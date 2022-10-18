@@ -66,8 +66,14 @@ body{
 #thumbs-down{
     background: rgba(255, 0, 0, 0.511);
 }
+#thumbs-down:hover{
+    background: rgb(255, 0, 0);
+}
 #thumbs-up{
     background: rgba(0, 128, 0, 0.436);
+}
+#thumbs-up:hover{
+    background: rgb(0, 0, 0);
 }
 .card_container .rating a {
     text-decoration: none;
@@ -117,9 +123,11 @@ body{
     
 }
 .form_container form input{
-    padding: 7px 30px;
+    padding: 10px 30px;
+    
     width: 100%;
     border-radius: 2px;
+    border: solid 1px rgba(0, 0, 0, 0.277);
 }
 .form_container .message_icon{
     font-size: 50px;
@@ -147,3 +155,43 @@ body{
     background: black;
     z-index: 1;
 }
+.checkbox{
+    display: flex;
+    height: 20px;
+    font-size: 8px;
+}
+
+
+
+/* rating page */
+.chosse {
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+}
+.btn{
+    width: 220px;
+ display:inline-block;
+ padding:0.70em 1.2em;
+ border: 1px solid #00000082;
+ margin:0 0.3em 0.3em 0;
+ border-radius: 4px;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:300;
+ color:#000000;
+ text-align:center;
+ transition: all 0.2s;
+}
+.btn:hover{
+ color:#000000;
+ font-weight:305;
+ background-color:#ffffff;
+ border:0.1em solid #00b3ea;
+}
+
