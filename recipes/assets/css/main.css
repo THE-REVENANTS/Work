@@ -41,7 +41,7 @@
   .table .thead {
     display: grid;
     align-items: center;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 65% 35%;
     padding: 20px;
     padding: 0 20px; }
     .table .thead .column {
@@ -61,7 +61,7 @@
     display: grid;
     width: 100%;
     grid-gap: 0;
-    grid-template-columns: 25% 25% 25% 12.5% 12.5%;
+    grid-template-columns: 25% 20% 20% 17.5% 17.5%;
     grid-template-areas: "a b c d e"; }
     .table .tnav .column {
       width: 100%;
@@ -81,7 +81,7 @@
     padding: 0 20px;
     display: grid;
     width: 100%;
-    grid-template-columns: 25% 25% 25% 12.5% 12.5%;
+    grid-template-columns: 25% 20% 20% 17.5% 17.5%;
     grid-template-areas: "a b c d e";
     height: 100%; }
     .table .row .column {
@@ -98,14 +98,35 @@
         border-right: 2px solid #4d9436; }
       .table .row .column:nth-child(4) {
         grid-area: d;
-        padding-left: 10px; }
+        padding: 4px 0;
+        padding-left: 10px;
+        font-size: 12px;
+        margin: 0; }
       .table .row .column:nth-child(5) {
         grid-area: e;
+        padding: 4px 0;
         padding-left: 10px;
-        text-align: right; }
+        text-align: right;
+        font-size: 12px;
+        margin: 0; }
   .table .tfooter {
     background: #4d9436;
     color: white;
     padding: 20px; }
+
+.table.no_devider .thead {
+  grid-template-columns: 100%; }
+  .table.no_devider .thead .column {
+    border-right: none; }
+.table.no_devider .tnav {
+  grid-template-columns: 25% 25% 25% 25%; }
+.table.no_devider .row {
+  grid-template-columns: 25% 25% 25% 25%; }
+  .table.no_devider .row .column:nth-child(3) {
+    border-right: none; }
+.table.no_devider .tfooter {
+  background: #4d9436;
+  color: white;
+  padding: 20px; }
 
 /*# sourceMappingURL=main.css.map */
