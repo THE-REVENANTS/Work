@@ -1,7 +1,10 @@
 
- if(aff_masterTag == null){	var aff_masterTag = true;
-// masterTag regenerated on 2022-09-30 09:35
-/****************************************************************************************************************
+
+ if(aff_masterTag == null){	var aff_masterTag = true;
+
+// masterTag regenerated on 2022-09-30 09:35
+
+/****************************************************************************************************************
 * Master TAG
 ****************************************************************************************************************/
 var AffUtils = AffUtils || {
@@ -255,7 +258,8 @@ var AffUtils = AffUtils || {
 		}
 	}
 };
-/****************************************************************************************************************
+
+/****************************************************************************************************************
 * DENOMATIC PIXEL
 ****************************************************************************************************************/
 if(aff_denomatic == null){
@@ -273,7 +277,8 @@ if(aff_denomatic == null){
 	}();
 }
 
-/**************************************************
+
+/**************************************************
  * AFFILIRED MERCHANT LOCAL COOKIES
  *
  * Note: Adding the variable into the browser console "window.affilireddebug=1" will enable the log feature
@@ -772,7 +777,7 @@ var AffMLC = AffMLC || {};
 				// referer
 				referrer = data[4];
 				if (referrer !== null) {
-					// codify the referrer url before pass into param
+					// codify the referrer/rl before pass into param
 					var referrerParts = referrer.split('//');
 					var scheme = referrerParts[0];
 					var host = referrerParts[1];
@@ -846,12 +851,17 @@ var AffMLC = AffMLC || {};
 	}
 })();
 
- if(aff_extra_js == null){ 
- var aff_extra_js = true; 
-// Resetting aff_denomatic == null and others because we need Denomatic need to be loaded multiple times during the shopping cart steps
+
+ if(aff_extra_js == null){ 
+
+ var aff_extra_js = true; 
+
+// Resetting aff_denomatic == null and others because we need Denomatic need to be loaded multiple times during the shopping cart steps
 aff_extra_js = null;
 aff_masterTag = null;
 aff_denomatic = null;
- } 
-} 
+
+ } 
+
+} 
 
