@@ -137,3 +137,48 @@ header .logo-section {
   .visachecker-blog .global-visa-checker {
     height: auto;
 }
+
+/* Add New Hero */
+.new_hero {
+  display: flex;
+  padding: 120px 5%;
+}
+.new_hero .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.new_hero .left h1 span {
+  display: block;
+  font-size: 80px;
+  font-weight: bolder;
+}
+.new_hero .left h1 span:first-child {
+  color: rgb(0, 8, 148);
+}
+.new_hero .left h1 span:last-child {
+  color: rgb(241, 174, 23);
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.new_hero .left a.button {
+  background: rgb(241, 174, 23); 
+  width: fit-content;
+  padding: 10px 15px;
+  border-radius: 15px;
+  position: relative;
+}
+.new_hero .left a.button::before {
+  content: '';
+  position: absolute;
+  border-radius: 15px;
+  top: 5px;
+  left: 5px;
+  height: 100%;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, .2);
+  z-index: -1;
+}
