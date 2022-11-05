@@ -5,14 +5,18 @@
   font-family: 'Lexend', sans-serif; }
 
 .tables {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+  grid-gap: 80px;
+  grid-column-gap: 40px;
   padding: 40px;
   background-image: url(../images/Green-back-1.jpg);
   background-repeat: repeat;
   background-size: 1000px;
-  background-position: center center; }
+  background-position: center center;
+  padding-top: 100px;
+  z-index: 1; }
   .tables .table {
     width: 100%; }
     .tables .table:nth-child(2) {
@@ -23,7 +27,8 @@
 @media (max-width: 1024px) {
   .tables {
     grid-template-columns: 1fr;
-    padding: 2.5%; }
+    padding: 1.25%;
+    padding-top: 100px; }
     .tables .table {
       width: 100%; }
       .tables .table:nth-child(2) {
@@ -31,19 +36,38 @@
       .tables .table:last-child {
         margin-top: 0; } }
 .table {
-  background: white;
+  position: relative;
+  color: black;
   display: flex;
   flex-direction: column;
   gap: 0;
   border-radius: 10px;
-  overflow: hidden;
+  border-top-left-radius: 0;
   max-height: fit-content; }
+  .table .table_title {
+    font-weight: bolder;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    padding: 20px;
+    z-index: 2;
+    background-image: url(../images/Grey-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: black;
+    letter-spacing: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; }
   .table .thead {
     display: grid;
+    background-image: url(../images/Grey-background.jpg);
+    background-size: cover;
+    background-position: center center;
     align-items: center;
     grid-template-columns: 65% 35%;
     padding: 20px;
-    padding: 0 20px; }
+    padding: 0 20px;
+    border-top-right-radius: 10px; }
     .table .thead .column {
       width: 100%;
       color: #4d9436;
@@ -76,9 +100,45 @@
         grid-area: d;
         grid-column: span 2;
         padding-left: 10px; }
+  @media (max-width: 1024px) {
+    .table .tnav {
+      padding-left: 10px;
+      padding-right: 10px; }
+      .table .tnav .column {
+        font-size: 10px; } }
+  .table .rows {
+    background-image: url(../images/Grey-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-template-columns: 65% 35%;
+    display: grid;
+    font-size: 14px; }
+    .table .rows .left {
+      display: grid;
+      grid-template-columns: 40% 30% 30%;
+      border-right: 2px solid #4d9436;
+      padding: 20px;
+      padding-right: 0; }
+      .table .rows .left .column.font-smaller {
+        font-size: 12px; }
+    .table .rows .right {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: space-between;
+      font-size: 12px;
+      padding: 20px 10px; }
+      .table .rows .right .column:nth-child(2n) {
+        text-align: right; }
+  .table .all-rows {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/Grey-background.jpg);
+    background-size: cover;
+    background-position: center center; }
   .table .row {
     color: black;
-    padding: 0 20px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: grid;
     width: 100%;
     grid-template-columns: 25% 20% 20% 17.5% 17.5%;
@@ -109,10 +169,27 @@
         text-align: right;
         font-size: 12px;
         margin: 0; }
+  @media (max-width: 1024px) {
+    .table .row {
+      padding-left: 10px;
+      padding-right: 10px; }
+      .table .row .column {
+        font-size: 10px !important; }
+        .table .row .column:nth-child(4) {
+          font-size: 10px; }
+        .table .row .column:nth-child(5) {
+          font-size: 10px; } }
   .table .tfooter {
     background: #4d9436;
     color: white;
-    padding: 20px; }
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+  @media (max-width: 1024px) {
+    .table .tfooter {
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 13px; } }
 
 .table.no_devider .thead {
   grid-template-columns: 100%; }

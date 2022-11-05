@@ -8,14 +8,18 @@
 
 
 .tables {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2 , 1fr);
-    grid-gap: 40px;
+    grid-gap: 80px;
+    grid-column-gap: 40px;
     padding: 40px;
     background-image: url(../images/Green-back-1.jpg);
     background-repeat: repeat;
     background-size: 1000px;
     background-position: center center; 
+    padding-top: 100px;
+    z-index: 1;
     .table {
         width: 100%;
         &:nth-child(2) {
@@ -29,7 +33,8 @@
 @media (max-width:1024px) {
     .tables {
         grid-template-columns: 1fr;
-        padding: 2.5%;
+        padding: 1.25%;
+        padding-top: 100px;
         .table {
             width: 100%;
             &:nth-child(2) {
@@ -45,19 +50,39 @@
 
 // table 
 .table {
-    background: white;
+    position: relative;
+    color: black;
     display: flex;
     flex-direction: column;
     gap: 0;
     border-radius: 10px;
-    overflow: hidden;
+    border-top-left-radius: 0;
     max-height: fit-content;
+    .table_title {
+        font-weight: bolder;
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%) ;
+        padding: 20px;
+        z-index: 2;
+        background-image: url(../images/Grey-background.jpg);
+        background-size: cover;
+        background-position: center center;
+        color: black;
+        letter-spacing: 1px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
     .thead {
         display: grid;
+        background-image: url(../images/Grey-background.jpg);
+        background-size: cover;
+        background-position: center center;
         align-items: center;
         grid-template-columns: 65% 35%;
         padding: 20px;
         padding:0 20px ;
+        border-top-right-radius: 10px;
         .column {
             width: 100%;
             color: #4d9436;
@@ -99,9 +124,54 @@
             }
         }
     }
+    @media (max-width:1024px) {
+        .tnav {
+            padding-left: 10px;
+            padding-right: 10px;
+            .column {
+                font-size: 10px;
+            }
+        }
+    }
+    .rows {
+        background-image: url(../images/Grey-background.jpg);
+        background-size: cover;
+        background-position: center center;
+        grid-template-columns: 65% 35%;
+        display: grid;
+        font-size: 14px;
+        .left {
+            display: grid;
+            grid-template-columns: 40% 30% 30%  ;
+            border-right: 2px solid #4d9436;
+            padding: 20px;
+            padding-right: 0;
+            .column.font-smaller {
+                font-size: 12px;
+            }
+        }
+        .right {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 20px 10px;
+            .column:nth-child(2n){
+                text-align: right;
+            }
+        }
+    }
+    .all-rows {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../images/Grey-background.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
     .row {
         color: black;
-        padding: 0 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         display: grid; 
         width: 100%;
         grid-template-columns: 25% 20% 20% 17.5% 17.5% ;
@@ -139,10 +209,34 @@
             }
         }
     }
+    @media (max-width:1024px) {
+        .row {
+            padding-left: 10px;
+            padding-right: 10px;
+            .column {
+                font-size: 10px !important;
+                &:nth-child(4) {
+                    font-size: 10px;
+                }
+                &:nth-child(5) {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
     .tfooter {
         background: #4d9436;
         color: white;
         padding:20px ;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    @media (max-width:1024px) {
+        .tfooter {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 13px;
+        }
     }
 }
 .table.no_devider {
