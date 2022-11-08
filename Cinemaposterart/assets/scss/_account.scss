@@ -1,0 +1,456 @@
+.signin_main {
+    overflow: hidden;
+    .from_container {
+        padding: 100px 0;
+        form {
+            h2 {
+                position: relative;
+                align-self: center;
+                text-shadow: 1px 1px 6px rgba($color: #000000, $alpha: .7);
+                font-size: 50px;
+                letter-spacing: 2px;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 100px 100px;
+            gap: 10px;
+            position: relative;
+            img.background {
+                position: absolute;
+                width: 150%;
+                height: 150%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                object-fit: contain;
+                user-select: none;
+            }
+            input {
+                position: relative;
+                width: 400px; 
+                border: 1px solid black;
+                padding: 5px 10px;
+                border-radius: 20px;
+                background: #202020;
+                color: white
+            }
+            @media (max-width:450px) {
+                input {
+                    width: 280px
+                }
+            }
+            @media (max-width:300px) {
+                input {
+                    width: 240px
+                }
+            }
+            input[type=submit] {
+                @include ButtonStyles();
+                width: fit-content;
+                padding: 5px 50px;
+                margin-left: auto;
+            }
+            label {
+                position: relative;
+                color: white;
+                span {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.signup_main {
+    form {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        h3 {
+            color: white;
+            font-size: 36px;
+        }
+        .inputs {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+            padding: 30px 10%;
+            .element {
+                width: 31.5%;
+                &:nth-child(1) {
+                    width: 48%;
+                }
+                &:nth-child(2) {
+                    width: 48%;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                label {
+                    color: white;
+                    padding-bottom: 5px;
+                }
+                input {
+                    position: relative;
+                    width: 100%; 
+                    border: 1px solid $main-color;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    background: #202020;
+                    color: white
+                }
+            }
+        }
+        input[type=submit] {
+            @include ButtonStyles();
+            width: fit-content;
+            padding: 5px 50px;
+            margin-left: auto;
+        }
+    }
+    @media (max-width:950px) {
+        form {
+            width: 95%;  
+            .inputs { 
+                padding: 20px;
+                .element {
+                    width: 100% !important; 
+                }
+            }
+            input[type=submit] {
+                @include ButtonStyles();
+                width: fit-content;
+                padding: 5px 50px;
+                margin-left: auto;
+            }
+        }
+    }
+}
+.pro_account_main {
+    form {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3 {
+            color: white;
+            font-size: 80px;
+            margin: 50px auto;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 7px rgba($color: #000000, $alpha: .7);
+        }
+        h4 {
+            color: white;
+            font-size: 40px;
+            margin: 50px auto;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 7px rgba($color: #000000, $alpha: .7);
+            border-bottom: 1px solid #eee;
+            width: 100%;
+            text-align: left;
+        }
+        .inputs {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 20px;
+            padding: 30px 0;
+            .element {
+                width: 31.5%;
+                &:nth-child(1) {
+                    width: 48%;
+                }
+                &:nth-child(2) {
+                    width: 48%;
+                }
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                label {
+                    color: white;
+                    padding-bottom: 5px;
+                    font-size: 20px;
+                }
+                input {
+                    position: relative;
+                    width: 100%; 
+                    border: 1px solid $main-color;
+                    padding: 10px 10px;
+                    border-radius: 20px;
+                    background: #202020;
+                    color: white
+                }
+                span {
+                    margin-top: 10px;
+                    a {
+                        color: #ffba00;
+                    }
+                }
+            }
+            input[type=submit] {
+                @include ButtonStyles();
+                padding: 5px 40px;
+                margin-left: auto;
+            }
+        }
+    }
+    @media (max-width:800px) {
+        form {
+            width:100%;
+            h3 {
+                font-size: 45px;
+            }
+            .inputs {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    }
+    @media (max-width:460px) {
+        form { 
+            .inputs {
+                flex-direction: column;
+                .element {
+                    width: 100% !important;
+                }
+            }
+        }
+    }
+    .go_pro_features {
+        display: flex;
+        min-width: 50%;
+        width: fit-content;
+        margin: 0 auto;
+        gap: 50px;
+        margin-bottom:90px;
+        .left { 
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            h4 {
+                font-size: 150px; 
+                color: white; 
+                white-space: nowrap; 
+                span {
+                    font-size: 25px;
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    letter-spacing: 4px;
+                }
+            }
+            img {
+                width: fit-content;
+                height: fit-content;
+            }
+        }
+        .right {
+            .list {
+                margin-left: 15px;
+                position: relative;
+                height: auto;
+                width: fit-content;
+                text-align: left;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: calc(100% + 10px);
+                    height: 100%;
+                    width: 5px;
+                    background: $main-color;
+                    border-radius: 10px;
+                }
+                .feature {
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    @media (max-width:900px) {
+        .go_pro_features {
+            flex-direction: column;
+            .left {
+                flex-direction: row-reverse;
+                img {
+                    transform: rotate(-90deg) scaleX(-1);
+                }
+            }
+        }
+    }
+    @media (max-width:900px) {
+        .go_pro_features {
+            flex-direction: column;
+            width: 95%;
+            .left {
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                img {
+                    width: 100px;
+                }
+                h4 {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+    @media (max-width:600px) {
+        .go_pro_features { 
+            .left {
+                max-width: 80%;
+                gap: 0;
+            }
+        }
+    }
+}
+#checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba($color: #000, $alpha: .8);
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    &.show_popup {
+        opacity: 1;
+        pointer-events: all;
+    }
+    form {
+        width: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        .form_header {
+            background: #002e3b;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+            img {
+                width: 50px;
+            }
+            h5 {
+                font-size: 30px;
+            }
+        }
+        .inputs_container {
+            padding: 25px 30px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            .element {
+                display: flex;
+                flex-direction: column; 
+                font-family: 'Montserrat', sans-serif !important;
+                label {
+                    color: gray;
+                    font-family: 'Montserrat', sans-serif !important;
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                }
+                input,
+                select,
+                option{
+                    font-family: 'Montserrat', sans-serif !important;
+                    border: 1px solid #ddd;
+                    box-shadow: 1px 1px 3px 0 rgba($color: #000000, $alpha: .1);
+                    height: 35px;
+                    border-radius: 5px;
+                    padding: 0 20px;
+                }
+                .input_container {
+                    position: relative;
+                    .cards {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
+                        img {
+                            width: 17px;
+                            height: fit-content;
+                        }
+                    }
+                    input {
+                        width: 100%;
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                }
+                .two_inputs {
+                    display: flex;
+                    input {
+                        width: 50%;
+                        border-radius: 0;
+                        border-top: none;
+                        &:nth-child(1) {
+                            border-bottom-left-radius: 5px; 
+                            border-right: none;
+                        }
+                        &:nth-child(2) {
+                            border-bottom-right-radius: 5px; 
+                        }
+                    }
+                }
+                select {
+                    border-bottom-left-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                #zip {
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    border-top: none;
+                }
+            }
+            .note { 
+                font-family: 'Montserrat', sans-serif !important;
+                color: gray ;
+                font-size: 12px;
+                margin: 0 auto;
+                text-align: center;
+            }
+            input[type=submit] {
+                background: #002e3b;
+                padding: 7px 0;
+                cursor: pointer;
+                font-size: 20px;
+                color: white;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+@media (max-width:850px) {
+    #checkout {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 50;
+        height: 100vh;
+        background-image: url(/assets/images/BkGnd.jpg);
+        background-size: cover;
+        background-position: center center;
+        display: flex; 
+        align-items: center;
+        form {
+            width: 950%;
+            border: 1px solid #002e3b;
+        }
+    }
+}

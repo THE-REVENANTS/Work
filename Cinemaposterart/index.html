@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaPosterArt | Sign In</title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <!-- fontawesome link -->
+    <script src="https://kit.fontawesome.com/38516d3f67.js" crossorigin="anonymous"></script>
+    <!-- font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <style>
+        #PassCode {
+            background: white !important;
+            color: black !important;
+            height:40px;
+            font-size: 20px;
+            font-family: sans-serif, 'MONTSERRAT';
+            transition: .3s;
+            border: 2px solid white;
+        }
+        #PassCode.wrong {
+            animation: wrong .3s;
+            background: red;
+        }
+        @keyframes wrong {
+            0%{border: 2px solid white; transform: translateX(0);}
+            30%{border: 2px solid #a80000; transform: translateX(30px);}
+            60%{border: 2px solid #a80000; transform: translateX(-30px);}
+            90%{border: 2px solid #a80000; transform: translateX(30px);}
+            100%{border: 2px solid white; transform: translateX(0);}
+        }
+    </style>
+</head>
+<body> 
+    <!-- About content -->
+    <main class="signin_main">
+        <div class="from_container">
+            <form action="home.html">
+                <!-- form inputs -->
+                <label>PASSWORD <span style="color: red;">*</span></label>
+                <input type="text" id="PassCode" name="text" required>
+                <input type="submit" value="ACCESS">
+            </form>
+        </div>
+    </main> 
+    <!-- Link all javascript files -->
+    <script>
+        let password = 'admin&';
+        let form = document.querySelector('form');
+        form.onsubmit = function () {
+            let loginInfo = document.querySelector('#PassCode');
+            if(loginInfo.value == password) {
+                return true;
+            } else {
+                loginInfo.classList.add('wrong');
+                setTimeout(() => {
+                    loginInfo.classList.remove('wrong')
+                },300);
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
