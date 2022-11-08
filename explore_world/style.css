@@ -125,7 +125,7 @@ header a.logo {
         width: 80%;
     }
 }
-@media (max-width:7560px) {
+@media (max-width:756px) {
     .hero .text h1 {
         font-size: 35px;
     }
