@@ -1,0 +1,17 @@
+.about_main {
+    width: 80%;
+    margin: 100px auto;
+    p.about_text {
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+@media (max-width:950px) {
+    .about_main {
+        width: 95%;
+        p.about_text {
+            font-size:17px;
+            line-height: 25px;
+        }
+    }
+}

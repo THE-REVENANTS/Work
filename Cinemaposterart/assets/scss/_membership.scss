@@ -1,0 +1,80 @@
+.membership_main {
+    overflow: hidden;
+    .available_packs {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        padding: 100px 0;
+        margin: 0 auto;
+        .pack {
+            position: relative;
+            width: fit-content;
+            display: flex;
+            flex-direction: column; 
+            height: 600px;
+            // background image
+            img.background {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                user-select: none;
+                height: 130%;
+            }
+            // pricing content
+            h3 {
+                position: relative;
+                font-size: 50PX;
+                margin-bottom: 30px;
+                text-shadow: 1px 1px 6px rgba($color: #000000, $alpha: .7);
+            }
+            ul.features { 
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px; 
+                li {
+                    padding-left: 10px;
+                    &::marker {
+                        content: url(/assets/images/icons/check.png);
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .price {
+                margin-top: auto;
+                position: relative;
+                span {
+                    text-shadow: 1px 1px 6px rgba($color: #000000, $alpha: .7);
+                    font-size: 60px;
+                    color: white;
+                }
+                color: black;
+            }
+            .button {
+                @include ButtonStyles();
+                position: relative;
+                width: fit-content;
+                padding: 5px 60px;
+                margin: 0 auto;
+                border: 1px solid black;
+            }
+        }
+    }
+    @media (max-width:1100px) {
+        .available_packs {
+            width: 80%;
+        }
+    }
+    @media (max-width:850px) {
+        .available_packs {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 120px;
+            .pack {
+                height: auto;
+            }
+        }
+    }
+}
