@@ -1,5 +1,6 @@
 * {
   font-family: 'Montserrat', sans-serif ;
+  scroll-behavior: smooth;
 }
 
 
@@ -38,9 +39,14 @@ header .logo-section {
 #navigation-header.splitHeader nav .nav-link-dropdown-btn svg{ 
     fill: white !important;
 }
-#navigation-header.splitHeader .logo-container .logo-ivisa { 
+#navigation-header.splitHeader .logo-container .logo-VisaDirect { 
     height: 53px !important;
     width: fit-content !important;
+}
+@media (max-width:900px) {
+  #navigation-header.splitHeader .logo-container .logo-VisaDirect { 
+      height: 40px !important;
+  }
 }
 #navigation-header.splitHeader .bbc-feature > * {
     color: white !important;
@@ -227,17 +233,10 @@ header .logo-section {
   flex-direction: column;
   align-items: flex-end;
 }
-.new_hero .right img:first-child{
+.new_hero .right img{
   width:70%;
   height: fit-content;
-}
-.new_hero .right img:last-child{ 
-  height: fit-content;
-  width: fit-content;
-  user-select: none;
-  cursor: pointer;
-  z-index: -1;
-}
+} 
 
 /* responsive */
 @media (max-width:1000px) {
@@ -254,12 +253,9 @@ header .logo-section {
     font-size: 14px;
   }
 
-  .new_hero .right img:first-child{
-    width:70%;
+  .new_hero .right img{
+    width:60%;
     height: fit-content;
-  }
-  .new_hero .right img:last-child{ 
-    width: 150px;
   }
 }
 @media (max-width:700px) {
@@ -275,8 +271,11 @@ header .logo-section {
   .new_hero .left {
     width: 100%;
   }
-  .new_hero .right {
+  .new_hero .right{
     width: 100%;
+  }
+  .new_hero .right img{
+    width: 60%;
   }
 }
 
@@ -300,4 +299,102 @@ header .logo-section {
 }
 .argent_remis span:last-child{
   color: rgb(228, 186, 0);
+}
+/* visa agency banner goes here */
+.visa_agency_banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 100px 20%;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-image: url(images/visa-agency.jpg);
+  background-size: cover;
+  background-position: 90% 80%;
+  font-size: 30px;
+}
+.visa_agency_banner strong{
+  color: #092e55;
+}
+@media (max-width:756px) {
+  .visa_agency_banner {
+    font-size: 20px;
+    padding: 100px 5%;
+  }
+}
+
+/* testimonials styles */
+
+.testimonial-block .testimonial-image {
+  width: 80px;
+}
+.testimonial-block .testimonial-image img {
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  height: 60px;
+}
+.testimonial-block .testimonial-text {
+  width: calc(100% - 80px);
+}
+.testimonials-partial .testimonials-title h2 {
+  width: calc(100% - 60px);
+}
+@media (min-width: 576px) {
+  .testimonials-partial .testimonials-title h2 {
+      width: auto;
+  }
+}
+.testimonials-partial .testimonials-content .testimonial-block {
+  max-width: 588px;
+}
+@media screen and (min-width: 992px) {
+  .testimonials-partial .testimonials-content .testimonial-block {
+      max-height: 163px;
+      max-width: 429px;
+  }
+  .testimonials-partial .testimonials-content .testimonial-block:nth-child(odd) {
+      margin-right: 1.25rem;
+  }
+  .testimonials-partial .testimonials-content .testimonial-block:nth-child(2n) {
+      margin-left: 1.25rem;
+  }
+}
+.testimonials-partial .testimonials-content .testimonial-block .testimonial-text h4 {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+}
+.testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 768px) {
+  .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+      height: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+      -webkit-line-clamp: 5;
+  }
+}
+
+/* custom location */
+.custom_location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom_location svg {
+  fill: #e4ba00;
+  height: 20px;
+  width: 20px;
 }

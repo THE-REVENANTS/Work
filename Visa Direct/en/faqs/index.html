@@ -7,7 +7,7 @@
 
         <meta name="csrf-token" content="" />
         <meta name="route-name" content="public.faq.index" />
-        <meta name="cookie_domain" content="ivisa" />
+        <meta name="cookie_domain" content="VisaDirect" />
         <meta name="primary-view" content="faq.index" />
 
         <meta name="facebook-domain-verification" content="b53h8j57l478lajm3yzynj1edo7vfb" />
@@ -260,7 +260,7 @@
                 "document valid for": "Document Valid For",
                 "document validity": "Document Validity",
                 documents: "Documents",
-                "does not include ivisa fee": "Does not include iVisa Fee",
+                "does not include VisaDirect fee": "Does not include VisaDirect Fee",
                 donate: "Donate",
                 "earliest date accepted": "Earliest date accepted",
                 email: "Email",
@@ -271,7 +271,7 @@
                 "enter code": "Enter code",
                 "enter your code": "Enter your code",
                 "est. delivery": "Est. Delivery",
-                "estimated processing time and ivisa fee": "Estimated Processing Time and iVisa Fee",
+                "estimated processing time and VisaDirect fee": "Estimated Processing Time and VisaDirect Fee",
                 "exp. month": "Exp. Month",
                 "exp. year": "Exp. Year",
                 "expert review": "Expert Review",
@@ -501,8 +501,8 @@
                 "your progress is being saved": "Your progress is being saved",
                 "your response is not valid": "Your response is not valid",
                 "zip\/post code": "Zip\/Post Code",
-                "ivisa fee protection": "iVisa Fee Protection",
-                "ivisa transparency policy": "iVisa Transparency Policy",
+                "VisaDirect fee protection": "VisaDirect Fee Protection",
+                "VisaDirect transparency policy": "VisaDirect Transparency Policy",
                 person: "person",
                 "travelers with the": "travelers with the",
                 "": "",
@@ -844,7 +844,7 @@
 
         <script>
             window.gtm_vars = {
-                domain: "ivisa",
+                domain: "VisaDirect",
                 visitor_ip: null,
                 product_country: null,
                 nationality: null,
@@ -1027,7 +1027,7 @@
                     ["complete", "interactive"].includes(e.readyState) ? zaraz.init() : a.addEventListener("DOMContentLoaded", zaraz.init);
                 })(w, d, 0, "script");
             })(window, document);
-            window.ivisalog = {
+            window.VisaDirectlog = {
                 track: function (eventName, eventProps) {
                     console.log("[zaraz:track]", eventName, { ...eventProps, ...window.gtm_vars });
                     if (window.zaraz !== undefined) {
@@ -1051,11 +1051,11 @@
 
         <script>
             for (const x of Object.keys(window.gtm_vars || {})) {
-                window.ivisalog.set(x, window.gtm_vars[x]);
+                window.VisaDirectlog.set(x, window.gtm_vars[x]);
             }
 
-            function ivisalogButtonClick(btnText, callbackString) {
-                window.ivisalog.track("btn_click", { btn_text: btnText });
+            function VisaDirectlogButtonClick(btnText, callbackString) {
+                window.VisaDirectlog.track("btn_click", { btn_text: btnText });
                 if (callbackString !== undefined && callbackString !== null) {
                     return eval(callbackString);
                 }
@@ -1136,6 +1136,64 @@
             button {
                 background-color: transparent;
                 background-image: none;
+            }
+            .testimonial-block .testimonial-image {
+                width: 80px;
+            }
+            .testimonial-block .testimonial-image img {
+                width: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+                height: 60px;
+            }
+            .testimonial-block .testimonial-text {
+                width: calc(100% - 80px);
+            }
+            .testimonials-partial .testimonials-title h2 {
+                width: calc(100% - 60px);
+            }
+            @media (min-width: 576px) {
+                .testimonials-partial .testimonials-title h2 {
+                    width: auto;
+                }
+            }
+            .testimonials-partial .testimonials-content .testimonial-block {
+                max-width: 588px;
+            }
+            @media screen and (min-width: 992px) {
+                .testimonials-partial .testimonials-content .testimonial-block {
+                    max-height: 163px;
+                    max-width: 429px;
+                }
+                .testimonials-partial .testimonials-content .testimonial-block:nth-child(odd) {
+                    margin-right: 1.25rem;
+                }
+                .testimonials-partial .testimonials-content .testimonial-block:nth-child(2n) {
+                    margin-left: 1.25rem;
+                }
+            }
+            .testimonials-partial .testimonials-content .testimonial-block .testimonial-text h4 {
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                text-overflow: ellipsis;
+            }
+            .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+                -webkit-line-clamp: 7;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            @media screen and (min-width: 768px) {
+                .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+                    height: auto;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+                    -webkit-line-clamp: 5;
+                }
             }
             ul {
                 margin: 0;
@@ -1897,12 +1955,12 @@
                 opacity: 1;
                 transform: translateY(-1rem);
             }
-            .logo-ivisa {
+            .logo-VisaDirect {
                 height: 29px;
                 width: 114.5px;
             }
             @media (min-width: 992px) {
-                .logo-ivisa {
+                .logo-VisaDirect {
                     height: 45px;
                     width: 172px;
                 }
@@ -1963,7 +2021,7 @@
                 #navigation-header .lang-menu {
                     order: 6;
                 }
-                .logo-ivisa {
+                .logo-VisaDirect {
                     max-height: 65px;
                 }
             }
@@ -2019,7 +2077,7 @@
                     margin-right: 2rem;
                 }
             }
-            #navigation-header.splitHeader .logo-container .logo-ivisa {
+            #navigation-header.splitHeader .logo-container .logo-VisaDirect {
                 height: 65px;
                 width: 93px;
             }
@@ -3077,33 +3135,33 @@
             }
             #how-to-apply .nav-pills .nav-link.active,
             #how-to-apply .nav-pills .show > .nav-link,
-            .ivisa-tabs .nav-pills .nav-link.active,
-            .ivisa-tabs .nav-pills .show > .nav-link {
+            .VisaDirect-tabs .nav-pills .nav-link.active,
+            .VisaDirect-tabs .nav-pills .show > .nav-link {
                 --tw-bg-opacity: 1;
                 --tw-text-opacity: 1;
                 background-color: rgba(64, 96, 182, var(--tw-bg-opacity));
                 color: rgba(255, 255, 255, var(--tw-text-opacity));
             }
             #how-to-apply .nav-pills .nav-link,
-            .ivisa-tabs .nav-pills .nav-link {
+            .VisaDirect-tabs .nav-pills .nav-link {
                 border-radius: 0.75rem;
             }
             #how-to-apply .nav-pills .nav-link:not(.active),
             #how-to-apply .nav-pills .show > .nav-link,
-            .ivisa-tabs .nav-pills .nav-link:not(.active),
-            .ivisa-tabs .nav-pills .show > .nav-link {
+            .VisaDirect-tabs .nav-pills .nav-link:not(.active),
+            .VisaDirect-tabs .nav-pills .show > .nav-link {
                 --tw-bg-opacity: 1;
                 --tw-text-opacity: 1;
                 background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
                 color: rgba(155, 158, 179, var(--tw-text-opacity));
             }
             #how-to-apply .card,
-            .ivisa-tabs .card {
+            .VisaDirect-tabs .card {
                 border: 1px solid #9b9eb3 !important;
                 border-radius: 0.75rem !important;
             }
             #how-to-apply li a.active,
-            .ivisa-tabs li a.active {
+            .VisaDirect-tabs li a.active {
                 font-weight: 700;
             }
             span.error {
@@ -4126,7 +4184,7 @@
         <!-- Ziggy JS Named Route Support -->
         <script type="text/javascript">
             const Ziggy = {
-                url: "https:\/\/www.ivisa",
+                url: "https:\/\/www.VisaDirect",
                 port: null,
                 defaults: {},
                 routes: {
@@ -4245,18 +4303,18 @@
         </script>
 
         <link rel="alternate" hreflang="en" href="faqs " />
-        <link rel="alternate" hreflang="es" href="https://es.ivisa/faqs " />
-        <link rel="alternate" hreflang="fr" href="https://fr.ivisa/faqs " />
-        <link rel="alternate" hreflang="de" href="https://de.ivisa/faqs " />
-        <link rel="alternate" hreflang="ja" href="https://ja.ivisa/faqs " />
-        <link rel="alternate" hreflang="it" href="https://it.ivisa/faqs " />
-        <link rel="alternate" hreflang="ko" href="https://ko.ivisa/faqs " />
-        <link rel="alternate" hreflang="nl" href="https://nl.ivisa/faqs " />
-        <link rel="alternate" hreflang="pl" href="https://pl.ivisa/faqs " />
-        <link rel="alternate" hreflang="pt" href="https://pt.ivisa/faqs " />
-        <link rel="alternate" hreflang="ru" href="https://ru.ivisa/faqs " />
-        <link rel="alternate" hreflang="sv" href="https://sv.ivisa/faqs " />
-        <link rel="alternate" hreflang="tr" href="https://tr.ivisa/faqs " />
+        <link rel="alternate" hreflang="es" href="https://es.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="fr" href="https://fr.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="de" href="https://de.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="ja" href="https://ja.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="it" href="https://it.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="ko" href="https://ko.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="nl" href="https://nl.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="pl" href="https://pl.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="pt" href="https://pt.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="ru" href="https://ru.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="sv" href="https://sv.VisaDirect/faqs " />
+        <link rel="alternate" hreflang="tr" href="https://tr.VisaDirect/faqs " />
         <link rel="alternate" hreflang="zh" href="/en/faqs " />
 
         <script>
@@ -4265,22 +4323,22 @@
                 const splitVersion = (window.location.search.match(new RegExp("[?&]splitversion=([^&]+)")) || ["", null])[1];
 
                 let themes = {
-                    "ivisa-vivid-2": { primary: ["#740E51", "#CD1B91", "#faf2f6"], secondary: ["#740E51", "#CD1B91", "#EE98D1"], text: ["#202020", "#797979", "#bdbdbd"] },
-                    "ivisa-subdued-1": { primary: ["#40003F", "#8C0E8B", "#f8e3f8"], secondary: ["#09594E", "#0B7364", "#068C7A"], text: ["#383840", "#656573", "#c2c1c8"] },
-                    "ivisa-corporate-1": { primary: ["#0A4E79", "#106CA5", "#dff3fb"], secondary: ["#2B3A8C", "#2B3A8C", "#0F1026"], text: ["#202020", "#797979", "#bdbdbd"] },
+                    "VisaDirect-vivid-2": { primary: ["#740E51", "#CD1B91", "#faf2f6"], secondary: ["#740E51", "#CD1B91", "#EE98D1"], text: ["#202020", "#797979", "#bdbdbd"] },
+                    "VisaDirect-subdued-1": { primary: ["#40003F", "#8C0E8B", "#f8e3f8"], secondary: ["#09594E", "#0B7364", "#068C7A"], text: ["#383840", "#656573", "#c2c1c8"] },
+                    "VisaDirect-corporate-1": { primary: ["#0A4E79", "#106CA5", "#dff3fb"], secondary: ["#2B3A8C", "#2B3A8C", "#0F1026"], text: ["#202020", "#797979", "#bdbdbd"] },
                 };
 
                 function setCssVariables(theme) {
                     let rt = document.querySelector(":root");
                     Object.keys(theme).forEach((type) => {
                         theme[type].forEach((val, i) => {
-                            rt.style.setProperty("--ivisa-" + type + "-" + i, val);
+                            rt.style.setProperty("--VisaDirect-" + type + "-" + i, val);
                         });
                     });
                 }
 
-                function setIvisaTheme(theme) {
-                    document.documentElement.classList.add("ivisa-themable");
+                function setVisaDirectTheme(theme) {
+                    document.documentElement.classList.add("VisaDirect-themable");
                     if (themes[theme]) {
                         setCssVariables(themes[theme]);
                     } else {
@@ -4289,198 +4347,198 @@
                 }
 
                 if (splitVersion === "202209-viv2qa9") {
-                    setIvisaTheme("ivisa-vivid-2");
+                    setVisaDirectTheme("VisaDirect-vivid-2");
                 } else if (splitVersion === "202209-sub1qa9") {
-                    setIvisaTheme("ivisa-subdued-1");
+                    setVisaDirectTheme("VisaDirect-subdued-1");
                 } else if (splitVersion === "202209-cor1qa9") {
-                    setIvisaTheme("ivisa-corporate-1");
+                    setVisaDirectTheme("VisaDirect-corporate-1");
                 }
             })();
         </script>
         <style>
-            .ivisa-themable body,
-            .ivisa-themable p:not(.lg\:text-white, .text-white),
-            .ivisa-themable .text-gray-500,
-            .ivisa-themable .headline,
-            .ivisa-themable .markdown-style h2,
-            .ivisa-themable .learn-more-article p,
-            .ivisa-themable .learn-more-article li,
-            .ivisa-themable a.text-gray-900,
-            .ivisa-themable .testimonials-partial p.text-gray-500,
-            .ivisa-themable .tab-content p.text-gray-500 {
-                color: var(--ivisa-text-0);
+            .VisaDirect-themable body,
+            .VisaDirect-themable p:not(.lg\:text-white, .text-white),
+            .VisaDirect-themable .text-gray-500,
+            .VisaDirect-themable .headline,
+            .VisaDirect-themable .markdown-style h2,
+            .VisaDirect-themable .learn-more-article p,
+            .VisaDirect-themable .learn-more-article li,
+            .VisaDirect-themable a.text-gray-900,
+            .VisaDirect-themable .testimonials-partial p.text-gray-500,
+            .VisaDirect-themable .tab-content p.text-gray-500 {
+                color: var(--VisaDirect-text-0);
             }
 
-            .ivisa-themable a,
-            .ivisa-themable .markdown-style h2,
-            .ivisa-themable .text-green-500,
-            .ivisa-themable .hover\:text-green-500,
-            .ivisa-themable .hover\:text-green-500:hover,
-            .ivisa-themable .testimonials-partial svg.text-green-500,
-            .ivisa-themable .tab-content .h6.text-gray-500 {
-                color: var(--ivisa-primary-1);
+            .VisaDirect-themable a,
+            .VisaDirect-themable .markdown-style h2,
+            .VisaDirect-themable .text-green-500,
+            .VisaDirect-themable .hover\:text-green-500,
+            .VisaDirect-themable .hover\:text-green-500:hover,
+            .VisaDirect-themable .testimonials-partial svg.text-green-500,
+            .VisaDirect-themable .tab-content .h6.text-gray-500 {
+                color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable a:hover,
-            .ivisa-themable a.text-gray-900:hover,
-            .ivisa-themable .text-blue-500,
-            .ivisa-themable .hover\:text-blue-500,
-            .ivisa-themable .hover\:text-blue-500:hover {
-                color: var(--ivisa-secondary-1);
+            .VisaDirect-themable a:hover,
+            .VisaDirect-themable a.text-gray-900:hover,
+            .VisaDirect-themable .text-blue-500,
+            .VisaDirect-themable .hover\:text-blue-500,
+            .VisaDirect-themable .hover\:text-blue-500:hover {
+                color: var(--VisaDirect-secondary-1);
             }
 
-            .ivisa-themable .text-white,
-            .ivisa-themable footer.bg-grey-300 a,
-            .ivisa-themable footer.bg-grey-300 .text-black {
+            .VisaDirect-themable .text-white,
+            .VisaDirect-themable footer.bg-grey-300 a,
+            .VisaDirect-themable footer.bg-grey-300 .text-black {
                 color: #fff;
             }
 
-            .ivisa-themable .border-green-500,
-            .ivisa-themable .focus\:border-green-500:focus,
-            .ivisa-themable .headline::before,
-            .ivisa-themable .perfil-desktop {
-                border-color: var(--ivisa-primary-1);
+            .VisaDirect-themable .border-green-500,
+            .VisaDirect-themable .focus\:border-green-500:focus,
+            .VisaDirect-themable .headline::before,
+            .VisaDirect-themable .perfil-desktop {
+                border-color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable .border-blue-500,
-            .ivisa-themable .focus\:border-green-500:focus,
-            .ivisa-themable .visatype-categories .selected,
-            .ivisa-themable .perfil-desktop:hover {
-                border-color: var(--ivisa-secondary-1);
+            .VisaDirect-themable .border-blue-500,
+            .VisaDirect-themable .focus\:border-green-500:focus,
+            .VisaDirect-themable .visatype-categories .selected,
+            .VisaDirect-themable .perfil-desktop:hover {
+                border-color: var(--VisaDirect-secondary-1);
             }
 
-            .ivisa-themable .bg-green-500,
-            .ivisa-themable footer.bg-grey-300 .bg-blue-100 {
-                background-color: var(--ivisa-primary-1);
+            .VisaDirect-themable .bg-green-500,
+            .VisaDirect-themable footer.bg-grey-300 .bg-blue-100 {
+                background-color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable .bg-blue-500,
-            .ivisa-themable .bg-blue-400,
-            .ivisa-themable #collapseCountriesBtn .bg-blue-500,
-            .ivisa-themable .letter_link a:hover {
-                background-color: var(--ivisa-secondary-1);
+            .VisaDirect-themable .bg-blue-500,
+            .VisaDirect-themable .bg-blue-400,
+            .VisaDirect-themable #collapseCountriesBtn .bg-blue-500,
+            .VisaDirect-themable .letter_link a:hover {
+                background-color: var(--VisaDirect-secondary-1);
             }
 
-            .ivisa-themable footer.bg-grey-300 svg.text-black {
+            .VisaDirect-themable footer.bg-grey-300 svg.text-black {
                 fill: #fff;
             }
 
             /* buttons*/
-            .ivisa-themable .btn.btn--primary {
-                background: var(--ivisa-primary-1);
-                border-color: var(--ivisa-primary-1);
+            .VisaDirect-themable .btn.btn--primary {
+                background: var(--VisaDirect-primary-1);
+                border-color: var(--VisaDirect-primary-1);
                 color: #fff;
             }
 
-            .ivisa-themable .btn.btn--primary:hover {
+            .VisaDirect-themable .btn.btn--primary:hover {
                 background: #fff;
-                border-color: var(--ivisa-primary-1);
-                color: var(--ivisa-primary-1);
+                border-color: var(--VisaDirect-primary-1);
+                color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable .btn.btn--secondary,
-            .ivisa-themable .btn.btn--navigation {
+            .VisaDirect-themable .btn.btn--secondary,
+            .VisaDirect-themable .btn.btn--navigation {
                 background: #fff;
-                border-color: var(--ivisa-primary-1);
-                color: var(--ivisa-primary-1);
+                border-color: var(--VisaDirect-primary-1);
+                color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable .btn.btn--navigation {
+            .VisaDirect-themable .btn.btn--navigation {
                 border-color: transparent;
             }
 
-            .ivisa-themable .btn.btn--secondary:hover,
-            .ivisa-themable .btn.btn--navigation:hover,
-            .ivisa-themable .highlighted-option {
-                background: var(--ivisa-primary-2);
+            .VisaDirect-themable .btn.btn--secondary:hover,
+            .VisaDirect-themable .btn.btn--navigation:hover,
+            .VisaDirect-themable .highlighted-option {
+                background: var(--VisaDirect-primary-2);
             }
 
             /* navigation */
-            .ivisa-themable .ivisa-tabs .nav-pills .nav-link.active,
-            .ivisa-themable .ivisa-tabs .nav-pills .show > .nav-link,
-            .ivisa-themable #how-to-apply .nav-pills .nav-link.active,
-            .ivisa-themable #how-to-apply .nav-pills .show > .nav-link {
-                background-color: var(--ivisa-secondary-1);
+            .VisaDirect-themable .VisaDirect-tabs .nav-pills .nav-link.active,
+            .VisaDirect-themable .VisaDirect-tabs .nav-pills .show > .nav-link,
+            .VisaDirect-themable #how-to-apply .nav-pills .nav-link.active,
+            .VisaDirect-themable #how-to-apply .nav-pills .show > .nav-link {
+                background-color: var(--VisaDirect-secondary-1);
                 color: #fff;
-                border: 1px solid var(--ivisa-secondary-1);
+                border: 1px solid var(--VisaDirect-secondary-1);
             }
 
-            .ivisa-themable .ivisa-tabs .nav-pills .nav-link:not(.active),
-            .ivisa-themable .ivisa-tabs .nav-pills .show > .nav-link,
-            .ivisa-themable #how-to-apply .nav-pills .nav-link:not(.active),
-            .ivisa-themable #how-to-apply .nav-pills .show > .nav-link {
-                color: var(--ivisa-secondary-1);
-                border: 1px solid var(--ivisa-secondary-1);
+            .VisaDirect-themable .VisaDirect-tabs .nav-pills .nav-link:not(.active),
+            .VisaDirect-themable .VisaDirect-tabs .nav-pills .show > .nav-link,
+            .VisaDirect-themable #how-to-apply .nav-pills .nav-link:not(.active),
+            .VisaDirect-themable #how-to-apply .nav-pills .show > .nav-link {
+                color: var(--VisaDirect-secondary-1);
+                border: 1px solid var(--VisaDirect-secondary-1);
                 background: transparent;
             }
 
             /* popular visas */
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .text-blue-500,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .hover\:text-blue-500,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .hover\:text-blue-500:hover {
-                color: var(--ivisa-text-0);
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .text-blue-500,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .hover\:text-blue-500,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .hover\:text-blue-500:hover {
+                color: var(--VisaDirect-text-0);
             }
 
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:hover,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:focus {
-                border-color: var(--ivisa-primary-1);
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:hover,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:focus {
+                border-color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active .visa__button,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active:hover .visa__button,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:hover .visa__button,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active .visa__button:hover,
-            .ivisa-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element .visa__button:hover,
-            .ivisa-themable .btn.btn--learn-more:hover,
-            .ivisa-themable .btn.btn--learn-more:focus {
-                border-color: var(--ivisa-primary-1);
-                color: var(--ivisa-primary-1);
-                background-color: var(--ivisa-primary-2);
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active .visa__button,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active:hover .visa__button,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:hover .visa__button,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element:active .visa__button:hover,
+            .VisaDirect-themable .most-popular-visas-all .most-popular-visas .mostpopularvisas__element .visa__button:hover,
+            .VisaDirect-themable .btn.btn--learn-more:hover,
+            .VisaDirect-themable .btn.btn--learn-more:focus {
+                border-color: var(--VisaDirect-primary-1);
+                color: var(--VisaDirect-primary-1);
+                background-color: var(--VisaDirect-primary-2);
             }
 
             /*nav, user icon, language dd*/
-            .ivisa-themable #navigation-header nav,
-            .ivisa-themable #navigation-header .nav-link:active,
-            .ivisa-themable #navigation-header .dropdown-menu-header,
-            .ivisa-themable #navigation-header .dropdown-menu-header a,
-            .ivisa-themable #navigation-header .dropdown-menu-header span,
-            .ivisa-themable #navigation-header .dropdown-menu-header input {
-                background-color: var(--ivisa-primary-1);
+            .VisaDirect-themable #navigation-header nav,
+            .VisaDirect-themable #navigation-header .nav-link:active,
+            .VisaDirect-themable #navigation-header .dropdown-menu-header,
+            .VisaDirect-themable #navigation-header .dropdown-menu-header a,
+            .VisaDirect-themable #navigation-header .dropdown-menu-header span,
+            .VisaDirect-themable #navigation-header .dropdown-menu-header input {
+                background-color: var(--VisaDirect-primary-1);
             }
 
-            .ivisa-themable #navigation-header.splitHeader nav .nav-item > .nav-link,
-            .ivisa-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn {
-                color: var(--ivisa-text-0);
+            .VisaDirect-themable #navigation-header.splitHeader nav .nav-item > .nav-link,
+            .VisaDirect-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn {
+                color: var(--VisaDirect-text-0);
             }
 
             @media (min-width: 768px) {
-                .ivisa-themable .md\:text-blue-500 {
-                    color: var(--ivisa-secondary-1);
+                .VisaDirect-themable .md\:text-blue-500 {
+                    color: var(--VisaDirect-secondary-1);
                 }
             }
 
             @media (min-width: 992px) {
-                .ivisa-themable #navigation-header .nav-link-dropdown-btn:hover,
-                .ivisa-themable #navigation-header .nav-link-dropdown-btn:focus,
-                .ivisa-themable #navigation-header .nav-link-dropdown-btn:active,
-                .ivisa-themable #navigation-header .nav-link-dropdown-btn[aria-expanded="true"],
-                .ivisa-themable #navigation-header .dropdown-menu-header,
-                .ivisa-themable #navigation-header .dropdown-menu-header a,
-                .ivisa-themable #navigation-header .dropdown-menu-header span,
-                .ivisa-themable #navigation-header .dropdown-menu-header input,
-                .ivisa-themable #navigation-header .dropdown-menu-header a:hover,
-                .ivisa-themable #navigation-header .dropdown-menu-header span:hover,
-                .ivisa-themable #navigation-header .dropdown-menu-header input:hover {
-                    background-color: var(--ivisa-secondary-1);
+                .VisaDirect-themable #navigation-header .nav-link-dropdown-btn:hover,
+                .VisaDirect-themable #navigation-header .nav-link-dropdown-btn:focus,
+                .VisaDirect-themable #navigation-header .nav-link-dropdown-btn:active,
+                .VisaDirect-themable #navigation-header .nav-link-dropdown-btn[aria-expanded="true"],
+                .VisaDirect-themable #navigation-header .dropdown-menu-header,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header a,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header span,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header input,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header a:hover,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header span:hover,
+                .VisaDirect-themable #navigation-header .dropdown-menu-header input:hover {
+                    background-color: var(--VisaDirect-secondary-1);
                 }
 
-                .ivisa-themable #navigation-header.splitHeader nav .nav-item > .nav-link:hover,
-                .ivisa-themable #navigation-header.splitHeader nav .nav-item > .nav-link:active,
-                .ivisa-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn:hover,
-                .ivisa-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn:active,
-                .ivisa-themable #navigation-header.splitHeader .split-user-icon:hover {
-                    color: var(--ivisa-primary-1);
+                .VisaDirect-themable #navigation-header.splitHeader nav .nav-item > .nav-link:hover,
+                .VisaDirect-themable #navigation-header.splitHeader nav .nav-item > .nav-link:active,
+                .VisaDirect-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn:hover,
+                .VisaDirect-themable #navigation-header.splitHeader nav .nav-link-dropdown-btn:active,
+                .VisaDirect-themable #navigation-header.splitHeader .split-user-icon:hover {
+                    color: var(--VisaDirect-primary-1);
                 }
             }
         </style>
@@ -4513,23 +4571,23 @@
                     let icon = config.icon && iconTemplates[config.icon] ? iconTemplates[config.icon] : iconTemplates.info;
                     let message = `<p>${config.text}</p>`;
                     let btnText = config.button ? `<span>${config.button}</span>` : "";
-                    return `<aside class="ivisa-alert ${type}">
-                <div class="ivisa-alert-icon">
+                    return `<aside class="VisaDirect-alert ${type}">
+                <div class="VisaDirect-alert-icon">
                   ${icon}
                 </div>
-                <div class="ivisa-alert-content">
+                <div class="VisaDirect-alert-content">
                   ${title}
                   ${message}
                 </div>
-                <div class="ivisa-alert-action">
+                <div class="VisaDirect-alert-action">
                   <button class="close-modal">${btnText}${iconTemplates.close}</button>
                 </div>
               </aside>`;
                 }
 
-                function ivisaNotification(params) {
+                function VisaDirectNotification(params) {
                     params = typeof params === "string" ? { text: params } : params;
-                    let ivisaAlert = null;
+                    let VisaDirectAlert = null;
                     let defaults = {
                         title: "",
                         text: "There was an issue. No message was provided",
@@ -4546,27 +4604,27 @@
                         ...params,
                     };
                     const show = function () {
-                        document.querySelectorAll(".ivisa-alert-overlay").forEach((e) => e.remove());
-                        ivisaAlert = document.createElement("div");
-                        ivisaAlert.className = "ivisa-alert-overlay";
-                        ivisaAlert.insertAdjacentHTML("afterbegin", alertTemplate(config));
-                        document.body.appendChild(ivisaAlert);
-                        ivisaAlert.querySelector(".close-modal").addEventListener("click", destroy, true);
+                        document.querySelectorAll(".VisaDirect-alert-overlay").forEach((e) => e.remove());
+                        VisaDirectAlert = document.createElement("div");
+                        VisaDirectAlert.className = "VisaDirect-alert-overlay";
+                        VisaDirectAlert.insertAdjacentHTML("afterbegin", alertTemplate(config));
+                        document.body.appendChild(VisaDirectAlert);
+                        VisaDirectAlert.querySelector(".close-modal").addEventListener("click", destroy, true);
                         document.addEventListener("keydown", handleEscape, true);
-                        setTimeout(() => ivisaAlert.classList.add("open"), 0);
+                        setTimeout(() => VisaDirectAlert.classList.add("open"), 0);
                     };
                     const handleEscape = function (e) {
                         e.key === "Escape" ? destroy() : 0;
                     };
                     const destroy = function (immediate) {
-                        if (ivisaAlert !== null) {
-                            ivisaAlert.classList.remove("open");
+                        if (VisaDirectAlert !== null) {
+                            VisaDirectAlert.classList.remove("open");
                             setTimeout(() => {
-                                if (!ivisaAlert || !ivisaAlert.parentNode) return;
-                                ivisaAlert.querySelector(".close-modal").removeEventListener("click", destroy, true);
+                                if (!VisaDirectAlert || !VisaDirectAlert.parentNode) return;
+                                VisaDirectAlert.querySelector(".close-modal").removeEventListener("click", destroy, true);
                                 document.removeEventListener("keydown", handleEscape, true);
-                                document.body.removeChild(ivisaAlert);
-                                ivisaAlert = null;
+                                document.body.removeChild(VisaDirectAlert);
+                                VisaDirectAlert = null;
                             }, 700);
                         }
                     };
@@ -4579,7 +4637,7 @@
 
                 //hijacking swal
                 function swalSwap() {
-                    if (window.swal && !window.swal.swapped && splitVersion === "202209-alt1pz01") window.swal = ivisaNotification;
+                    if (window.swal && !window.swal.swapped && splitVersion === "202209-alt1pz01") window.swal = VisaDirectNotification;
                 }
 
                 window.addEventListener(
@@ -4600,7 +4658,7 @@
             })();
         </script>
         <style>
-            .ivisa-alert-overlay {
+            .VisaDirect-alert-overlay {
                 position: fixed;
                 overflow: hidden;
                 top: 0;
@@ -4613,13 +4671,13 @@
                 backdrop-filter: blur(0px);
             }
 
-            .ivisa-alert-overlay.open {
+            .VisaDirect-alert-overlay.open {
                 transition: all 1s;
                 background: rgba(0, 0, 0, 0.15);
                 backdrop-filter: blur(1px);
             }
 
-            aside.ivisa-alert {
+            aside.VisaDirect-alert {
                 border-radius: 4px;
                 background: #f5f5f5;
                 display: inline-flex;
@@ -4635,55 +4693,55 @@
                 color: rgba(0, 0, 0, 0.87);
             }
 
-            .ivisa-alert-overlay.open aside.ivisa-alert {
+            .VisaDirect-alert-overlay.open aside.VisaDirect-alert {
                 top: 15vh;
                 transition: 0.2s 0.2s top;
             }
 
-            aside.ivisa-alert.error {
+            aside.VisaDirect-alert.error {
                 background: #fdeceb;
             }
 
-            aside.ivisa-alert.warning {
+            aside.VisaDirect-alert.warning {
                 background: #fef1e6;
             }
 
-            aside.ivisa-alert.info {
+            aside.VisaDirect-alert.info {
                 background: #e8f3fe;
             }
 
-            aside.ivisa-alert.success {
+            aside.VisaDirect-alert.success {
                 background: #ecf7ed;
             }
 
-            aside.ivisa-alert .ivisa-alert-icon,
-            aside.ivisa-alert .ivisa-alert-content,
-            aside.ivisa-alert .ivisa-alert-action {
+            aside.VisaDirect-alert .VisaDirect-alert-icon,
+            aside.VisaDirect-alert .VisaDirect-alert-content,
+            aside.VisaDirect-alert .VisaDirect-alert-action {
                 padding: 0 5px;
             }
 
-            aside.ivisa-alert .ivisa-alert-icon svg {
+            aside.VisaDirect-alert .VisaDirect-alert-icon svg {
                 position: relative;
                 top: -2px;
             }
 
-            aside.ivisa-alert .ivisa-alert-content {
+            aside.VisaDirect-alert .VisaDirect-alert-content {
                 flex: 1;
                 padding: 5px;
             }
 
-            aside.ivisa-alert h1 {
+            aside.VisaDirect-alert h1 {
                 font-size: 16px;
                 margin: 0 0 5px;
             }
 
-            aside.ivisa-alert p {
+            aside.VisaDirect-alert p {
                 font-size: 14px;
                 color: rgba(0, 0, 0, 0.87);
                 margin: 0;
             }
 
-            aside.ivisa-alert .ivisa-alert-action button {
+            aside.VisaDirect-alert .VisaDirect-alert-action button {
                 padding: 5px 10px 4px;
                 border-radius: 4px;
                 display: flex;
@@ -4691,16 +4749,16 @@
                 min-height: 32px;
             }
 
-            aside.ivisa-alert .ivisa-alert-action button:hover {
+            aside.VisaDirect-alert .VisaDirect-alert-action button:hover {
                 background: rgba(0, 0, 0, 0.06);
             }
 
-            aside.ivisa-alert .ivisa-alert-action span {
+            aside.VisaDirect-alert .VisaDirect-alert-action span {
                 display: inline-block;
                 margin-right: 5px;
             }
 
-            aside.ivisa-alert .ivisa-alert-action svg {
+            aside.VisaDirect-alert .VisaDirect-alert-action svg {
                 display: inline-block;
             }
         </style>
@@ -4783,20 +4841,14 @@
                 <div id="navigation-header" class="flex flex-wrap justify-between w-full m-0 lg:px-3 splitHeader">
                     <div class="flex items-center justify-between logo-section h-full w-full lg:w-auto">
                         <div class="flex items-center">
-                            <a class="flex" href="/" style="z-index: 0;">
-                                <span class="sr-only">ivisa</span>
+                            <a class="flex" href="/#" style="z-index: 0;">
+                                <span class="sr-only">VisaDirect</span>
                                 <div class="logo-container">
-                                    <img class="logo-ivisa" src="/index_files/ivisa-logo-bars.png" alt="ivisa logo" />
+                                    <img class="logo-VisaDirect" src="/index_files/VisaDirect-logo-bars.png" alt="VisaDirect logo" />
                                 </div>
                             </a>
 
-                            <div class="flex items-center">
-                                <div class="leading-none mb-0 lg:mb-1 bbc-feature">
-                                    <p class="text-white inline-block align-middle m-0 w-full sm:w-auto">Featured on</p>
-                                    <img alt="BBC" class="bbc-feature-logo hidden md:block" width="42" height="12" src="/index_files/featured_bbc_black.svg" />
-                                    <img alt="CNN" class="bbc-feature-logo block md:hidden" width="42" height="12" src="https://d2v38geh4xxze4.cloudfront.net/img/CNN_small.png" />
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div class="lg:hidden">
@@ -4810,7 +4862,7 @@
                     <nav>
                         <ul class="flex flex-col lg:flex-row px-4 items-left">
                             <li class="nav-item justify-center">
-                                <a id="btn_travel_docs" class="nav-link nav-link-dropdown-btn px-0 lg:px-4" href="/">
+                                <a id="btn_travel_docs" class="nav-link nav-link-dropdown-btn px-0 lg:px-4" href="/#">
                                     <span class="text-black md:text-primary">Home</span>
                                 </a>
                             </li>
@@ -4853,7 +4905,7 @@
                                     </li>
                                     <li id="logged-in-header-transformer-mobile" class="lg:hidden mx-4">
                                         <a href="/en/login" tabindex="-1" class="">
-                                            <button id="btn_header_login" type="button" class="btn btn--blue-trans btn--small btn--header flex-row-reverse" onclick='return ivisalogButtonClick("Login", null)'>
+                                            <button id="btn_header_login" type="button" class="btn btn--blue-trans btn--small btn--header flex-row-reverse" onclick='return VisaDirectlogButtonClick("Login", null)'>
                                                 <span> Login </span>
                                             </button>
                                         </a>
@@ -4888,8 +4940,8 @@
                         <p class="text-white font-bold mb-0" style="font-size: 10px;">
                             For Best Experience
                         </p>
-                        <img class="w-24 my-2" src="/index_files/ivisa-logo-bars.png" alt="" style="filter: invert(1);" />
-                        <button type="button" class="btn btn--primary flex-row-reverse py-2 px-4 mt-4" onclick='return ivisalogButtonClick("Get Our Mobile App", null)'>
+                        <img class="w-24 my-2" src="/index_files/VisaDirect-logo-bars.png" alt="" style="filter: invert(1);" />
+                        <button type="button" class="btn btn--primary flex-row-reverse py-2 px-4 mt-4" onclick='return VisaDirectlogButtonClick("Get Our Mobile App", null)'>
                             <span> Get Our Mobile App </span>
                         </button>
 
@@ -4920,7 +4972,7 @@
                                     <div
                                         data-vue-component="dropdown-filter"
                                         class="w-full"
-                                        data-vue-props='{"placeholder":"Choose Country","information-all-options":[{"value":"AF","name":"Afghanistan","url":"https:\/\/www.ivisa\/afghanistan-visa#faqs"},{"value":"AX","name":"Aland Islands","url":"https:\/\/www.ivisa#faqs"},{"value":"AL","name":"Albania","url":"https:\/\/www.ivisa\/albania-visa#faqs"},{"value":"DZ","name":"Algeria","url":"https:\/\/www.ivisa\/algeria-health-declaration-form#faqs"},{"value":"AS","name":"American Samoa","url":"https:\/\/www.ivisa\/american-samoa-entry-permit#faqs"},{"value":"AD","name":"Andorra","url":"https:\/\/www.ivisa\/andorra-health-declaration-form#faqs"},{"value":"AO","name":"Angola","url":"https:\/\/www.ivisa\/angola-e-visa#faqs"},{"value":"AI","name":"Anguilla","url":"https:\/\/www.ivisa\/anguilla-visa#faqs"},{"value":"AQ","name":"Antarctica","url":"https:\/\/www.ivisa\/antarctica-visa#faqs"},{"value":"AG","name":"Antigua \u0026 Barbuda","url":"https:\/\/www.ivisa\/antigua-and-barbuda-e-visa#faqs"},{"value":"AR","name":"Argentina","url":"https:\/\/www.ivisa\/argentina-health-declaration-form#faqs"},{"value":"AM","name":"Armenia","url":"https:\/\/www.ivisa\/armenia-e-visa#faqs"},{"value":"AW","name":"Aruba","url":"https:\/\/www.ivisa\/aruba-ed-card#faqs"},{"value":"AU","name":"Australia","url":"https:\/\/www.ivisa\/australia-evisitor#faqs"},{"value":"AT","name":"Austria","url":"https:\/\/www.ivisa\/austria-pre-travel-clearance#faqs"},{"value":"AZ","name":"Azerbaijan","url":"https:\/\/www.ivisa\/azerbaijan-visa#faqs"},{"value":"BS","name":"Bahamas","url":"https:\/\/www.ivisa\/bahamas-visa#faqs"},{"value":"BH","name":"Bahrain","url":"https:\/\/www.ivisa\/bahrain-visa#faqs"},{"value":"BD","name":"Bangladesh","url":"https:\/\/www.ivisa\/bangladesh-visa#faqs"},{"value":"BB","name":"Barbados","url":"https:\/\/www.ivisa\/barbados-ed-card#faqs"},{"value":"BY","name":"Belarus","url":"https:\/\/www.ivisa\/belarus-visa#faqs"},{"value":"BE","name":"Belgium","url":"https:\/\/www.ivisa\/belgium-passenger-locator-form#faqs"},{"value":"BZ","name":"Belize","url":"https:\/\/www.ivisa\/belize-travel-insurance#faqs"},{"value":"BJ","name":"Benin","url":"https:\/\/www.ivisa\/benin-e-visa#faqs"},{"value":"BM","name":"Bermuda","url":"https:\/\/www.ivisa\/bermuda-travel-authorization#faqs"},{"value":"BT","name":"Bhutan","url":"https:\/\/www.ivisa\/bhutan-health-declaration-form#faqs"},{"value":"BO","name":"Bolivia","url":"https:\/\/www.ivisa\/bolivia-passenger-locator-form#faqs"},{"value":"BQ","name":"Bonaire, St Eustatius and Saba","url":"https:\/\/www.ivisa\/bonaire-health-declaration-form#faqs"},{"value":"BA","name":"Bosnia and Herzegovina","url":"https:\/\/www.ivisa\/bosnia-visa#faqs"},{"value":"BW","name":"Botswana","url":"https:\/\/www.ivisa\/botswana-visa#faqs"},{"value":"BV","name":"Bouvet Island","url":"https:\/\/www.ivisa\/bouvet-island-visa#faqs"},{"value":"BR","name":"Brazil","url":"https:\/\/www.ivisa\/brazil-travelers-health-declaration-form#faqs"},{"value":"IO","name":"British Indian Ocean Territory","url":"https:\/\/www.ivisa\/british-indian-ocean-territory-visa#faqs"},{"value":"BN","name":"Brunei Darussalam","url":"https:\/\/www.ivisa\/brunei-darussalam-health-declaration-form#faqs"},{"value":"BG","name":"Bulgaria","url":"https:\/\/www.ivisa\/bulgaria-travel-declaration#faqs"},{"value":"BF","name":"Burkina Faso","url":"https:\/\/www.ivisa\/burkina-faso-visa#faqs"},{"value":"BI","name":"Burundi","url":"https:\/\/www.ivisa\/burundi-visa#faqs"},{"value":"KH","name":"Cambodia","url":"https:\/\/www.ivisa\/cambodia-visa#faqs"},{"value":"CM","name":"Cameroon","url":"https:\/\/www.ivisa\/cameroon-visa#faqs"},{"value":"CA","name":"Canada","url":"https:\/\/www.ivisa\/canada-visa-eta#faqs"},{"value":"CV","name":"Cape Verde","url":"https:\/\/www.ivisa\/cape-verde-visa#faqs"},{"value":"KY","name":"Cayman Islands","url":"https:\/\/www.ivisa\/cayman-islands-travel-application#faqs"},{"value":"CF","name":"Central African Republic","url":"https:\/\/www.ivisa\/central-african-republic-visa#faqs"},{"value":"TD","name":"Chad","url":"https:\/\/www.ivisa\/chad-visa#faqs"},{"value":"CL","name":"Chile","url":"https:\/\/www.ivisa\/chile-travelers-affidavit#faqs"},{"value":"CN","name":"China","url":"https:\/\/www.ivisa\/china-health-declaration-form#faqs"},{"value":"CX","name":"Christmas Island","url":"https:\/\/www.ivisa\/christmas-island-health-declaration-form#faqs"},{"value":"CC","name":"Cocos (K) Island","url":"https:\/\/www.ivisa\/cocos-k-island-health-declaration-form#faqs"},{"value":"CO","name":"Colombia","url":"https:\/\/www.ivisa\/colombia-check-mig-form#faqs"},{"value":"KM","name":"Comoros","url":"https:\/\/www.ivisa\/comoros-sanitary-traveler-form#faqs"},{"value":"CG","name":"Congo","url":"https:\/\/www.ivisa\/congo-visa#faqs"},{"value":"CK","name":"Cook Islands","url":"https:\/\/www.ivisa\/cook-islands-visa#faqs"},{"value":"CR","name":"Costa Rica","url":"https:\/\/www.ivisa\/digital-nomad-visa#faqs"},{"value":"CI","name":"Ivory Coast","url":"https:\/\/www.ivisa\/ivory-coast-e-visa#faqs"},{"value":"HR","name":"Croatia","url":"https:\/\/www.ivisa\/croatia\/croatia-travel-announcement-form#faqs"},{"value":"CU","name":"Cuba","url":"https:\/\/www.ivisa\/usa-tourist-card-cuba#faqs"},{"value":"CW","name":"Curacao","url":"https:\/\/www.ivisa\/curacao-immigration-and-locator-card#faqs"},{"value":"CY","name":"Cyprus","url":"https:\/\/www.ivisa\/cyprus-flight-pass#faqs"},{"value":"CZ","name":"Czech Republic","url":"https:\/\/www.ivisa\/czech-republic-passenger-locator-form#faqs"},{"value":"CD","name":"Democratic Republic of Congo","url":"https:\/\/www.ivisa\/drc-congo-traveler-registration#faqs"},{"value":"DK","name":"Denmark","url":"https:\/\/www.ivisa\/denmark-health-declaration-form#faqs"},{"value":"DJ","name":"Djibouti","url":"https:\/\/www.ivisa\/djibouti-e-visa#faqs"},{"value":"DM","name":"Dominica","url":"https:\/\/www.ivisa\/dominica-health-questionnaire#faqs"},{"value":"DO","name":"Dominican Republic","url":"https:\/\/www.ivisa\/dominican-republic-e-ticket#faqs"},{"value":"TL","name":"East Timor","url":"https:\/\/www.ivisa\/timor-leste-visa-on-arrival#faqs"},{"value":"EC","name":"Ecuador","url":"https:\/\/www.ivisa\/ecuador-traveler-health-declaration#faqs"},{"value":"EG","name":"Egypt","url":"https:\/\/www.ivisa\/egypt-e-visa#faqs"},{"value":"SV","name":"El Salvador","url":"https:\/\/www.ivisa\/el-salvador-visa#faqs"},{"value":"GQ","name":"Equatorial Guinea","url":"https:\/\/www.ivisa\/equatorial-guinea-visa#faqs"},{"value":"ER","name":"Eritrea","url":"https:\/\/www.ivisa\/eritrea-visa#faqs"},{"value":"EE","name":"Estonia","url":"https:\/\/www.ivisa\/estonia-passenger-locator#faqs"},{"value":"ET","name":"Ethiopia","url":"https:\/\/www.ivisa\/ethiopia-visa#faqs"},{"value":"FK","name":"Falkland Islands (Malvinas)","url":"https:\/\/www.ivisa\/falkland-islands-malvinas-health-declaration-form#faqs"},{"value":"FO","name":"Faroe Islands","url":"https:\/\/www.ivisa\/faroe-islands-visa#faqs"},{"value":"FJ","name":"Fiji","url":"https:\/\/www.ivisa\/fiji-travel-insurance#faqs"},{"value":"FI","name":"Finland","url":"https:\/\/www.ivisa\/finland-digital-covid-certificate#faqs"},{"value":"FR","name":"France","url":"https:\/\/www.ivisa\/france-travel-certificate#faqs"},{"value":"GF","name":"French Guiana","url":"https:\/\/www.ivisa\/french-guiana-visa#faqs"},{"value":"PF","name":"French Polynesia","url":"https:\/\/www.ivisa\/french-polynesia-etis#faqs"},{"value":"TF","name":"French West Indies","url":"https:\/\/www.ivisa\/french-southern-territories-visa#faqs"},{"value":"GA","name":"Gabon","url":"https:\/\/www.ivisa\/gabon-e-visa#faqs"},{"value":"GM","name":"Gambia","url":"https:\/\/www.ivisa\/gambia-visa#faqs"},{"value":"GE","name":"Georgia","url":"https:\/\/www.ivisa\/georgia-pre-registration#faqs"},{"value":"DE","name":"Germany","url":"https:\/\/www.ivisa\/germany-digital-registration-on-entry#faqs"},{"value":"GH","name":"Ghana","url":"https:\/\/www.ivisa\/ghana-health-declaration-form#faqs"},{"value":"GI","name":"Gibraltar","url":"https:\/\/www.ivisa\/gibraltar-passenger-locator-form#faqs"},{"value":"GR","name":"Greece","url":"https:\/\/www.ivisa\/greece-passenger-locator-form#faqs"},{"value":"GL","name":"Greenland","url":"https:\/\/www.ivisa\/greenland-sumut-form#faqs"},{"value":"GD","name":"Grenada","url":"https:\/\/www.ivisa\/grenada-travel-authorization#faqs"},{"value":"GP","name":"Guadeloupe","url":"https:\/\/www.ivisa\/guadeloupe-health-declaration-form#faqs"},{"value":"GU","name":"Guam","url":"https:\/\/www.ivisa\/guam-health-declaration-form#faqs"},{"value":"GT","name":"Guatemala","url":"https:\/\/www.ivisa\/guatemala-health-pass#faqs"},{"value":"GG","name":"Guernsey","url":"https:\/\/www.ivisa\/guernsey-leave-to-enter#faqs"},{"value":"GN","name":"Guinea","url":"https:\/\/www.ivisa\/guinea-evisa#faqs"},{"value":"GW","name":"Guinea-Bissau","url":"https:\/\/www.ivisa\/guinea-bissau-e-visa#faqs"},{"value":"GY","name":"Guyana","url":"https:\/\/www.ivisa\/guyana-passenger-locator-form#faqs"},{"value":"HT","name":"Haiti","url":"https:\/\/www.ivisa\/haiti-visa#faqs"},{"value":"HM","name":"Heard Island and McDonald Islands","url":"https:\/\/www.ivisa\/heard-island-and-mcdonald-islands-e-visa#faqs"},{"value":"HN","name":"Honduras","url":"https:\/\/www.ivisa\/honduras-pre-check#faqs"},{"value":"HK","name":"Hong Kong","url":"https:\/\/www.ivisa\/hong-kong-electronic-health-declaration-form#faqs"},{"value":"HU","name":"Hungary","url":"https:\/\/www.ivisa\/hungary-digital-covid-certificate#faqs"},{"value":"IS","name":"Iceland","url":"https:\/\/www.ivisa\/iceland-pre-registration-form#faqs"},{"value":"IN","name":"India","url":"https:\/\/www.ivisa\/india-visa-application#faqs"},{"value":"ID","name":"Indonesia","url":"https:\/\/www.ivisa\/indonesia-health-alert-card#faqs"},{"value":"IR","name":"Iran","url":"https:\/\/www.ivisa\/iran-evisa#faqs"},{"value":"IQ","name":"Iraq","url":"https:\/\/www.ivisa\/iraq-visa#faqs"},{"value":"IE","name":"Ireland","url":"https:\/\/www.ivisa\/ireland\/ireland-passenger-locator-form#faqs"},{"value":"IM","name":"Isle of Man","url":"https:\/\/www.ivisa\/isle-of-man-visa#faqs"},{"value":"IL","name":"Israel","url":"https:\/\/www.ivisa\/israel-inbound-passenger-statement#faqs"},{"value":"IT","name":"Italy","url":"https:\/\/www.ivisa\/italy-health-declaration-form#faqs"},{"value":"JM","name":"Jamaica","url":"https:\/\/www.ivisa\/jamaica-travel-authorization#faqs"},{"value":"JP","name":"Japan","url":"https:\/\/www.ivisa\/japan-health-declaration-form#faqs"},{"value":"JE","name":"Jersey","url":"https:\/\/www.ivisa\/jersey-travel-registration#faqs"},{"value":"JO","name":"Jordan","url":"https:\/\/www.ivisa\/jordan-pass#faqs"},{"value":"KZ","name":"Kazakhstan","url":"https:\/\/www.ivisa\/kazakhstan-health-declaration-form#faqs"},{"value":"KE","name":"Kenya","url":"https:\/\/www.ivisa\/kenya-visa#faqs"},{"value":"KI","name":"Kiribati","url":"https:\/\/www.ivisa\/kiribati-visa#faqs"},{"value":"XK","name":"Kosovo","url":"https:\/\/www.ivisa\/kosovo-visa#faqs"},{"value":"KW","name":"Kuwait","url":"https:\/\/www.ivisa\/kuwait\/kuwait-visa#faqs"},{"value":"KG","name":"Kyrgyzstan","url":"https:\/\/www.ivisa\/kyrgyzstan-e-visa#faqs"},{"value":"LA","name":"Laos","url":"https:\/\/www.ivisa\/laos-visa#faqs"},{"value":"LV","name":"Latvia","url":"https:\/\/www.ivisa\/latvia-covid-pass#faqs"},{"value":"LB","name":"Lebanon","url":"https:\/\/www.ivisa\/lebanon-moph-pass#faqs"},{"value":"LS","name":"Lesotho","url":"https:\/\/www.ivisa\/lesotho-e-visa#faqs"},{"value":"LR","name":"Liberia","url":"https:\/\/www.ivisa\/liberia-health-declaration-form#faqs"},{"value":"LY","name":"Libya","url":"https:\/\/www.ivisa\/libya-visa#faqs"},{"value":"LI","name":"Liechtenstein","url":"https:\/\/www.ivisa\/liechtenstein-entry-form#faqs"},{"value":"LT","name":"Lithuania","url":"https:\/\/www.ivisa\/lithuania-registration-form#faqs"},{"value":"LU","name":"Luxembourg","url":"https:\/\/www.ivisa\/luxembourg-digital-covid-certificate#faqs"},{"value":"MO","name":"Macao","url":"https:\/\/www.ivisa\/macao-health-code#faqs"},{"value":"MK","name":"Macedonia","url":"https:\/\/www.ivisa\/macedonia-visa#faqs"},{"value":"MG","name":"Madagascar","url":"https:\/\/www.ivisa\/madagascar-visa-on-arrival#faqs"},{"value":"MW","name":"Malawi","url":"https:\/\/www.ivisa\/malawi-e-visa#faqs"},{"value":"MY","name":"Malaysia","url":"https:\/\/www.ivisa\/malaysia-visa#faqs"},{"value":"MV","name":"Maldives","url":"https:\/\/www.ivisa\/maldives-health-declaration-form#faqs"},{"value":"ML","name":"Mali","url":"https:\/\/www.ivisa\/mali-visa#faqs"},{"value":"MT","name":"Malta","url":"https:\/\/www.ivisa\/malta-declaration-forms#faqs"},{"value":"MH","name":"Marshall Islands","url":"https:\/\/www.ivisa\/marshall-islands-visa-on-arrival#faqs"},{"value":"MQ","name":"Martinique","url":"https:\/\/www.ivisa\/martinique-attestation-form#faqs"},{"value":"MR","name":"Mauritania","url":"https:\/\/www.ivisa\/mauritania-visa#faqs"},{"value":"MU","name":"Mauritius","url":"https:\/\/www.ivisa\/mauritius-premium-visa#faqs"},{"value":"YT","name":"Mayotte","url":"https:\/\/www.ivisa\/mayotte-visa#faqs"},{"value":"MX","name":"Mexico","url":"https:\/\/www.ivisa\/mexico-tourist-visa#faqs"},{"value":"FM","name":"Micronesia","url":"https:\/\/www.ivisa\/micronesia-visa#faqs"},{"value":"MD","name":"Moldova","url":"https:\/\/www.ivisa\/moldova-e-visa#faqs"},{"value":"MC","name":"Monaco","url":"https:\/\/www.ivisa\/monaco-health-declaration-form#faqs"},{"value":"MN","name":"Mongolia","url":"https:\/\/www.ivisa\/mongolia-evisa#faqs"},{"value":"ME","name":"Montenegro","url":"https:\/\/www.ivisa\/montenegro-visa#faqs"},{"value":"MS","name":"Montserrat","url":"https:\/\/www.ivisa\/montserrat-e-visa#faqs"},{"value":"MA","name":"Morocco","url":"https:\/\/www.ivisa\/morocco-visa#faqs"},{"value":"MZ","name":"Mozambique","url":"https:\/\/www.ivisa\/mozambique-visa-on-arrival#faqs"},{"value":"MM","name":"Myanmar","url":"https:\/\/www.ivisa\/myanmar-visa#faqs"},{"value":"NA","name":"Namibia","url":"https:\/\/www.ivisa\/namibia-health-questionnaire#faqs"},{"value":"NR","name":"Nauru","url":"https:\/\/www.ivisa\/nauru-health-declaration-form#faqs"},{"value":"NP","name":"Nepal","url":"https:\/\/www.ivisa\/nepal-traveller-arrival-form#faqs"},{"value":"NL","name":"Netherlands","url":"https:\/\/www.ivisa\/netherlands\/netherlands-health-declaration-form#faqs"},{"value":"NC","name":"New Caledonia","url":"https:\/\/www.ivisa\/new-caledonia-travel-certificate#faqs"},{"value":"NZ","name":"New Zealand","url":"https:\/\/www.ivisa\/new-zealand-eta#faqs"},{"value":"NI","name":"Nicaragua","url":"https:\/\/www.ivisa\/nicaragua-immigration-form#faqs"},{"value":"NE","name":"Niger","url":"https:\/\/www.ivisa\/niger-visa#faqs"},{"value":"NG","name":"Nigeria","url":"https:\/\/www.ivisa\/nigeria-health-declaration#faqs"},{"value":"NU","name":"Niue","url":"https:\/\/www.ivisa\/niue-visa#faqs"},{"value":"NF","name":"Norfolk Island","url":"https:\/\/www.ivisa\/norfolk-island-health-declaration-form#faqs"},{"value":"KP","name":"North Korea","url":"https:\/\/www.ivisa\/north-korea-visa#faqs"},{"value":"MP","name":"Northern Mariana Islands","url":"https:\/\/www.ivisa\/northern-mariana-islands-health-declaration-form#faqs"},{"value":"NO","name":"Norway","url":"https:\/\/www.ivisa\/norway\/norway-entry-registration#faqs"},{"value":"OM","name":"Oman","url":"https:\/\/www.ivisa\/oman-visa#faqs"},{"value":"PK","name":"Pakistan","url":"https:\/\/www.ivisa\/pakistan-visa#faqs"},{"value":"PW","name":"Palau","url":"https:\/\/www.ivisa\/palau-visa-on-arrival#faqs"},{"value":"PS","name":"Palestine","url":"https:\/\/www.ivisa\/palestine-visa#faqs"},{"value":"PA","name":"Panama","url":"https:\/\/www.ivisa\/panama-electronic-affidavit#faqs"},{"value":"PG","name":"Papua New Guinea","url":"https:\/\/www.ivisa\/papua-new-guinea-e-visa#faqs"},{"value":"PY","name":"Paraguay","url":"https:\/\/www.ivisa\/paraguay-health-declaration#faqs"},{"value":"PE","name":"Peru","url":"https:\/\/www.ivisa\/peru-health-declaration-form#faqs"},{"value":"PH","name":"Philippines","url":"https:\/\/www.ivisa\/philippines-e-cif#faqs"},{"value":"PN","name":"Pitcairn","url":"https:\/\/www.ivisa\/pitcairn-visa#faqs"},{"value":"PL","name":"Poland","url":"https:\/\/www.ivisa\/poland-passenger-locator-form#faqs"},{"value":"PT","name":"Portugal","url":"https:\/\/www.ivisa\/portugal-passenger-locator-card#faqs"},{"value":"PR","name":"Puerto Rico","url":"https:\/\/www.ivisa\/puerto-rico-health-declaration-form#faqs"},{"value":"QA","name":"Qatar","url":"https:\/\/www.ivisa\/hayya-card-qatar#faqs"},{"value":"RE","name":"Reunion","url":"https:\/\/www.ivisa\/reunion-attestation#faqs"},{"value":"RO","name":"Romania","url":"https:\/\/www.ivisa\/romania-covid-statement#faqs"},{"value":"RU","name":"Russia","url":"https:\/\/www.ivisa\/russia-invitation-letter#faqs"},{"value":"RW","name":"Rwanda","url":"https:\/\/www.ivisa\/rwanda-e-visa#faqs"},{"value":"BL","name":"Saint Barthelemy","url":"https:\/\/www.ivisa\/st-barthelemy-visa#faqs"},{"value":"SH","name":"Saint Helena","url":"https:\/\/www.ivisa\/st-helena-e-visa#faqs"},{"value":"KN","name":"Saint Kitts and Nevis","url":"https:\/\/www.ivisa\/st-kitts-and-nevis-e-visa#faqs"},{"value":"LC","name":"Saint Lucia","url":"https:\/\/www.ivisa\/saint-lucia-travel-registration-form#faqs"},{"value":"MF","name":"Saint Martin","url":"https:\/\/www.ivisa\/st-martin-visa#faqs"},{"value":"PM","name":"Saint Pierre and Miquelon","url":"https:\/\/www.ivisa\/st-pierre-visa#faqs"},{"value":"VC","name":"Saint Vincent \u0026 Grenadines","url":"https:\/\/www.ivisa\/st-vincent-and-grenadines-pre-arrival-travel-form#faqs"},{"value":"WS","name":"Samoa","url":"https:\/\/www.ivisa\/samoa-medical-clearance#faqs"},{"value":"SM","name":"San Marino","url":"https:\/\/www.ivisa\/san-marino-health-declaration-form#faqs"},{"value":"ST","name":"Sao Tome \u0026 Principe","url":"https:\/\/www.ivisa\/sao-tome-e-visa#faqs"},{"value":"SA","name":"Saudi Arabia","url":"https:\/\/www.ivisa\/saudi-arabia-e-visa#faqs"},{"value":"SN","name":"Senegal","url":"https:\/\/www.ivisa\/senegal-passenger-locator-form#faqs"},{"value":"RS","name":"Serbia","url":"https:\/\/www.ivisa\/serbia-self-assessment-form#faqs"},{"value":"SC","name":"Seychelles","url":"https:\/\/www.ivisa\/seychelles-travel-authorization#faqs"},{"value":"SL","name":"Sierra Leone","url":"https:\/\/www.ivisa\/sierra-leone-health-declaration-form#faqs"},{"value":"SG","name":"Singapore","url":"https:\/\/www.ivisa\/singapore-e-visa#faqs"},{"value":"SX","name":"Sint Maarten","url":"https:\/\/www.ivisa\/st-maarten-electronic-health-authorization-system#faqs"},{"value":"SK","name":"Slovakia","url":"https:\/\/www.ivisa\/slovakia-public-health-locator-form#faqs"},{"value":"SI","name":"Slovenia","url":"https:\/\/www.ivisa\/slovenia-entry-registration#faqs"},{"value":"SB","name":"Solomon Islands","url":"https:\/\/www.ivisa\/solomon-health-declaration-card#faqs"},{"value":"SO","name":"Somalia","url":"https:\/\/www.ivisa\/somalia-visa#faqs"},{"value":"ZA","name":"South Africa","url":"https:\/\/www.ivisa\/south-africa-health-questionnaire#faqs"},{"value":"GS","name":"South Georgia and the South Sandwich Islands","url":"https:\/\/www.ivisa\/south-georgia-and-the-south-sandwich-islands-visa#faqs"},{"value":"KR","name":"South Korea","url":"https:\/\/www.ivisa\/south-korea-eta#faqs"},{"value":"SS","name":"South Sudan","url":"https:\/\/www.ivisa\/south-sudan-visa#faqs"},{"value":"ES","name":"Spain","url":"https:\/\/www.ivisa\/spain-health-declaration-form#faqs"},{"value":"LK","name":"Sri Lanka","url":"https:\/\/www.ivisa\/sri-lanka\/sri-lanka-visa#faqs"},{"value":"SD","name":"Sudan","url":"https:\/\/www.ivisa\/sudan-visa#faqs"},{"value":"SR","name":"Suriname","url":"https:\/\/www.ivisa\/suriname-entry-fee#faqs"},{"value":"SJ","name":"Svalbard \u0026 Jan Mayen","url":"https:\/\/www.ivisa\/svalbard-jan-mayen-visa#faqs"},{"value":"SZ","name":"Swaziland","url":"https:\/\/www.ivisa\/swaziland-visa#faqs"},{"value":"SE","name":"Sweden","url":"https:\/\/www.ivisa\/sweden-digital-covid-certificate#faqs"},{"value":"CH","name":"Switzerland","url":"https:\/\/www.ivisa\/switzerland\/switzerland-entry-form#faqs"},{"value":"SY","name":"Syria","url":"https:\/\/www.ivisa\/syria-visa#faqs"},{"value":"TW","name":"Taiwan","url":"https:\/\/www.ivisa\/taiwan-e-visa#faqs"},{"value":"TJ","name":"Tajikistan","url":"https:\/\/www.ivisa\/tajikistan-visa#faqs"},{"value":"TZ","name":"Tanzania","url":"https:\/\/www.ivisa\/tanzania-visa#faqs"},{"value":"TH","name":"Thailand","url":"https:\/\/www.ivisa\/thailand-e-visa#faqs"},{"value":"TG","name":"Togo","url":"https:\/\/www.ivisa\/togo-traveler-declaration-form#faqs"},{"value":"TK","name":"Tokelau","url":"https:\/\/www.ivisa\/tokelau-visa#faqs"},{"value":"TO","name":"Tonga","url":"https:\/\/www.ivisa\/tonga-visa-on-arrival#faqs"},{"value":"TT","name":"Trinidad and Tobago","url":"https:\/\/www.ivisa\/trinidad-and-tobago-travel-pass#faqs"},{"value":"TN","name":"Tunisia","url":"https:\/\/www.ivisa\/tunisia-health-declaration-form#faqs"},{"value":"TR","name":"Turkey","url":"https:\/\/www.ivisa\/turkey-turkish-visa#faqs"},{"value":"TM","name":"Turkmenistan","url":"https:\/\/www.ivisa\/turkmenistan-visa#faqs"},{"value":"TC","name":"Turks \u0026 Caicos Islands","url":"https:\/\/www.ivisa\/turks-and-caicos-tci-travel-authorization#faqs"},{"value":"TV","name":"Tuvalu","url":"https:\/\/www.ivisa\/tuvalu-visa-on-arrival#faqs"},{"value":"UG","name":"Uganda","url":"https:\/\/www.ivisa\/uganda-visa-application#faqs"},{"value":"VG","name":"UK Virgin Islands","url":"https:\/\/www.ivisa\/british-virgin-islands-travel-authorisation#faqs"},{"value":"UA","name":"Ukraine","url":"https:\/\/www.ivisa\/ukraine-e-visa#faqs"},{"value":"AE","name":"United Arab Emirates","url":"https:\/\/www.ivisa\/uae-e-visa#faqs"},{"value":"GB","name":"United Kingdom","url":"https:\/\/www.ivisa\/united-kingdom-electronic-visa-waiver#faqs"},{"value":"US","name":"United States","url":"https:\/\/www.ivisa\/esta-visa-usa#faqs"},{"value":"UM","name":"United States Minor Outlying Islands","url":"https:\/\/www.ivisa\/united-states-minor-outlying-islands-visa#faqs"},{"value":"UY","name":"Uruguay","url":"https:\/\/www.ivisa\/uruguay-health-declaration-form#faqs"},{"value":"VI","name":"US Virgin Islands","url":"https:\/\/www.ivisa\/us-virgin-islands-travel-screening#faqs"},{"value":"UZ","name":"Uzbekistan","url":"https:\/\/www.ivisa\/uzbekistan-e-visa#faqs"},{"value":"VU","name":"Vanuatu","url":"https:\/\/www.ivisa\/vanuatu-traveler-registration#faqs"},{"value":"VA","name":"Vatican City","url":"https:\/\/www.ivisa\/vatican-city-health-declaration-form#faqs"},{"value":"VE","name":"Venezuela","url":"https:\/\/www.ivisa\/venezuela-pase-de-salud#faqs"},{"value":"VN","name":"Vietnam","url":"https:\/\/www.ivisa\/vietnam-e-visa#faqs"},{"value":"WF","name":"Wallis and Futuna","url":"https:\/\/www.ivisa\/wallis-and-futuna-visa#faqs"},{"value":"EH","name":"Western Sahara","url":"https:\/\/www.ivisa\/western-sahara-visa#faqs"},{"value":"YE","name":"Yemen","url":"https:\/\/www.ivisa\/yemen-visa#faqs"},{"value":"ZM","name":"Zambia","url":"https:\/\/www.ivisa\/zambia-visa#faqs"},{"value":"ZW","name":"Zimbabwe","url":"https:\/\/www.ivisa\/zimbabwe-visa#faqs"}],"redirect-on-change":true,"icon-left":"circle"}'
+                                        data-vue-props='{"placeholder":"Choose Country","information-all-options":[{"value":"AF","name":"Afghanistan","url":"https:\/\/www.VisaDirect\/afghanistan-visa#faqs"},{"value":"AX","name":"Aland Islands","url":"https:\/\/www.VisaDirect#faqs"},{"value":"AL","name":"Albania","url":"https:\/\/www.VisaDirect\/albania-visa#faqs"},{"value":"DZ","name":"Algeria","url":"https:\/\/www.VisaDirect\/algeria-health-declaration-form#faqs"},{"value":"AS","name":"American Samoa","url":"https:\/\/www.VisaDirect\/american-samoa-entry-permit#faqs"},{"value":"AD","name":"Andorra","url":"https:\/\/www.VisaDirect\/andorra-health-declaration-form#faqs"},{"value":"AO","name":"Angola","url":"https:\/\/www.VisaDirect\/angola-e-visa#faqs"},{"value":"AI","name":"Anguilla","url":"https:\/\/www.VisaDirect\/anguilla-visa#faqs"},{"value":"AQ","name":"Antarctica","url":"https:\/\/www.VisaDirect\/antarctica-visa#faqs"},{"value":"AG","name":"Antigua \u0026 Barbuda","url":"https:\/\/www.VisaDirect\/antigua-and-barbuda-e-visa#faqs"},{"value":"AR","name":"Argentina","url":"https:\/\/www.VisaDirect\/argentina-health-declaration-form#faqs"},{"value":"AM","name":"Armenia","url":"https:\/\/www.VisaDirect\/armenia-e-visa#faqs"},{"value":"AW","name":"Aruba","url":"https:\/\/www.VisaDirect\/aruba-ed-card#faqs"},{"value":"AU","name":"Australia","url":"https:\/\/www.VisaDirect\/australia-evisitor#faqs"},{"value":"AT","name":"Austria","url":"https:\/\/www.VisaDirect\/austria-pre-travel-clearance#faqs"},{"value":"AZ","name":"Azerbaijan","url":"https:\/\/www.VisaDirect\/azerbaijan-visa#faqs"},{"value":"BS","name":"Bahamas","url":"https:\/\/www.VisaDirect\/bahamas-visa#faqs"},{"value":"BH","name":"Bahrain","url":"https:\/\/www.VisaDirect\/bahrain-visa#faqs"},{"value":"BD","name":"Bangladesh","url":"https:\/\/www.VisaDirect\/bangladesh-visa#faqs"},{"value":"BB","name":"Barbados","url":"https:\/\/www.VisaDirect\/barbados-ed-card#faqs"},{"value":"BY","name":"Belarus","url":"https:\/\/www.VisaDirect\/belarus-visa#faqs"},{"value":"BE","name":"Belgium","url":"https:\/\/www.VisaDirect\/belgium-passenger-locator-form#faqs"},{"value":"BZ","name":"Belize","url":"https:\/\/www.VisaDirect\/belize-travel-insurance#faqs"},{"value":"BJ","name":"Benin","url":"https:\/\/www.VisaDirect\/benin-e-visa#faqs"},{"value":"BM","name":"Bermuda","url":"https:\/\/www.VisaDirect\/bermuda-travel-authorization#faqs"},{"value":"BT","name":"Bhutan","url":"https:\/\/www.VisaDirect\/bhutan-health-declaration-form#faqs"},{"value":"BO","name":"Bolivia","url":"https:\/\/www.VisaDirect\/bolivia-passenger-locator-form#faqs"},{"value":"BQ","name":"Bonaire, St Eustatius and Saba","url":"https:\/\/www.VisaDirect\/bonaire-health-declaration-form#faqs"},{"value":"BA","name":"Bosnia and Herzegovina","url":"https:\/\/www.VisaDirect\/bosnia-visa#faqs"},{"value":"BW","name":"Botswana","url":"https:\/\/www.VisaDirect\/botswana-visa#faqs"},{"value":"BV","name":"Bouvet Island","url":"https:\/\/www.VisaDirect\/bouvet-island-visa#faqs"},{"value":"BR","name":"Brazil","url":"https:\/\/www.VisaDirect\/brazil-travelers-health-declaration-form#faqs"},{"value":"IO","name":"British Indian Ocean Territory","url":"https:\/\/www.VisaDirect\/british-indian-ocean-territory-visa#faqs"},{"value":"BN","name":"Brunei Darussalam","url":"https:\/\/www.VisaDirect\/brunei-darussalam-health-declaration-form#faqs"},{"value":"BG","name":"Bulgaria","url":"https:\/\/www.VisaDirect\/bulgaria-travel-declaration#faqs"},{"value":"BF","name":"Burkina Faso","url":"https:\/\/www.VisaDirect\/burkina-faso-visa#faqs"},{"value":"BI","name":"Burundi","url":"https:\/\/www.VisaDirect\/burundi-visa#faqs"},{"value":"KH","name":"Cambodia","url":"https:\/\/www.VisaDirect\/cambodia-visa#faqs"},{"value":"CM","name":"Cameroon","url":"https:\/\/www.VisaDirect\/cameroon-visa#faqs"},{"value":"CA","name":"Canada","url":"https:\/\/www.VisaDirect\/canada-visa-eta#faqs"},{"value":"CV","name":"Cape Verde","url":"https:\/\/www.VisaDirect\/cape-verde-visa#faqs"},{"value":"KY","name":"Cayman Islands","url":"https:\/\/www.VisaDirect\/cayman-islands-travel-application#faqs"},{"value":"CF","name":"Central African Republic","url":"https:\/\/www.VisaDirect\/central-african-republic-visa#faqs"},{"value":"TD","name":"Chad","url":"https:\/\/www.VisaDirect\/chad-visa#faqs"},{"value":"CL","name":"Chile","url":"https:\/\/www.VisaDirect\/chile-travelers-affidavit#faqs"},{"value":"CN","name":"China","url":"https:\/\/www.VisaDirect\/china-health-declaration-form#faqs"},{"value":"CX","name":"Christmas Island","url":"https:\/\/www.VisaDirect\/christmas-island-health-declaration-form#faqs"},{"value":"CC","name":"Cocos (K) Island","url":"https:\/\/www.VisaDirect\/cocos-k-island-health-declaration-form#faqs"},{"value":"CO","name":"Colombia","url":"https:\/\/www.VisaDirect\/colombia-check-mig-form#faqs"},{"value":"KM","name":"Comoros","url":"https:\/\/www.VisaDirect\/comoros-sanitary-traveler-form#faqs"},{"value":"CG","name":"Congo","url":"https:\/\/www.VisaDirect\/congo-visa#faqs"},{"value":"CK","name":"Cook Islands","url":"https:\/\/www.VisaDirect\/cook-islands-visa#faqs"},{"value":"CR","name":"Costa Rica","url":"https:\/\/www.VisaDirect\/digital-nomad-visa#faqs"},{"value":"CI","name":"Ivory Coast","url":"https:\/\/www.VisaDirect\/ivory-coast-e-visa#faqs"},{"value":"HR","name":"Croatia","url":"https:\/\/www.VisaDirect\/croatia\/croatia-travel-announcement-form#faqs"},{"value":"CU","name":"Cuba","url":"https:\/\/www.VisaDirect\/usa-tourist-card-cuba#faqs"},{"value":"CW","name":"Curacao","url":"https:\/\/www.VisaDirect\/curacao-immigration-and-locator-card#faqs"},{"value":"CY","name":"Cyprus","url":"https:\/\/www.VisaDirect\/cyprus-flight-pass#faqs"},{"value":"CZ","name":"Czech Republic","url":"https:\/\/www.VisaDirect\/czech-republic-passenger-locator-form#faqs"},{"value":"CD","name":"Democratic Republic of Congo","url":"https:\/\/www.VisaDirect\/drc-congo-traveler-registration#faqs"},{"value":"DK","name":"Denmark","url":"https:\/\/www.VisaDirect\/denmark-health-declaration-form#faqs"},{"value":"DJ","name":"Djibouti","url":"https:\/\/www.VisaDirect\/djibouti-e-visa#faqs"},{"value":"DM","name":"Dominica","url":"https:\/\/www.VisaDirect\/dominica-health-questionnaire#faqs"},{"value":"DO","name":"Dominican Republic","url":"https:\/\/www.VisaDirect\/dominican-republic-e-ticket#faqs"},{"value":"TL","name":"East Timor","url":"https:\/\/www.VisaDirect\/timor-leste-visa-on-arrival#faqs"},{"value":"EC","name":"Ecuador","url":"https:\/\/www.VisaDirect\/ecuador-traveler-health-declaration#faqs"},{"value":"EG","name":"Egypt","url":"https:\/\/www.VisaDirect\/egypt-e-visa#faqs"},{"value":"SV","name":"El Salvador","url":"https:\/\/www.VisaDirect\/el-salvador-visa#faqs"},{"value":"GQ","name":"Equatorial Guinea","url":"https:\/\/www.VisaDirect\/equatorial-guinea-visa#faqs"},{"value":"ER","name":"Eritrea","url":"https:\/\/www.VisaDirect\/eritrea-visa#faqs"},{"value":"EE","name":"Estonia","url":"https:\/\/www.VisaDirect\/estonia-passenger-locator#faqs"},{"value":"ET","name":"Ethiopia","url":"https:\/\/www.VisaDirect\/ethiopia-visa#faqs"},{"value":"FK","name":"Falkland Islands (Malvinas)","url":"https:\/\/www.VisaDirect\/falkland-islands-malvinas-health-declaration-form#faqs"},{"value":"FO","name":"Faroe Islands","url":"https:\/\/www.VisaDirect\/faroe-islands-visa#faqs"},{"value":"FJ","name":"Fiji","url":"https:\/\/www.VisaDirect\/fiji-travel-insurance#faqs"},{"value":"FI","name":"Finland","url":"https:\/\/www.VisaDirect\/finland-digital-covid-certificate#faqs"},{"value":"FR","name":"France","url":"https:\/\/www.VisaDirect\/france-travel-certificate#faqs"},{"value":"GF","name":"French Guiana","url":"https:\/\/www.VisaDirect\/french-guiana-visa#faqs"},{"value":"PF","name":"French Polynesia","url":"https:\/\/www.VisaDirect\/french-polynesia-etis#faqs"},{"value":"TF","name":"French West Indies","url":"https:\/\/www.VisaDirect\/french-southern-territories-visa#faqs"},{"value":"GA","name":"Gabon","url":"https:\/\/www.VisaDirect\/gabon-e-visa#faqs"},{"value":"GM","name":"Gambia","url":"https:\/\/www.VisaDirect\/gambia-visa#faqs"},{"value":"GE","name":"Georgia","url":"https:\/\/www.VisaDirect\/georgia-pre-registration#faqs"},{"value":"DE","name":"Germany","url":"https:\/\/www.VisaDirect\/germany-digital-registration-on-entry#faqs"},{"value":"GH","name":"Ghana","url":"https:\/\/www.VisaDirect\/ghana-health-declaration-form#faqs"},{"value":"GI","name":"Gibraltar","url":"https:\/\/www.VisaDirect\/gibraltar-passenger-locator-form#faqs"},{"value":"GR","name":"Greece","url":"https:\/\/www.VisaDirect\/greece-passenger-locator-form#faqs"},{"value":"GL","name":"Greenland","url":"https:\/\/www.VisaDirect\/greenland-sumut-form#faqs"},{"value":"GD","name":"Grenada","url":"https:\/\/www.VisaDirect\/grenada-travel-authorization#faqs"},{"value":"GP","name":"Guadeloupe","url":"https:\/\/www.VisaDirect\/guadeloupe-health-declaration-form#faqs"},{"value":"GU","name":"Guam","url":"https:\/\/www.VisaDirect\/guam-health-declaration-form#faqs"},{"value":"GT","name":"Guatemala","url":"https:\/\/www.VisaDirect\/guatemala-health-pass#faqs"},{"value":"GG","name":"Guernsey","url":"https:\/\/www.VisaDirect\/guernsey-leave-to-enter#faqs"},{"value":"GN","name":"Guinea","url":"https:\/\/www.VisaDirect\/guinea-evisa#faqs"},{"value":"GW","name":"Guinea-Bissau","url":"https:\/\/www.VisaDirect\/guinea-bissau-e-visa#faqs"},{"value":"GY","name":"Guyana","url":"https:\/\/www.VisaDirect\/guyana-passenger-locator-form#faqs"},{"value":"HT","name":"Haiti","url":"https:\/\/www.VisaDirect\/haiti-visa#faqs"},{"value":"HM","name":"Heard Island and McDonald Islands","url":"https:\/\/www.VisaDirect\/heard-island-and-mcdonald-islands-e-visa#faqs"},{"value":"HN","name":"Honduras","url":"https:\/\/www.VisaDirect\/honduras-pre-check#faqs"},{"value":"HK","name":"Hong Kong","url":"https:\/\/www.VisaDirect\/hong-kong-electronic-health-declaration-form#faqs"},{"value":"HU","name":"Hungary","url":"https:\/\/www.VisaDirect\/hungary-digital-covid-certificate#faqs"},{"value":"IS","name":"Iceland","url":"https:\/\/www.VisaDirect\/iceland-pre-registration-form#faqs"},{"value":"IN","name":"India","url":"https:\/\/www.VisaDirect\/india-visa-application#faqs"},{"value":"ID","name":"Indonesia","url":"https:\/\/www.VisaDirect\/indonesia-health-alert-card#faqs"},{"value":"IR","name":"Iran","url":"https:\/\/www.VisaDirect\/iran-evisa#faqs"},{"value":"IQ","name":"Iraq","url":"https:\/\/www.VisaDirect\/iraq-visa#faqs"},{"value":"IE","name":"Ireland","url":"https:\/\/www.VisaDirect\/ireland\/ireland-passenger-locator-form#faqs"},{"value":"IM","name":"Isle of Man","url":"https:\/\/www.VisaDirect\/isle-of-man-visa#faqs"},{"value":"IL","name":"Israel","url":"https:\/\/www.VisaDirect\/israel-inbound-passenger-statement#faqs"},{"value":"IT","name":"Italy","url":"https:\/\/www.VisaDirect\/italy-health-declaration-form#faqs"},{"value":"JM","name":"Jamaica","url":"https:\/\/www.VisaDirect\/jamaica-travel-authorization#faqs"},{"value":"JP","name":"Japan","url":"https:\/\/www.VisaDirect\/japan-health-declaration-form#faqs"},{"value":"JE","name":"Jersey","url":"https:\/\/www.VisaDirect\/jersey-travel-registration#faqs"},{"value":"JO","name":"Jordan","url":"https:\/\/www.VisaDirect\/jordan-pass#faqs"},{"value":"KZ","name":"Kazakhstan","url":"https:\/\/www.VisaDirect\/kazakhstan-health-declaration-form#faqs"},{"value":"KE","name":"Kenya","url":"https:\/\/www.VisaDirect\/kenya-visa#faqs"},{"value":"KI","name":"Kiribati","url":"https:\/\/www.VisaDirect\/kiribati-visa#faqs"},{"value":"XK","name":"Kosovo","url":"https:\/\/www.VisaDirect\/kosovo-visa#faqs"},{"value":"KW","name":"Kuwait","url":"https:\/\/www.VisaDirect\/kuwait\/kuwait-visa#faqs"},{"value":"KG","name":"Kyrgyzstan","url":"https:\/\/www.VisaDirect\/kyrgyzstan-e-visa#faqs"},{"value":"LA","name":"Laos","url":"https:\/\/www.VisaDirect\/laos-visa#faqs"},{"value":"LV","name":"Latvia","url":"https:\/\/www.VisaDirect\/latvia-covid-pass#faqs"},{"value":"LB","name":"Lebanon","url":"https:\/\/www.VisaDirect\/lebanon-moph-pass#faqs"},{"value":"LS","name":"Lesotho","url":"https:\/\/www.VisaDirect\/lesotho-e-visa#faqs"},{"value":"LR","name":"Liberia","url":"https:\/\/www.VisaDirect\/liberia-health-declaration-form#faqs"},{"value":"LY","name":"Libya","url":"https:\/\/www.VisaDirect\/libya-visa#faqs"},{"value":"LI","name":"Liechtenstein","url":"https:\/\/www.VisaDirect\/liechtenstein-entry-form#faqs"},{"value":"LT","name":"Lithuania","url":"https:\/\/www.VisaDirect\/lithuania-registration-form#faqs"},{"value":"LU","name":"Luxembourg","url":"https:\/\/www.VisaDirect\/luxembourg-digital-covid-certificate#faqs"},{"value":"MO","name":"Macao","url":"https:\/\/www.VisaDirect\/macao-health-code#faqs"},{"value":"MK","name":"Macedonia","url":"https:\/\/www.VisaDirect\/macedonia-visa#faqs"},{"value":"MG","name":"Madagascar","url":"https:\/\/www.VisaDirect\/madagascar-visa-on-arrival#faqs"},{"value":"MW","name":"Malawi","url":"https:\/\/www.VisaDirect\/malawi-e-visa#faqs"},{"value":"MY","name":"Malaysia","url":"https:\/\/www.VisaDirect\/malaysia-visa#faqs"},{"value":"MV","name":"Maldives","url":"https:\/\/www.VisaDirect\/maldives-health-declaration-form#faqs"},{"value":"ML","name":"Mali","url":"https:\/\/www.VisaDirect\/mali-visa#faqs"},{"value":"MT","name":"Malta","url":"https:\/\/www.VisaDirect\/malta-declaration-forms#faqs"},{"value":"MH","name":"Marshall Islands","url":"https:\/\/www.VisaDirect\/marshall-islands-visa-on-arrival#faqs"},{"value":"MQ","name":"Martinique","url":"https:\/\/www.VisaDirect\/martinique-attestation-form#faqs"},{"value":"MR","name":"Mauritania","url":"https:\/\/www.VisaDirect\/mauritania-visa#faqs"},{"value":"MU","name":"Mauritius","url":"https:\/\/www.VisaDirect\/mauritius-premium-visa#faqs"},{"value":"YT","name":"Mayotte","url":"https:\/\/www.VisaDirect\/mayotte-visa#faqs"},{"value":"MX","name":"Mexico","url":"https:\/\/www.VisaDirect\/mexico-tourist-visa#faqs"},{"value":"FM","name":"Micronesia","url":"https:\/\/www.VisaDirect\/micronesia-visa#faqs"},{"value":"MD","name":"Moldova","url":"https:\/\/www.VisaDirect\/moldova-e-visa#faqs"},{"value":"MC","name":"Monaco","url":"https:\/\/www.VisaDirect\/monaco-health-declaration-form#faqs"},{"value":"MN","name":"Mongolia","url":"https:\/\/www.VisaDirect\/mongolia-evisa#faqs"},{"value":"ME","name":"Montenegro","url":"https:\/\/www.VisaDirect\/montenegro-visa#faqs"},{"value":"MS","name":"Montserrat","url":"https:\/\/www.VisaDirect\/montserrat-e-visa#faqs"},{"value":"MA","name":"Morocco","url":"https:\/\/www.VisaDirect\/morocco-visa#faqs"},{"value":"MZ","name":"Mozambique","url":"https:\/\/www.VisaDirect\/mozambique-visa-on-arrival#faqs"},{"value":"MM","name":"Myanmar","url":"https:\/\/www.VisaDirect\/myanmar-visa#faqs"},{"value":"NA","name":"Namibia","url":"https:\/\/www.VisaDirect\/namibia-health-questionnaire#faqs"},{"value":"NR","name":"Nauru","url":"https:\/\/www.VisaDirect\/nauru-health-declaration-form#faqs"},{"value":"NP","name":"Nepal","url":"https:\/\/www.VisaDirect\/nepal-traveller-arrival-form#faqs"},{"value":"NL","name":"Netherlands","url":"https:\/\/www.VisaDirect\/netherlands\/netherlands-health-declaration-form#faqs"},{"value":"NC","name":"New Caledonia","url":"https:\/\/www.VisaDirect\/new-caledonia-travel-certificate#faqs"},{"value":"NZ","name":"New Zealand","url":"https:\/\/www.VisaDirect\/new-zealand-eta#faqs"},{"value":"NI","name":"Nicaragua","url":"https:\/\/www.VisaDirect\/nicaragua-immigration-form#faqs"},{"value":"NE","name":"Niger","url":"https:\/\/www.VisaDirect\/niger-visa#faqs"},{"value":"NG","name":"Nigeria","url":"https:\/\/www.VisaDirect\/nigeria-health-declaration#faqs"},{"value":"NU","name":"Niue","url":"https:\/\/www.VisaDirect\/niue-visa#faqs"},{"value":"NF","name":"Norfolk Island","url":"https:\/\/www.VisaDirect\/norfolk-island-health-declaration-form#faqs"},{"value":"KP","name":"North Korea","url":"https:\/\/www.VisaDirect\/north-korea-visa#faqs"},{"value":"MP","name":"Northern Mariana Islands","url":"https:\/\/www.VisaDirect\/northern-mariana-islands-health-declaration-form#faqs"},{"value":"NO","name":"Norway","url":"https:\/\/www.VisaDirect\/norway\/norway-entry-registration#faqs"},{"value":"OM","name":"Oman","url":"https:\/\/www.VisaDirect\/oman-visa#faqs"},{"value":"PK","name":"Pakistan","url":"https:\/\/www.VisaDirect\/pakistan-visa#faqs"},{"value":"PW","name":"Palau","url":"https:\/\/www.VisaDirect\/palau-visa-on-arrival#faqs"},{"value":"PS","name":"Palestine","url":"https:\/\/www.VisaDirect\/palestine-visa#faqs"},{"value":"PA","name":"Panama","url":"https:\/\/www.VisaDirect\/panama-electronic-affidavit#faqs"},{"value":"PG","name":"Papua New Guinea","url":"https:\/\/www.VisaDirect\/papua-new-guinea-e-visa#faqs"},{"value":"PY","name":"Paraguay","url":"https:\/\/www.VisaDirect\/paraguay-health-declaration#faqs"},{"value":"PE","name":"Peru","url":"https:\/\/www.VisaDirect\/peru-health-declaration-form#faqs"},{"value":"PH","name":"Philippines","url":"https:\/\/www.VisaDirect\/philippines-e-cif#faqs"},{"value":"PN","name":"Pitcairn","url":"https:\/\/www.VisaDirect\/pitcairn-visa#faqs"},{"value":"PL","name":"Poland","url":"https:\/\/www.VisaDirect\/poland-passenger-locator-form#faqs"},{"value":"PT","name":"Portugal","url":"https:\/\/www.VisaDirect\/portugal-passenger-locator-card#faqs"},{"value":"PR","name":"Puerto Rico","url":"https:\/\/www.VisaDirect\/puerto-rico-health-declaration-form#faqs"},{"value":"QA","name":"Qatar","url":"https:\/\/www.VisaDirect\/hayya-card-qatar#faqs"},{"value":"RE","name":"Reunion","url":"https:\/\/www.VisaDirect\/reunion-attestation#faqs"},{"value":"RO","name":"Romania","url":"https:\/\/www.VisaDirect\/romania-covid-statement#faqs"},{"value":"RU","name":"Russia","url":"https:\/\/www.VisaDirect\/russia-invitation-letter#faqs"},{"value":"RW","name":"Rwanda","url":"https:\/\/www.VisaDirect\/rwanda-e-visa#faqs"},{"value":"BL","name":"Saint Barthelemy","url":"https:\/\/www.VisaDirect\/st-barthelemy-visa#faqs"},{"value":"SH","name":"Saint Helena","url":"https:\/\/www.VisaDirect\/st-helena-e-visa#faqs"},{"value":"KN","name":"Saint Kitts and Nevis","url":"https:\/\/www.VisaDirect\/st-kitts-and-nevis-e-visa#faqs"},{"value":"LC","name":"Saint Lucia","url":"https:\/\/www.VisaDirect\/saint-lucia-travel-registration-form#faqs"},{"value":"MF","name":"Saint Martin","url":"https:\/\/www.VisaDirect\/st-martin-visa#faqs"},{"value":"PM","name":"Saint Pierre and Miquelon","url":"https:\/\/www.VisaDirect\/st-pierre-visa#faqs"},{"value":"VC","name":"Saint Vincent \u0026 Grenadines","url":"https:\/\/www.VisaDirect\/st-vincent-and-grenadines-pre-arrival-travel-form#faqs"},{"value":"WS","name":"Samoa","url":"https:\/\/www.VisaDirect\/samoa-medical-clearance#faqs"},{"value":"SM","name":"San Marino","url":"https:\/\/www.VisaDirect\/san-marino-health-declaration-form#faqs"},{"value":"ST","name":"Sao Tome \u0026 Principe","url":"https:\/\/www.VisaDirect\/sao-tome-e-visa#faqs"},{"value":"SA","name":"Saudi Arabia","url":"https:\/\/www.VisaDirect\/saudi-arabia-e-visa#faqs"},{"value":"SN","name":"Senegal","url":"https:\/\/www.VisaDirect\/senegal-passenger-locator-form#faqs"},{"value":"RS","name":"Serbia","url":"https:\/\/www.VisaDirect\/serbia-self-assessment-form#faqs"},{"value":"SC","name":"Seychelles","url":"https:\/\/www.VisaDirect\/seychelles-travel-authorization#faqs"},{"value":"SL","name":"Sierra Leone","url":"https:\/\/www.VisaDirect\/sierra-leone-health-declaration-form#faqs"},{"value":"SG","name":"Singapore","url":"https:\/\/www.VisaDirect\/singapore-e-visa#faqs"},{"value":"SX","name":"Sint Maarten","url":"https:\/\/www.VisaDirect\/st-maarten-electronic-health-authorization-system#faqs"},{"value":"SK","name":"Slovakia","url":"https:\/\/www.VisaDirect\/slovakia-public-health-locator-form#faqs"},{"value":"SI","name":"Slovenia","url":"https:\/\/www.VisaDirect\/slovenia-entry-registration#faqs"},{"value":"SB","name":"Solomon Islands","url":"https:\/\/www.VisaDirect\/solomon-health-declaration-card#faqs"},{"value":"SO","name":"Somalia","url":"https:\/\/www.VisaDirect\/somalia-visa#faqs"},{"value":"ZA","name":"South Africa","url":"https:\/\/www.VisaDirect\/south-africa-health-questionnaire#faqs"},{"value":"GS","name":"South Georgia and the South Sandwich Islands","url":"https:\/\/www.VisaDirect\/south-georgia-and-the-south-sandwich-islands-visa#faqs"},{"value":"KR","name":"South Korea","url":"https:\/\/www.VisaDirect\/south-korea-eta#faqs"},{"value":"SS","name":"South Sudan","url":"https:\/\/www.VisaDirect\/south-sudan-visa#faqs"},{"value":"ES","name":"Spain","url":"https:\/\/www.VisaDirect\/spain-health-declaration-form#faqs"},{"value":"LK","name":"Sri Lanka","url":"https:\/\/www.VisaDirect\/sri-lanka\/sri-lanka-visa#faqs"},{"value":"SD","name":"Sudan","url":"https:\/\/www.VisaDirect\/sudan-visa#faqs"},{"value":"SR","name":"Suriname","url":"https:\/\/www.VisaDirect\/suriname-entry-fee#faqs"},{"value":"SJ","name":"Svalbard \u0026 Jan Mayen","url":"https:\/\/www.VisaDirect\/svalbard-jan-mayen-visa#faqs"},{"value":"SZ","name":"Swaziland","url":"https:\/\/www.VisaDirect\/swaziland-visa#faqs"},{"value":"SE","name":"Sweden","url":"https:\/\/www.VisaDirect\/sweden-digital-covid-certificate#faqs"},{"value":"CH","name":"Switzerland","url":"https:\/\/www.VisaDirect\/switzerland\/switzerland-entry-form#faqs"},{"value":"SY","name":"Syria","url":"https:\/\/www.VisaDirect\/syria-visa#faqs"},{"value":"TW","name":"Taiwan","url":"https:\/\/www.VisaDirect\/taiwan-e-visa#faqs"},{"value":"TJ","name":"Tajikistan","url":"https:\/\/www.VisaDirect\/tajikistan-visa#faqs"},{"value":"TZ","name":"Tanzania","url":"https:\/\/www.VisaDirect\/tanzania-visa#faqs"},{"value":"TH","name":"Thailand","url":"https:\/\/www.VisaDirect\/thailand-e-visa#faqs"},{"value":"TG","name":"Togo","url":"https:\/\/www.VisaDirect\/togo-traveler-declaration-form#faqs"},{"value":"TK","name":"Tokelau","url":"https:\/\/www.VisaDirect\/tokelau-visa#faqs"},{"value":"TO","name":"Tonga","url":"https:\/\/www.VisaDirect\/tonga-visa-on-arrival#faqs"},{"value":"TT","name":"Trinidad and Tobago","url":"https:\/\/www.VisaDirect\/trinidad-and-tobago-travel-pass#faqs"},{"value":"TN","name":"Tunisia","url":"https:\/\/www.VisaDirect\/tunisia-health-declaration-form#faqs"},{"value":"TR","name":"Turkey","url":"https:\/\/www.VisaDirect\/turkey-turkish-visa#faqs"},{"value":"TM","name":"Turkmenistan","url":"https:\/\/www.VisaDirect\/turkmenistan-visa#faqs"},{"value":"TC","name":"Turks \u0026 Caicos Islands","url":"https:\/\/www.VisaDirect\/turks-and-caicos-tci-travel-authorization#faqs"},{"value":"TV","name":"Tuvalu","url":"https:\/\/www.VisaDirect\/tuvalu-visa-on-arrival#faqs"},{"value":"UG","name":"Uganda","url":"https:\/\/www.VisaDirect\/uganda-visa-application#faqs"},{"value":"VG","name":"UK Virgin Islands","url":"https:\/\/www.VisaDirect\/british-virgin-islands-travel-authorisation#faqs"},{"value":"UA","name":"Ukraine","url":"https:\/\/www.VisaDirect\/ukraine-e-visa#faqs"},{"value":"AE","name":"United Arab Emirates","url":"https:\/\/www.VisaDirect\/uae-e-visa#faqs"},{"value":"GB","name":"United Kingdom","url":"https:\/\/www.VisaDirect\/united-kingdom-electronic-visa-waiver#faqs"},{"value":"US","name":"United States","url":"https:\/\/www.VisaDirect\/esta-visa-usa#faqs"},{"value":"UM","name":"United States Minor Outlying Islands","url":"https:\/\/www.VisaDirect\/united-states-minor-outlying-islands-visa#faqs"},{"value":"UY","name":"Uruguay","url":"https:\/\/www.VisaDirect\/uruguay-health-declaration-form#faqs"},{"value":"VI","name":"US Virgin Islands","url":"https:\/\/www.VisaDirect\/us-virgin-islands-travel-screening#faqs"},{"value":"UZ","name":"Uzbekistan","url":"https:\/\/www.VisaDirect\/uzbekistan-e-visa#faqs"},{"value":"VU","name":"Vanuatu","url":"https:\/\/www.VisaDirect\/vanuatu-traveler-registration#faqs"},{"value":"VA","name":"Vatican City","url":"https:\/\/www.VisaDirect\/vatican-city-health-declaration-form#faqs"},{"value":"VE","name":"Venezuela","url":"https:\/\/www.VisaDirect\/venezuela-pase-de-salud#faqs"},{"value":"VN","name":"Vietnam","url":"https:\/\/www.VisaDirect\/vietnam-e-visa#faqs"},{"value":"WF","name":"Wallis and Futuna","url":"https:\/\/www.VisaDirect\/wallis-and-futuna-visa#faqs"},{"value":"EH","name":"Western Sahara","url":"https:\/\/www.VisaDirect\/western-sahara-visa#faqs"},{"value":"YE","name":"Yemen","url":"https:\/\/www.VisaDirect\/yemen-visa#faqs"},{"value":"ZM","name":"Zambia","url":"https:\/\/www.VisaDirect\/zambia-visa#faqs"},{"value":"ZW","name":"Zimbabwe","url":"https:\/\/www.VisaDirect\/zimbabwe-visa#faqs"}],"redirect-on-change":true,"icon-left":"circle"}'
                                         data-v-app=""
                                     >
                                         <div class="dropdown" tabindex="0">
@@ -4986,7 +5038,7 @@
                                                         role="button"
                                                         aria-expanded="false"
                                                         aria-controls="collapseFaq27622"
-                                                        onclick="window.ivisalog.track('faq_click', {})"
+                                                        onclick="window.VisaDirectlog.track('faq_click', {})"
                                                     >
                                                         <h3 class="text-gray-900 my-0">100% guaranteed visa. How do we do that?  </h3>
                                                         <svg class="chevron mr-4 absolute right-0 text-gray-900 h-4 w-4 mr-2 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -5010,7 +5062,7 @@
                                                         role="button"
                                                         aria-expanded="false"
                                                         aria-controls="collapseFaq27623"
-                                                        onclick="window.ivisalog.track('faq_click', {})"
+                                                        onclick="window.VisaDirectlog.track('faq_click', {})"
                                                     >
                                                         <h3 class="text-gray-900 my-0">How long may I stay in the Schengen area with a short-stay visa? </h3>
                                                         <svg class="chevron mr-4 absolute right-0 text-gray-900 h-4 w-4 mr-2 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -5034,7 +5086,7 @@
                                                         role="button"
                                                         aria-expanded="false"
                                                         aria-controls="collapseFaq27624"
-                                                        onclick="window.ivisalog.track('faq_click', {})"
+                                                        onclick="window.VisaDirectlog.track('faq_click', {})"
                                                     >
                                                         <h3 class="text-gray-900 my-0">Can I go to England or Ireland with a Schengen visa? </h3>
                                                         <svg class="chevron mr-4 absolute right-0 text-gray-900 h-4 w-4 mr-2 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -5060,7 +5112,7 @@
                                                         role="button"
                                                         aria-expanded="false"
                                                         aria-controls="collapseFaq27625"
-                                                        onclick="window.ivisalog.track('faq_click', {})"
+                                                        onclick="window.VisaDirectlog.track('faq_click', {})"
                                                     >
                                                         <h3 class="text-gray-900 my-0">How often may I enter the Schengen area with my visa? </h3>
                                                         <svg class="chevron mr-4 absolute right-0 text-gray-900 h-4 w-4 mr-2 ml-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -5204,7 +5256,7 @@
                                 </div>
                                 <div class="card relative flex flex-col bg-white bg-clip-border my-4">
                                     <div class="list-group list-group-flush">
-                                        <a href="/en/login" class="flex list-group-item rounded-t items-center text-lg text-blue-500 font-normal">
+                                        <a href="/#jotform_form" class="flex list-group-item rounded-t items-center text-lg text-blue-500 font-normal">
                                             <figure class="w-10 mr-3 mb-0">
                                                 <img class="img-responsive" src="https://d2v38geh4xxze4.cloudfront.net/img/icons/icon-new-application.png" alt="" />
                                             </figure>
@@ -5237,36 +5289,187 @@
                         </div>
                     </div>
 
-                    <div class="container text-center py-12" style="min-height: 340px;">
-                        <div class="tools-title text-center mb-8 md:pb-8 flex justify-center items-center">
+                    <div class="testimonials-partial container px-5 md:px-0 pt-20 pb-10 lg:pb-16">
+                        <div class="testimonials-title text-center pb-12 flex justify-center items-center">
                             <span class="title-line inline-block align-middle bg-blue-500 mb-2 w-6 md:w-12" style="height: 2px;"></span>
-                            <h2 class="px-2 sm:px-1 lg:px-4 text-blue-500 text-center no-apply-important inline">
-                                Testimonials <br />
-                                Our customers have great stories about us
-                            </h2>
+                            <h2 class="px-2 md:px-4 text-blue-500 text-center no-apply-important inline ">Our Customers Have Great Stories About Us</h2>
                             <span class="title-line inline-block align-middle bg-blue-500 mb-2 w-6 md:w-12" style="height: 2px;"></span>
                         </div>
-                        <!-- TrustBox widget - Carousel -->
-                        <div>
-                            <div
-                                class="trustpilot-widget sm:h-32"
-                                data-locale="en"
-                                data-template-id="53aa8912dec7e10d38f59f36"
-                                data-businessunit-id="560958f90000ff000583ccb5"
-                                data-style-width="100%"
-                                data-theme="light"
-                                data-stars="5"
-                                style="position: relative;"
-                            >
-                                <iframe
-                                    title="Customer reviews powered by Trustpilot"
-                                    loading="auto"
-                                    src="https://widget.trustpilot.com/trustboxes/53aa8912dec7e10d38f59f36/index.html?templateId=53aa8912dec7e10d38f59f36&amp;businessunitId=560958f90000ff000583ccb5#locale=en&amp;styleWidth=100%25&amp;theme=light&amp;stars=5"
-                                    style="position: relative; width: 100%; border-style: none; display: block; overflow: hidden;"
-                                ></iframe>
+                        <div class="py-5"></div>
+                        <div class="testimonials-content flex flex-wrap w-full justify-center">
+                            <div class="testimonial-block px-3 py-6 mb-4 lg:px-6 lg:py-4 sm:mb-5 md:mb-10 lg:mb-6 flex align-top shadow rounded-md w-full lg:w-1/2">
+                                <div class="testimonial-image inline-block align-top text-center">
+                                    <img class="rounded-full mx-auto" alt="Alan" src="/index_files/Photo1.png" />
+                                    <div class="testimonial-stars mt-4 flex">
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text inline-block text-left pl-4 md:pl-5 align-top">
+                                    <h4 class="m-0 mb-2 text-blue-500">Safouen</h4>
+                                    <p class="text-black text-sm">
+                                        In the past I got refused twice through TLS contact and the French Embassy. After consulting the visadirect.fr I could not believe how fast and easy the process was. I got my visa within 30 days after payment and am finally reunited with my family! Thanks again Visadirect! I will never forget the life-changing service you provided me.  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-block px-3 py-6 mb-4 lg:px-6 lg:py-4 sm:mb-5 md:mb-10 lg:mb-6 flex align-top shadow rounded-md w-full lg:w-1/2">
+                                <div class="testimonial-image inline-block align-top text-center">
+                                    <img class="rounded-full mx-auto" alt="Pritam Gajjar" src="/index_files/Photo2.png" />
+                                    <div class="testimonial-stars mt-4 flex">
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text inline-block text-left pl-4 md:pl-5 align-top">
+                                    <h4 class="m-0 mb-2 text-blue-500">Mohammed </h4>
+                                    <p class="text-black text-sm">
+                                        Everybody said my changes to a Schengenvisa are ZERO. I got 3 refusals in the past and I have been extradited from France in 2018. The money-back guarantee made me try anyway. It is the best decision I have ever made!! I received my Visa and now I am back with my girlfriend and son.  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-block px-3 py-6 mb-4 lg:px-6 lg:py-4 sm:mb-5 md:mb-10 lg:mb-6 flex align-top shadow rounded-md w-full lg:w-1/2">
+                                <div class="testimonial-image inline-block align-top text-center">
+                                    <img class="rounded-full mx-auto" alt="Elizabeth Walker" src="/index_files/Photo3.png" />
+                                    <div class="testimonial-stars mt-4 flex">
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text inline-block text-left pl-4 md:pl-5 align-top">
+                                    <h4 class="m-0 mb-2 text-blue-500">Bessam</h4>
+                                    <p class="text-black text-sm">
+                                        I have been extradited in 2020 from France because I had no papers. I had to miss my children, (who are living with my ex-wife) for two years! I have just received my 90 days multiple entry Schengen Visa. From my two kids Adam and Yosra: forever thanks for brining papa back!  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="testimonial-block px-3 py-6 mb-4 lg:px-6 lg:py-4 sm:mb-5 md:mb-10 lg:mb-6 flex align-top shadow rounded-md w-full lg:w-1/2">
+                                <div class="testimonial-image inline-block align-top text-center">
+                                    <img class="rounded-full mx-auto" alt="Sarah Brown" src="/index_files/Photo4.png" />
+                                    <div class="testimonial-stars mt-4 flex">
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                        <svg class="h-4 w-4 text-primary mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                            <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                                            <path
+                                                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                            ></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text inline-block text-left pl-4 md:pl-5 align-top">
+                                    <h4 class="m-0 mb-2 text-blue-500">Ahmed </h4>
+                                    <p class="text-black text-sm">
+                                        I was married in 2019 with a French woman in Paris. The French authorities told me to go back to Tunisia and get my paperwork done. After I did everything they asked; they refused to grant me a visa to join my wife and get back to work in Paris. I applied again via visadirect.fr and they really  saved my life! Thanks forever.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <!-- End TrustBox widget -->
                     </div>
                 </div>
             </div>
@@ -5292,7 +5495,7 @@
                                         Contact Us
                                     </li>
                                 </a>
-                                <a href="/en/login">
+                                <a href="/#jotform_form">
                                     <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
                                         Apply Now
                                     </li>
@@ -5321,16 +5524,6 @@
                                 </a>
                             </ul>
                             <ul class="mb-6 md:mb-10 w-1/2 lg:w-1/6 p-0">
-                                <a href="/en/visa-blog">
-                                    <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
-                                        Blog
-                                    </li>
-                                </a>
-                                <a href="/en/embassies">
-                                    <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
-                                        Embassy Listings
-                                    </li>
-                                </a>
                                 <a href="/en/photos">
                                     <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
                                         Passport Photos
@@ -5339,6 +5532,11 @@
                                 <a href="/en/passport-renewal">
                                     <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
                                         Passport Renewals
+                                    </li>
+                                </a>
+                                <a href="/en/affiliates">
+                                    <li class="flex items-center text-sm md:text-lg text-white font-normal mb-3">
+                                        Partners / Affiliates
                                     </li>
                                 </a>
                             </ul>
@@ -5350,8 +5548,7 @@
                                 </a>
                             </ul>
                             <ul class="mb-6 md:mb-10 p-0 text-right flex justify-center flex-row lg:flex-col w-full lg:w-1/6">
-                                <span class="hidden lg:inline text-sm">Scan the QR code to download the iVisa app</span>
-                                <a class="flex flex-row-reverse" href="/"><img class="my-4 h-12 lg:h-10" src="/index_files/app_store.svg" /></a>
+                                <span class="hidden lg:inline text-sm">Scan the QR code to download the VisaDirect app</span>
                             </ul>
                             <ul class="mb-6 md:mb-10 p-6 hidden lg:block w-1/6">
                                 <img src="/index_files/apple_adjust_qr_code.png" />
@@ -5361,59 +5558,19 @@
                     <div class="bg-primary w-full">
                         <div class="flex flex-col justify-center items-center px-2 sm:px-6 py-8 lg:py-6 mb-12 lg:mb-0 lg:flex-row lg:justify-end max-w-8xl lg:m-auto">
                             <p class="text-white text-center text-xs py-8 mb-0 max-w-xs lg:py-0 lg:w-1/2 lg:text-left lg:max-w-full lg:mr-auto leading-normal">
-                                © 2014-2022 ivisa. All rights reserved. iVisa and iVisa logo are registered trademarks of ivisa.
+                                © 2022 VisaDirect. All rights reserved.
                             </p>
 
                             <div class="flex items-center">
                                 <div class="flex justify-center items-center pr-4">
                                     <p class="text-white text-xs mb-0 mr-0 hidden sm:block">Connect with us:</p>
                                     <div class="flex mt-0 mb-0 justify-center items-center">
-                                        <a class="mx-2 flex align-items justify-center" target="_blank" href="https://www.facebook.com/iVisaTravel/">
+                                        <a class="mx-2 flex align-items justify-center" target="_blank" href="https://www.facebook.com/VisaDirectTravel/">
                                             <div class="bg-transparent rounded-full social-icon">
                                                 <svg class="p-0 sm:p-1/2 h-6 w-6 text-white mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                                                     <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
                                                     <path
                                                         d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a class="mx-2 sm:mx-1 flex align-items justify-center" target="_blank" href="https://twitter.com/_iVisa">
-                                            <div class="bg-transparent rounded-full social-icon">
-                                                <svg class="p-0 sm:p-1/2 h-6 w-6 text-white mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                    <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                                                    <path
-                                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a class="mx-2 sm:mx-1 flex align-items justify-center" target="_blank" href="https://www.youtube.com/channel/UC9DcB6hZY2gFlE6TmulZ24A">
-                                            <div class="bg-transparent rounded-full social-icon">
-                                                <svg class="p-0 sm:p-1/2 h-6 w-6 text-white mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                                    <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                                                    <path
-                                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a class="mx-2 sm:mx-1 flex align-items justify-center" target="_blank" href="https://www.linkedin.com/company/ivisa/">
-                                            <div class="bg-transparent rounded-full social-icon">
-                                                <svg class="p-0 sm:p-1/2 h-6 w-6 text-white mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                                    <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                                                    <path
-                                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                                                    ></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a class="mx-2 sm:mx-1 flex align-items justify-center" target="_blank" href="https://www.instagram.com/ivisa_travel/">
-                                            <div class="bg-transparent rounded-full social-icon">
-                                                <svg class="p-0 sm:p-1/2 h-6 w-6 text-white mr-0 ml-0" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                                    <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
-                                                    <path
-                                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
                                                     ></path>
                                                 </svg>
                                             </div>
@@ -5701,7 +5858,7 @@
 
         <script type="text/javascript">
             // Array of javascript functions that will run once jquery, vue, AND the DOM load
-            window.ivisa_js_autorun = [];
+            window.VisaDirect_js_autorun = [];
         </script>
 
         <script type="text/javascript"></script>
@@ -5895,7 +6052,7 @@
             }
             //Add check for android
             if (browserType.indexOf("android") !== -1 && "visa" === "passport_photo" && wasBannerClosed === false) {
-                document.getElementById("store-link").href = "https://play.google.com/store/apps/details?id=com.ivisa.photos&hl=es_PE&gl=US";
+                document.getElementById("store-link").href = "https://play.google.com/store/apps/details?id=com.VisaDirect.photos&hl=es_PE&gl=US";
                 document.querySelector("#native-app-banner-ad").style.display = "block";
             }
 
