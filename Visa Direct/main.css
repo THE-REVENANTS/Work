@@ -156,6 +156,7 @@ header .logo-section {
   display: flex;
   padding: 120px 5% 40px 5%;
   position: relative;
+  justify-content: space-between;
 }
 .new_hero::before {
   position: absolute;
@@ -231,11 +232,13 @@ header .logo-section {
   width: 40%;   
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-end; 
+  padding-top: 40px;
+  align-items: center;
 }
 .new_hero .right img{
-  width:50%;
-  height: fit-content;
+  width:90%;
+  height: fit-content; 
 } 
 
 /* responsive */
@@ -392,4 +395,62 @@ header .logo-section {
   fill: #e4ba00;
   height: 20px;
   width: 20px;
+}
+
+/* trust banner */
+.trust_banner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 140px;
+}
+.trust_banner .left {
+  width: 70%;
+  padding: 50px 0;
+  padding-left: 5%;
+  border-top:5px solid #f1ae17;
+  border-bottom:5px solid #f1ae17;
+  border-left:5px solid #f1ae17;
+}
+.trust_banner .left h4{
+  padding-left: 5px;
+  border-left: 3px solid #3a3a3a;
+}
+.trust_banner .right {
+  width: 30%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+}
+@media (max-width:1000px) {
+  /* trust banner */
+  .trust_banner {
+    display: flex;
+    flex-direction: column;
+  }
+  .trust_banner .left {
+    width: 100%;
+    border-right:5px solid #f1ae17;
+    border-bottom:0;
+  }
+  .trust_banner .left ul{
+    padding-left: 15px;
+  }
+  .trust_banner .left ul li{
+    font-size: 14px;
+  }
+  .trust_banner .left h4{
+    padding-left: 5px;
+    border-left: 3px solid #3a3a3a;
+    font-size: 16px;
+  }
+  .trust_banner .right {
+    position: relative;
+    width: 100%;
+  }
 }
