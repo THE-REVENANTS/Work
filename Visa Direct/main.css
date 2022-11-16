@@ -45,7 +45,7 @@ header .logo-section {
 }
 @media (max-width:900px) {
   #navigation-header.splitHeader .logo-container .logo-VisaDirect { 
-      height: 40px !important;
+      height: 30px !important;
   }
 }
 #navigation-header.splitHeader .bbc-feature > * {
@@ -234,7 +234,7 @@ header .logo-section {
   align-items: flex-end;
 }
 .new_hero .right img{
-  width:70%;
+  width:50%;
   height: fit-content;
 } 
 
@@ -254,11 +254,10 @@ header .logo-section {
   }
 
   .new_hero .right img{
-    width:60%;
-    height: fit-content;
+    display: none;
   }
 }
-@media (max-width:700px) {
+@media (max-width:1000px) {
   .new_hero {
     flex-direction: column;
   }
@@ -353,7 +352,7 @@ header .logo-section {
 }
 @media screen and (min-width: 992px) {
   .testimonials-partial .testimonials-content .testimonial-block {
-      max-height: 163px;
+      height: fit-content;
       max-width: 429px;
   }
   .testimonials-partial .testimonials-content .testimonial-block:nth-child(odd) {
@@ -370,11 +369,7 @@ header .logo-section {
   text-overflow: ellipsis;
 }
 .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
-  -webkit-line-clamp: 7;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  height: fit-content;
 }
 @media screen and (min-width: 768px) {
   .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
