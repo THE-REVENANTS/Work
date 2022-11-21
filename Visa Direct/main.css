@@ -1,163 +1,178 @@
 * {
-  font-family: 'Montserrat', sans-serif ;
-  scroll-behavior: smooth;
-}
-
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth; }
 
 .swal-overlay--show-modal {
-    display: none !important;
-}
+  display: none !important; }
+
 /* header styles */
 header {
-    background: rgb(9, 46, 85) !important;
-    top: 0;
-    position: fixed;
-}
-header #navigation-header {
-    background: rgb(9, 46, 85) !important;
-}
-header .logo-section {
-    background: rgb(9, 46, 85) !important;
-} 
-#navigation-header.splitHeader nav ul {
-    background: rgb(9, 46, 85) !important;
-    gap: 0;
-    padding: 0;
-}
-#navigation-header.splitHeader {
-  display: flex;
-  flex-wrap: nowrap;
-}
-#navigation-header.splitHeader nav .nav-link-dropdown-btn {
-    background: rgb(9, 46, 85) !important;
-    color: white !important;
-    padding: 10px;
-}
-#navigation-header.splitHeader nav .nav-link-dropdown-btn span{ 
-    color: white ;
-}
-#navigation-header.splitHeader nav .nav-link-dropdown-btn svg{ 
-    fill: white !important;
-}
-#navigation-header.splitHeader .logo-container .logo-VisaDirect { 
-    height: 53px !important;
-    width: fit-content !important;
-}
-@media (max-width:900px) {
-  #navigation-header.splitHeader .logo-container .logo-VisaDirect { 
-      height: 30px !important;
-  }
-}
-#navigation-header.splitHeader .bbc-feature > * {
-    color: white !important;
-}
-.bg-primary {
-    background: rgb(9, 46, 85) !important; 
-}
-.btn.btn--primary {
-    background: rgb(228, 186, 0) ; 
-    border: 3px solid rgb(228, 186, 0) !important;
-}
-.btn.btn--primary:hover {
-    color: rgb(228, 186, 0);
-}
+  background: #092e55 !important;
+  top: 0;
+  position: fixed; }
 
+header #navigation-header {
+  background: #092e55 !important; }
+
+header .logo-section {
+  background: #092e55 !important; }
+
+#navigation-header.splitHeader nav ul {
+  background: #092e55 !important;
+  gap: 0;
+  padding: 0; }
+
+#navigation-header.splitHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+
+#navigation-header.splitHeader nav .nav-link-dropdown-btn {
+  background: #092e55 !important;
+  color: white !important;
+  padding: 10px; }
+
+#navigation-header.splitHeader nav .nav-link-dropdown-btn span {
+  color: white; }
+
+#navigation-header.splitHeader nav .nav-link-dropdown-btn svg {
+  fill: white !important; }
+
+#navigation-header.splitHeader .logo-container .logo-VisaDirect {
+  width: 183px !important;
+  height: 50px !important;
+  max-height: 50px !important;
+  min-height: 50px !important; }
+
+#navigation-header.splitHeader .bbc-feature > * {
+  color: white !important; }
+
+.bg-primary {
+  background: #092e55 !important; }
+
+.btn.btn--primary {
+  background: #e4ba00;
+  border: 3px solid #e4ba00 !important; }
+
+.btn.btn--primary:hover {
+  color: #e4ba00; }
 
 /* dropdown styles */
 .language_list_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-}
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 /* flag for menu translate */
 .language_dropdown {
-    min-width:150px;
-    max-width:fit-content;
-    white-space:nowrap;
-    vertical-align: middle;
-    margin-top: 5px;
-    position: relative;
-  }
-  .language_dropdown .default {
-    height: 30px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 10px;
-    padding-right: 20px;
-    color:white;
-    font-size: 13px;
-    cursor: pointer;
-    transition: .2s;
-  }
-  .language_dropdown .default i{
-    margin-left: auto;
-  }
-  .language_dropdown .options {
-    display: none;
-    position: absolute;
-    top: 30px;
-    z-index: 20;
-    background: #00a79d;
-    width: 100%;
-    overflow: hidden;
-    border-top: none;
-  }
-  .language_dropdown .options .option{
-    color: white;
-    padding: 5px 7px ;
-    font-size: 13px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .language_dropdown .options .option:hover{
-    background: #e4ba00;
-    color: white;
-  }
-  .language_dropdown .options .option.active{
-    background: #e4ba00;
-    font-weight: bold;
-  }
-  .language_dropdown .default img{
-    width: 20px;
-  }
-  .language_dropdown .options .option img{
-    width: 20px;
-  }
-  
-  /* in open mode */
-  .language_dropdown.openDropdown .options{
-    display: block;
-  }
-  .language_dropdown.openDropdown .default{ 
-    background: #00a79d;
-  }
+  min-width: 150px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-top: 5px;
+  position: relative; }
 
-  /* remove google banner */
-  #goog-gt-tt {
-    display: none !important;
-  }
-  .goog-text-highlight {
-    background: none !important;
-    box-shadow: none !important;
-  }
-  /* hide google */
-  .skiptranslate  {
-    display: none !important;
-  }
-  .visachecker-blog .global-visa-checker {
-    height: auto;
-}
+.language_dropdown .default {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 10px;
+  padding-right: 20px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s; }
+
+.language_dropdown .default i {
+  margin-left: auto; }
+
+.language_dropdown .options {
+  display: none;
+  position: absolute;
+  top: 30px;
+  z-index: 20;
+  background: #00a79d;
+  width: 100%;
+  overflow: hidden;
+  border-top: none; }
+
+.language_dropdown .options .option {
+  color: white;
+  padding: 5px 7px;
+  font-size: 13px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px; }
+
+.language_dropdown .options .option:hover {
+  background: #e4ba00;
+  color: white; }
+
+.language_dropdown .options .option.active {
+  background: #e4ba00;
+  font-weight: bold; }
+
+.language_dropdown .default img {
+  width: 20px; }
+
+.language_dropdown .options .option img {
+  width: 20px; }
+
+/* in open mode */
+.language_dropdown.openDropdown .options {
+  display: block; }
+
+.language_dropdown.openDropdown .default {
+  background: #00a79d; }
+
+/* remove google banner */
+#goog-gt-tt {
+  display: none !important; }
+
+.goog-text-highlight {
+  background: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important; }
+
+/* hide google */
+.skiptranslate {
+  display: none !important; }
+
+.visachecker-blog .global-visa-checker {
+  height: auto; }
 
 /* Add New Hero */
 .new_hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 120px 5% 40px 5%;
   position: relative;
-  justify-content: space-between;
-}
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 .new_hero::before {
   position: absolute;
   content: '';
@@ -165,149 +180,188 @@ header .logo-section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   background-image: url(/images/design.png);
   background-size: 60% 100%;
-  background-repeat: no-repeat; 
-}
+  background-repeat: no-repeat; }
+
 .new_hero .left {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
-  position: relative;
-}
+  position: relative; }
+
 .new_hero .left p {
-  font-size: 13px;
-}
-.new_hero .left .list{
+  font-size: 13px; }
+
+.new_hero .left .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  gap: 20px;
-}
-.new_hero .left .list a{
+  gap: 20px; }
+
+.new_hero .left .list a {
   color: #919191;
-  font-weight: 200;
-}
-.new_hero .left .list a:hover{
-  color: #e4ba00;
-}
+  font-weight: 200; }
+
+.new_hero .left .list a:hover {
+  color: #e4ba00; }
+
 .new_hero .left h1 span {
   display: block;
   font-size: 42px;
-  font-weight: bolder;
-}
+  font-weight: bolder; }
+
 .new_hero .left h1 span:first-child {
-  color: rgb(0, 8, 148);
-}
+  color: #000894; }
+
 .new_hero .left h1 .span_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  gap: 20px;
-}
-.new_hero .left h1 .span_image img{
-  height: fit-content ; 
-  width: fit-content ; 
-}
-.new_hero .left h1 .span_image span{
-  color: rgb(241, 174, 23);
+  gap: 20px; }
+
+.new_hero .left h1 .span_image img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+
+.new_hero .left h1 .span_image span {
+  color: #f1ae17;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  gap: 20px;
-}
+  gap: 20px; }
+
 .new_hero .left a.button {
   position: relative;
-  background: rgb(241, 174, 23);
+  background: #f1ae17;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 10px 15px;
   border-radius: 15px;
   z-index: 1;
   border-bottom: 5px solid white;
   border-right: 5px solid white;
-  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .3);
-  transition: .3s;
-}
+  -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s; }
+
 .new_hero .left a.button:hover {
-  opacity: .85;
-}
+  opacity: .85; }
+
 .new_hero .right {
-  width: 40%;   
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end; 
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-top: 40px;
-  align-items: center;
-}
-.new_hero .right img{
-  width:90%;
-  height: fit-content; 
-} 
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.new_hero .right img {
+  width: 90%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
 
 /* responsive */
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
   .new_hero .left {
-    gap: 20px;
-  }
+    gap: 20px; }
+
   .new_hero .left h1 span {
-      font-size: 50px;
-  }
-  .new_hero .left h1 .span_image img{
-    width: 150px;
-  }
-  .new_hero .left p{
-    font-size: 14px;
-  }
+    font-size: 50px; }
 
-  .new_hero .right img{
-    display: none;
-  }
-}
-@media (max-width:1000px) {
+  .new_hero .left h1 .span_image img {
+    width: 150px; }
+
+  .new_hero .left p {
+    font-size: 14px; }
+
+  .new_hero .right img {
+    display: none; } }
+@media (max-width: 1000px) {
   .new_hero {
-    flex-direction: column;
-  }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
   .new_hero:before {
-    display: none;
-  }
+    display: none; }
+
   .new_hero .left {
-    width: 100%;
-  }
+    width: 100%; }
+
   .new_hero .left {
-    width: 100%;
-  }
-  .new_hero .right{
-    width: 100%;
-  }
-  .new_hero .right img{
-    width: 60%;
-  }
-}
+    width: 100%; }
 
+  .new_hero .right {
+    width: 100%; }
 
-
+  .new_hero .right img {
+    width: 60%; } }
 /* custom Quote */
 .argent_remis {
-  padding: 20px 15%; 
+  padding: 20px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 40px;
-  background: rgb(248, 250, 252);
-}
-.argent_remis span{
-  font-size:30px;
-  font-weight: bolder;
-}
-.argent_remis span:first-child{
-  color: rgb(64, 96, 182);
-}
-.argent_remis span:last-child{
-  color: rgb(228, 186, 0);
-}
+  background: #f8fafc; }
+
+.argent_remis span {
+  font-size: 30px;
+  font-weight: bolder; }
+
+.argent_remis span:first-child {
+  color: #4060b6; }
+
+.argent_remis span:last-child {
+  color: #e4ba00; }
+
 /* visa agency banner goes here */
 .visa_agency_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   padding: 100px 20%;
   text-align: center;
@@ -316,141 +370,156 @@ header .logo-section {
   background-image: url(images/visa-agency.jpg);
   background-size: cover;
   background-position: 90% 80%;
-  font-size: 30px;
-}
-.visa_agency_banner strong{
-  color: #092e55;
-}
-@media (max-width:756px) {
+  font-size: 30px; }
+
+.visa_agency_banner strong {
+  color: #092e55; }
+
+@media (max-width: 756px) {
   .visa_agency_banner {
     font-size: 20px;
-    padding: 100px 5%;
-  }
-}
-
+    padding: 100px 5%; } }
 /* testimonials styles */
-
 .testimonial-block .testimonial-image {
-  width: 80px;
-}
+  width: 80px; }
+
 .testimonial-block .testimonial-image img {
   width: 60px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
-  height: 60px;
-}
+  height: 60px; }
+
 .testimonial-block .testimonial-text {
-  width: calc(100% - 80px);
-}
+  width: calc(100% - 80px); }
+
 .testimonials-partial .testimonials-title h2 {
-  width: calc(100% - 60px);
-}
+  width: calc(100% - 60px); }
+
 @media (min-width: 576px) {
   .testimonials-partial .testimonials-title h2 {
-      width: auto;
-  }
-}
+    width: auto; } }
 .testimonials-partial .testimonials-content .testimonial-block {
-  max-width: 588px;
-}
+  max-width: 588px; }
+
 @media screen and (min-width: 992px) {
   .testimonials-partial .testimonials-content .testimonial-block {
-      height: fit-content;
-      max-width: 429px;
-  }
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 429px; }
+
   .testimonials-partial .testimonials-content .testimonial-block:nth-child(odd) {
-      margin-right: 1.25rem;
-  }
+    margin-right: 1.25rem; }
+
   .testimonials-partial .testimonials-content .testimonial-block:nth-child(2n) {
-      margin-left: 1.25rem;
-  }
-}
+    margin-left: 1.25rem; } }
 .testimonials-partial .testimonials-content .testimonial-block .testimonial-text h4 {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  text-overflow: ellipsis;
-}
+  text-overflow: ellipsis; }
+
 .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
-  height: fit-content;
-}
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content; }
+
 @media screen and (min-width: 768px) {
   .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
-      height: auto;
-  }
-}
+    height: auto; } }
 @media screen and (min-width: 992px) {
   .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
-      -webkit-line-clamp: 5;
-  }
-}
-
+    -webkit-line-clamp: 5; } }
 /* custom location */
 .custom_location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .custom_location svg {
   fill: #e4ba00;
   height: 20px;
-  width: 20px;
-}
+  width: 20px; }
 
 /* trust banner */
 .trust_banner {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
-  position: relative;
-  margin-bottom: 140px;
-}
+  position: relative; }
+
 .trust_banner .left {
   width: 70%;
   padding: 50px 0;
   padding-left: 5%;
-  border-top:5px solid #f1ae17;
-  border-bottom:5px solid #f1ae17;
-  border-left:5px solid #f1ae17;
-}
-.trust_banner .left h4{
+  border-top: 5px solid #f1ae17;
+  border-bottom: 5px solid #f1ae17;
+  border-left: 5px solid #f1ae17; }
+
+.trust_banner .left h2 del {
+  -moz-text-decoration-color: red; }
+
+.trust_banner .left h4 {
   padding-left: 5px;
   border-left: 3px solid #3a3a3a;
-}
+  padding-right: 5px;
+  border-right: 3px solid #3a3a3a;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content; }
+
 .trust_banner .right {
   width: 30%;
   height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  object-fit: cover;
-}
-@media (max-width:1000px) {
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+@media (max-width: 1000px) {
   /* trust banner */
   .trust_banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-  }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
   .trust_banner .left {
     width: 100%;
-    border-right:5px solid #f1ae17;
-    border-bottom:0;
-  }
-  .trust_banner .left ul{
-    padding-left: 15px;
-  }
-  .trust_banner .left ul li{
-    font-size: 14px;
-  }
-  .trust_banner .left h4{
-    padding-left: 5px;
-    border-left: 3px solid #3a3a3a;
+    border-right: 5px solid #f1ae17;
+    border-bottom: 0; }
+
+  .trust_banner .left ul {
+    padding-left: 15px; }
+
+  .trust_banner .left ul li {
+    font-size: 14px; }
+
+  .trust_banner .left h4 {
     font-size: 16px;
-  }
+    max-width: 80%; }
+
   .trust_banner .right {
     position: relative;
-    width: 100%;
-  }
-}
+    width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */
