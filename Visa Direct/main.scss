@@ -412,10 +412,7 @@
     border-top:5px solid #f1ae17;
     border-bottom:5px solid #f1ae17;
     border-left:5px solid #f1ae17;
-  }
-  .trust_banner .left h2 del{
-    -moz-text-decoration-color: red;
-  }
+  } 
   .trust_banner .left h4{
     padding-left: 5px;
     border-left: 3px solid #3a3a3a;    
@@ -439,7 +436,8 @@
     }
     .trust_banner .left {
       width: 100%;
-      border-right:5px solid #f1ae17;
+      border-right:5px solid #f1ae17;;
+      border-left:5px solid #f1ae17 !important;
       border-bottom:0;
     }
     .trust_banner .left ul{
@@ -457,3 +455,86 @@
       width: 100%;
     }
   }
+
+
+
+
+
+
+
+// ARABIC BODY GOES HEREEE
+#ARABIC_BODY {
+  * {
+    font-family: 'Cairo', sans-serif !important;
+    text-align: right !important;
+  }
+  i {
+    font-family: "Font Awesome 6 Free" !important;
+  }
+  @media (min-width:1000px) {
+    header {
+      direction: ltr !important;
+      .language_list_items {
+        direction: rtl;
+      }
+    }
+  }
+  overflow-x: hidden;
+
+
+  direction: rtl;
+  // new hero section
+  .new_hero::before {
+    transform: scaleX(-1);
+  }
+  .new_hero .left p {
+    text-align: right;
+  }   
+  .new_hero .left h1 span {
+    text-align: right;
+  }  
+  .new_hero .left h1 .span_image img{
+    transform: scaleX(-1);
+  }
+  .new_hero .left h1 .span_image span{
+    color: rgb(241, 174, 23);
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+  }
+
+
+  // Banner
+  .trust_banner .left {
+    border-left: 0;
+    border-right:5px solid #f1ae17;
+    padding-right: 50px;
+  }
+  .trust_banner .right {
+    left: 0;
+    right: unset; 
+    text-align: right;
+  }
+
+
+  // testimonials
+
+  .testimonials-partial .testimonials-content .testimonial-block .testimonial-text h4 {
+    text-align: right;
+  }
+  .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+    text-align: right;
+  } 
+  .testimonial-block .testimonial-text {
+    padding-left: 0 !important;
+    width: 100%;
+    padding-right:20px !important;
+  } 
+
+
+  // about us page
+  .features-partial .feature-text  {
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}

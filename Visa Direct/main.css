@@ -471,9 +471,6 @@ header .logo-section {
   border-bottom: 5px solid #f1ae17;
   border-left: 5px solid #f1ae17; }
 
-.trust_banner .left h2 del {
-  -moz-text-decoration-color: red; }
-
 .trust_banner .left h4 {
   padding-left: 5px;
   border-left: 3px solid #3a3a3a;
@@ -506,6 +503,7 @@ header .logo-section {
   .trust_banner .left {
     width: 100%;
     border-right: 5px solid #f1ae17;
+    border-left: 5px solid #f1ae17 !important;
     border-bottom: 0; }
 
   .trust_banner .left ul {
@@ -521,5 +519,54 @@ header .logo-section {
   .trust_banner .right {
     position: relative;
     width: 100%; } }
+#ARABIC_BODY {
+  overflow-x: hidden;
+  direction: rtl; }
+  #ARABIC_BODY * {
+    font-family: 'Cairo', sans-serif !important;
+    text-align: right !important; }
+  #ARABIC_BODY i {
+    font-family: "Font Awesome 6 Free" !important; }
+  @media (min-width: 1000px) {
+    #ARABIC_BODY header {
+      direction: ltr !important; }
+      #ARABIC_BODY header .language_list_items {
+        direction: rtl; } }
+  #ARABIC_BODY .new_hero::before {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1); }
+  #ARABIC_BODY .new_hero .left p {
+    text-align: right; }
+  #ARABIC_BODY .new_hero .left h1 span {
+    text-align: right; }
+  #ARABIC_BODY .new_hero .left h1 .span_image img {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1); }
+  #ARABIC_BODY .new_hero .left h1 .span_image span {
+    color: #f1ae17;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px; }
+  #ARABIC_BODY .trust_banner .left {
+    border-left: 0;
+    border-right: 5px solid #f1ae17;
+    padding-right: 50px; }
+  #ARABIC_BODY .trust_banner .right {
+    left: 0;
+    right: unset;
+    text-align: right; }
+  #ARABIC_BODY .testimonials-partial .testimonials-content .testimonial-block .testimonial-text h4 {
+    text-align: right; }
+  #ARABIC_BODY .testimonials-partial .testimonials-content .testimonial-block .testimonial-text p {
+    text-align: right; }
+  #ARABIC_BODY .testimonial-block .testimonial-text {
+    padding-left: 0 !important;
+    width: 100%;
+    padding-right: 20px !important; }
+  #ARABIC_BODY .features-partial .feature-text {
+    padding-left: 0;
+    padding-right: 20px; }
 
 /*# sourceMappingURL=main.css.map */
