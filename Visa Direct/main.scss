@@ -538,3 +538,23 @@
     padding-right: 20px;
   }
 }
+
+// white_banner_bottom
+.white_banner_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding: 10px 5%;
+  gap: 10px;
+  img {
+    height: 20px !important;
+    width: fit-content !important;
+    filter: grayscale(100%);
+    opacity: .8;
+    &:hover {
+      filter: none;
+      opacity: 1;
+    }
+  }
+}

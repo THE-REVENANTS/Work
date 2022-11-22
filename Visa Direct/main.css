@@ -569,4 +569,31 @@ header .logo-section {
     padding-left: 0;
     padding-right: 20px; }
 
+.white_banner_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 10px 5%;
+  gap: 10px; }
+  .white_banner_bottom img {
+    height: 20px !important;
+    width: -webkit-fit-content !important;
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    opacity: .8; }
+    .white_banner_bottom img:hover {
+      -webkit-filter: none;
+              filter: none;
+      opacity: 1; }
+
 /*# sourceMappingURL=main.css.map */
