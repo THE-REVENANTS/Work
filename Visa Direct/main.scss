@@ -543,18 +543,18 @@
 .white_banner_bottom {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  padding: 10px 5%;
-  gap: 10px;
+  justify-content: center; 
+  padding: 10px 5%; 
+  padding-bottom:40px;
+  flex-direction: column;
   img {
-    height: 20px !important;
-    width: fit-content !important;
-    filter: grayscale(100%);
-    opacity: .8;
-    &:hover {
-      filter: none;
-      opacity: 1;
-    }
+    width:35px !important;
+  }
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 10px; 
   }
 }

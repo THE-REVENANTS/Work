@@ -576,24 +576,29 @@ header .logo-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px 5%;
-  gap: 10px; }
+  padding-bottom: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .white_banner_bottom img {
-    height: 20px !important;
-    width: -webkit-fit-content !important;
-    width: -moz-fit-content !important;
-    width: fit-content !important;
-    -webkit-filter: grayscale(100%);
-            filter: grayscale(100%);
-    opacity: .8; }
-    .white_banner_bottom img:hover {
-      -webkit-filter: none;
-              filter: none;
-      opacity: 1; }
+    width: 35px !important; }
+  .white_banner_bottom div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px; }
 
 /*# sourceMappingURL=main.css.map */
