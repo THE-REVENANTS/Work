@@ -7165,16 +7165,7 @@ input[type='checkbox'] {
         position: relative;
         z-index: 1; }
       .page-header__video__image:before {
-        content: '';
-        display: block;
-        width: 70px;
-        height: 70px;
-        min-width: 70px;
-        min-height: 70px;
-        position: absolute;
-        background: url("../fonts/play-button.svg") no-repeat center center;
-        background-size: 100%;
-        z-index: 9; }
+        display:none !important; }
       .page-header__video__image:after {
         content: '';
         position: absolute;
