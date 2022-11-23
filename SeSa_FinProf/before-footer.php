@@ -1,5 +1,5 @@
 <?php
-$myemail = 'contact@mrmontasir.com';//<-----Put Your email address here.
+$myemail = 's.sadof@sesa-finprof.nl';//<-----Put Your email address here.
 
     $email = $_POST['email'];  
     $i_am = $_POST['i_am'];  

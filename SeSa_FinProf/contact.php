@@ -6,8 +6,7 @@ $myemail = 's.sadof@sesa-finprof.nl';//<-----Put Your email address here.
     $name = $_POST['name'];  
     $email = $_POST['email'];  
     $phone = $_POST['phone'];  
-    $message = $_POST['message']; 
-    $consent = $_POST['consent'];
+    $message = $_POST['message'];
 
     $to = $myemail; 
     $email_subject = "Contact form submission received from SeSa FinProf contact form"; 
