@@ -558,3 +558,34 @@
     gap: 10px; 
   }
 }
+
+// footer
+footer ul a li {
+  font-size: 15px !important;
+}
+footer ul a li i {
+  margin-right: 15px;
+  font-size: 18px;
+  &.fa-brands {
+    font-family:"Font Awesome 6 Brands" !important;
+  }
+}
+body#ARABIC_BODY {
+  footer ul a li i {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+  .fa-brands {
+    font-family:"Font Awesome 6 Brands" !important;
+  }
+}
+
+
+// contact us social icons
+.contact_social_media_icons {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
