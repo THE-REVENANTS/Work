@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ouzeri Limanaki</title>
+        <!-- fontawesome script -->
+        <script src="https://kit.fontawesome.com/472bc20742.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/main.css">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png">
+    </head>
+<body>
+    <div class="card_container">
+        <div class="img_container">
+            <img src="assets/img/logo.png" alt="">
+        </div>
+        <h1
+         data-en="Rate your experience at the Oionos cafe-bar and enter the competition for an iPhone 13 Pro"
+         data-gr="Αξιολογήστε την εμπειρία σας στον χώρο Oionos cafe-bar και μπείτε στο διαγωνισμό για ένα iPhone 13 Pro"
+        >
+            Αξιολογήστε την εμπειρία σας στον χώρο Oionos cafe-bar και μπείτε στο διαγωνισμό για ένα iPhone 13 Pro
+        </h1>
+        <div class="rating">
+            <a id="rating" href="rating.html"><i id="thumbs-up" class="fa-solid fa-thumbs-up"></i></a>
+            <a id="contact" href="contact.html"><i id="thumbs-down" class="fa-solid fa-thumbs-down"></i></a>
+        </div>
+        <div class="lang">
+            <a id="gr">GR </a>
+            <a id="en">EN</a>
+        </div>
+    </div>
+    <script>
+        let theTitle = document.querySelector('h1');
+        gr.onclick = toGR;
+        en.onclick = toEn;
+        function toGR() {
+            theTitle.textContent = theTitle.getAttribute('data-gr');
+            contact.setAttribute('href' , 'contact.html');
+            rating.setAttribute('href' , 'rating.html');
+        } 
+        function toEn() {
+            theTitle.textContent = theTitle.getAttribute('data-en');
+            contact.setAttribute('href' , 'contact_en.html');
+            rating.setAttribute('href' , 'rating_en.html');
+        } 
+    </script>
+</body>
+</html>

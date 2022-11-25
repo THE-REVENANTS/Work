@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency Home</title>
+    <!-- Link to CSS style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Add fontawesome library kit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Get  Needed Fonts from fonts.google.com -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Goes Here -->
+<header id="header">
+    <!-- Website Logo -->
+    <a class="logo">Travel Agency Home</a>
+    <!-- Links -->
+    <div class="links" id="nav_links">
+        <a href="#">Contact</a>
+        <a href="#">Team</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Shop</a>
+        <a href="packages.html">Packages</a>
+        <a href="index.html">Home</a>
+        <a href="#">Landing</a>
+    </div>
+    <!-- Bars Icon for mobile menu -->
+    <i id="bar_icon" class="fa-solid fa-bars"></i>
+</header>
+
+<!-- Explore The world section goes here -->
+<div class="hero">
+    <div class="text">
+        <h1>EXPLORE THE WORLD</h1>
+        <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        </p>
+        <a href="packages.html" class="button">LEARN MORE</a>
+    </div>
+</div>
+<!-- images banner -->
+<div class="images_banner">
+    <img src="images/uheader1.jpg" alt="">
+    <img src="images/uheader2.jpg" alt="">
+    <img src="images/uheader3.jpg" alt="">
+    <img src="images/uheader4.jpg" alt="">
+</div>
+<!-- middle body -->
+<div class="middle_body">
+    <div class="text">
+        <h2>DISCOVER <br> UNLIMITED BEATY</h2>
+        <p class="large_p">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit laborum.
+        </p>
+        <hr>
+        <p class="small_p">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip sunt in culpa qui officia deserunt mollit laborum.
+        </p>
+    </div>
+    <img src="images/midbody-cr.jpg" alt="">
+</div>
+<!-- bottom section home -->
+<div class="bottom_home">
+    <div class="text">
+        <h2>WHAT ARE YOU WAITING FOR?</h2>
+        <a href="#" class="button">GET IN TOUCH</a>
+    </div>
+    <img src="images/footerimg.jpg" alt="">
+</div>
+
+<!-- Script to open and close menu -->
+<script> 
+    function openMenu() {
+        let links = document.querySelector('#nav_links');
+        links.classList.toggle('show');
+        BarIcon.classList.toggle('fa-x');
+        BarIcon.classList.toggle('fa-bars');
+    }
+    let BarIcon = document.querySelector("#bar_icon");
+    BarIcon.addEventListener('click' , openMenu);
+</script>
+
+</body>
+</html>
