@@ -1,0 +1,406 @@
+/* body selector for overwriting original styles */
+.acsb-trigger {
+    z-index: 999999 !important; /* it's important to show Accessibe button below Cookie Consent Block */
+}
+
+.ot-floating-button {
+    display: none !important;
+}
+
+body #onetrust-banner-sdk #onetrust-policy-text,
+body #onetrust-banner-sdk #onetrust-policy-text a {
+    font-weight: 300;
+}
+
+body #onetrust-banner-sdk:focus {
+    outline: none;
+}
+
+body #onetrust-banner-sdk .ot-sdk-container {
+    width: 100%;
+    padding: 0;
+}
+
+body #onetrust-banner-sdk #onetrust-accept-btn-handler,
+body #onetrust-banner-sdk #onetrust-reject-all-handler,
+body #onetrust-banner-sdk #onetrust-pc-btn-handler {
+    width: auto;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+
+body #onetrust-banner-sdk .ot-sdk-button,
+body #onetrust-banner-sdk button,
+body #onetrust-consent-sdk .ot-sdk-button,
+body #onetrust-consent-sdk button,
+body #ot-sdk-cookie-policy .ot-sdk-button,
+body #ot-sdk-cookie-policy button {
+    border-radius: 5px;
+}
+
+
+
+@media only screen and (min-width: 426px) {
+    body #onetrust-banner-sdk.ot-buttons-fw .ot-sdk-three button {
+        width: auto !important;
+    }
+
+
+}
+
+@media only screen and (min-width: 740px) {
+    body #onetrust-banner-sdk button {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 890px) {
+    body #onetrust-banner-sdk.ot-buttons-fw:not(.ot-iab-2) #onetrust-button-group-parent {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body #onetrust-banner-sdk.ot-buttons-fw:not(.ot-iab-2) #onetrust-button-group {
+        width: auto !important;
+        margin-top: 0 !important;
+    }
+
+    body #onetrust-banner-sdk.ot-buttons-fw:not(.ot-iab-2) #onetrust-button-group button:last-of-type {
+        margin-bottom: 5px;
+    }
+}
+
+
+body #onetrust-consent-sdk #onetrust-accept-btn-handler {
+    background-color: #fff;
+    border-color: #fff;
+    min-width: 175px;
+    padding: 12px 40px;
+}
+
+body #onetrust-consent-sdk #onetrust-accept-btn-handler:hover {
+    opacity: 1;
+}
+
+body #onetrust-consent-sdk #onetrust-banner-sdk *:focus,
+body #onetrust-consent-sdk #onetrust-banner-sdk:focus {
+    outline: none;
+    border-color: #6aac0e;
+}
+
+body #onetrust-banner-sdk #onetrust-policy {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    max-width: 720px;
+}
+
+body #onetrust-banner-sdk #onetrust-policy-text a {
+    margin-left: 0;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk #ot-category-title {
+    font-weight: 300;
+    display: none;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout .ot-cat-header {
+    font-weight: 300;
+    line-height: 1.5;
+    color: #2C2C2C;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-tgl input:focus + .ot-switch,
+body #onetrust-consent-sdk .ot-switch .ot-switch-nob,
+body #onetrust-consent-sdk .ot-switch .ot-switch-nob:before,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-checkbox input[type="checkbox"]:focus + label::before,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-chkbox input[type="checkbox"]:focus + label::before {
+    outline: none;
+}
+
+#onetrust-consent-sdk #onetrust-pc-sdk .ot-pc-footer-logo {
+    display: none !important;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-pc-header {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-pc-logo {
+    background: none !important;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#onetrust-consent-sdk #onetrust-pc-sdk .ot-pc-logo::after {
+    content: attr( aria-label );
+    font: 300 20px/1.5em "Open Sans", sans-serif;
+    display: block;
+    text-align: center;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk #close-pc-btn-handler.ot-close-icon {
+    left: 0;
+    background: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.41 10.59L2.83 6L7.41 1.41L6 0L0 6L6 12L7.41 10.59Z' fill='%23323232'/%3E%3C/svg%3E%0A") center center no-repeat;
+    background-size: 8px 12px;
+}
+
+body #onetrust-banner-sdk #onetrust-pc-btn-handler.cookie-setting-link {
+    text-decoration: none;
+    margin-right: 8px;
+}
+
+body #onetrust-consent-sdk #onetrust-banner-sdk a[href],
+body #onetrust-consent-sdk #onetrust-banner-sdk a[href] font,
+body #onetrust-consent-sdk #onetrust-banner-sdk .ot-link-btn {
+    color: #fff;
+}
+
+body #onetrust-banner-sdk .ot-sdk-row {
+    max-width: 1190px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+body #onetrust-banner-sdk .ot-close-icon {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='348.333px' height='348.333px' viewBox='0 0 348.333 348.334' style='enable-background:new 0 0 348.333 348.334;' xml:space='preserve'%3E%3Cg%3E%3Cpath fill='%23fff' d='M336.559,68.611L231.016,174.165l105.543,105.549c15.699,15.705,15.699,41.145,0,56.85c-7.844,7.844-18.128,11.769-28.407,11.769c-10.296,0-20.581-3.919-28.419-11.769L174.167,231.003L68.609,336.563c-7.843,7.844-18.128,11.769-28.416,11.769c-10.285,0-20.563-3.919-28.413-11.769c-15.699-15.698-15.699-41.139,0-56.85l105.54-105.549L11.774,68.611c-15.699-15.699-15.699-41.145,0-56.844c15.696-15.687,41.127-15.687,56.829,0l105.563,105.554L279.721,11.767c15.705-15.687,41.139-15.687,56.832,0C352.258,27.466,352.258,52.912,336.559,68.611z'/%3E%3C/g%3E%3C/svg%3E");
+    right: 0;
+}
+
+body #onetrust-pc-sdk .ot-accordion-layout .ot-acc-hdr {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+body #onetrust-pc-sdk .ot-accordion-layout .ot-acc-grpdesc {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 600px) {
+
+    body #onetrust-pc-sdk #ot-pc-content,
+    body #onetrust-pc-sdk.ot-ftr-stacked .ot-btn-container {
+        margin: 1px 3px 0 16px;
+        padding-right: 10px;
+        width: calc(100% - 30px);
+    }
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch {
+    height: 22px;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk *:focus,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-vlst-cntr > a:focus,
+body #onetrust-consent-sdk #onetrust-pc-sdk *:focus-visible,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-vlst-cntr > a:focus-visible {
+    outline: none !important;
+    border: none !important;
+}
+
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch-nob {
+    background-color: #BABABA;
+    border: none !important;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch:hover .ot-switch-nob,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch:focus .ot-switch-nob {
+    background-color: #777;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-switch-nob:before {
+    background-color: #fff;
+    height: 27px;
+    width: 27px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+    bottom: -3px;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-tgl input:checked+.ot-switch .ot-switch-nob {
+    background-color: #3FB923 !important;
+    border-color: #3FB923;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-tgl input:checked+.ot-switch .ot-switch-nob:before {
+    background:#fff url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.7498 8.1502L1.5998 5.0002L0.549805 6.05019L4.7498 10.2502L13.7498 1.2502L12.6998 0.200195L4.7498 8.1502Z' fill='%233FB923'/%3E%3C/svg%3E%0A") center center no-repeat;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout .ot-acc-hdr {
+    display: flex;
+    align-items: center;
+}
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-always-active-group .ot-cat-header,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout .ot-cat-header {
+    width: auto;
+    flex-grow: 1;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout h4~.ot-tgl,
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout h4~.ot-always-active {
+    position: static;
+    transform:none;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout h4~.ot-always-active {
+    transition: all .2s ease-in 0s;
+    -webkit-transition: all .2s ease-in 0s;
+    border-radius: 20px;
+    background-color: #EDEDED;
+    border: none !important;
+    position: relative;
+    width: 45px;
+    height: 25px;
+    color: #EDEDED;
+    text-indent: -800px;
+    right: 0;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout h4~.ot-always-active:before {
+    position: absolute;
+    content: "";
+    background: #fff url("data:image/svg+xml,%3Csvg width='14' height='11' viewBox='0 0 14 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.7498 8.1502L1.5998 5.0002L0.549805 6.05019L4.7498 10.2502L13.7498 1.2502L12.6998 0.200195L4.7498 8.1502Z' fill='%23CBCBCB'/%3E%3C/svg%3E%0A") center center no-repeat;
+    height: 27px;
+    width: 27px;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 20%);
+    bottom: -1px;
+    right: 0;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+    border-radius: 20px;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-plus-minus {
+    display: none;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout.ot-cat-item:first-of-type {
+    border-top: none;
+}
+
+body #onetrust-consent-sdk #onetrust-pc-sdk .ot-accordion-layout.ot-cat-item {
+    border: none;
+    border-bottom: 1px solid #EDEDED;
+}
+
+body #onetrust-banner-sdk #onetrust-button-group {
+    margin: 0 auto;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 739px) {
+    body #onetrust-banner-sdk #onetrust-button-group {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body #onetrust-banner-sdk #onetrust-group-container {
+        margin-top: 4px;
+    }
+
+    body #onetrust-banner-sdk #onetrust-close-btn-container {
+        top: 0;
+        right: 0;
+    }
+
+}
+
+#otet-long-text {
+    display: none;
+}
+
+body.show-otet-long-text #otet-long-text {
+    display: block;
+}
+
+body.show-otet-long-text #otet-short-text {
+    display: none;
+}
+
+@media only screen and (min-width: 740px) {
+    #onetrust-group-container:before {
+        content: '';
+        width: 78px;
+        min-width: 78px;
+        height: 84px;
+        display: block;
+        margin: 0;
+    }
+
+    #onetrust-group-container:before {
+        background: url('https://marketing.etorostatic.com/cache1/assets/img/etorock@1x.png') 0 0 no-repeat;
+        background-size: 78px 84px;
+    }
+
+    #otet-short-text {
+        display: none;
+    }
+
+    #otet-long-text {
+        display: block;
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25) and (min-width: 740px),
+only screen and (min-resolution: 120dpi) and (min-width: 740px) {
+    #onetrust-group-container:before {
+        background: url('https://marketing.etorostatic.com/cache1/assets/img/etorock.png') 0 0 no-repeat;
+        background-size: 78px 84px;
+    }
+}
+
+@media only screen and (min-width: 740px) {
+    body #onetrust-group-container,
+    body #onetrust-banner-sdk .ot-sdk-columns {
+        display: flex;
+    }
+
+    body #onetrust-banner-sdk .ot-sdk-row {
+        display: flex;
+        align-items: center;
+    }
+
+    body #onetrust-banner-sdk:not(.ot-iab-2) #onetrust-button-group-parent {
+        margin: 0 0 0 auto;
+    }
+
+    body #onetrust-banner-sdk #onetrust-button-group {
+        margin-right: 14px;
+        margin-left: auto;
+    }
+
+    body #onetrust-banner-sdk #onetrust-button-group-parent,
+    body #onetrust-banner-sdk.vertical-align-content #onetrust-button-group-parent{
+        min-width: 320px;
+        width: auto !important;
+        position: static !important;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body #onetrust-banner-sdk .ot-sdk-eight.ot-sdk-columns {
+        width: auto !important;
+    }
+
+    body #onetrust-banner-sdk.vertical-align-content #onetrust-button-group-parent {
+
+    }
+
+    #onetrust-banner-sdk #onetrust-close-btn-container button {
+
+    }
+}

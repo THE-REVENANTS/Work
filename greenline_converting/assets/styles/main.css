@@ -29,12 +29,6 @@
   min-height: 600px;
   width: 100%;
   position: relative; }
-  .home video {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    z-index: -2; }
   .home header {
     display: flex;
     justify-content: space-between;
@@ -66,7 +60,8 @@
       gap: 20px; }
       .home header .links a {
         color: white;
-        transition: .2s; }
+        transition: .2s;
+        text-transform: uppercase; }
         .home header .links a:hover {
           color: #39eed0; }
   .home .swiper {
@@ -77,20 +72,30 @@
     left: 0;
     object-fit: cover; }
     .home .swiper .swiper-slide {
-      text-align: center;
-      object-fit: cover;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      filter: brightness(60%); }
+      height: 100%;
+      width: 100%;
+      position: relative;
+      background: #006a58; }
+      .home .swiper .swiper-slide .text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-30%);
+        width: 100%;
+        font-family: lemon_milk;
+        z-index: 1;
+        color: white;
+        background: rgba(0, 106, 88, 0.6);
+        font-size: 25px;
+        font-weight: 400;
+        padding-left: 5%;
+        padding-right: 30%;
+        padding-top: 30px;
+        padding-bottom: 30px; }
+      .home .swiper .swiper-slide img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        opacity: .6; }
     .home .swiper .swiper-pagination-bullet {
       background: transparent;
       border: 1px solid white;
@@ -99,13 +104,6 @@
       opacity: 1; }
       .home .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
         background: white; }
-  .home .text {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    width: 50%;
-    z-index: 1;
-    color: white; }
 
 @media (max-width: 1100px) {
   .home header {
@@ -148,13 +146,13 @@
         opacity: 1; }
       .home header .links a {
         color: var(--primary-color); }
-  .home .text {
-    position: relative;
-    top: unset;
-    width: 90%;
-    font-weight: 400;
-    font-size: 25px;
-    margin-top: 15vh; } }
+  .home .swiper .swiper-slide .text {
+    font-weight: 300;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px; } }
 .development {
   background-image: url(/assets/images/world_map.png);
   padding: 80px 10%; }

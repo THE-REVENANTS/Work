@@ -216,7 +216,8 @@ header .logo-section {
 .new_hero .left h1 span {
   display: block;
   font-size: 42px;
-  font-weight: bolder; }
+  font-weight: bolder;
+  line-height: 50px; }
 
 .new_hero .left h1 span:first-child {
   color: #000894; }
@@ -291,7 +292,7 @@ header .logo-section {
     gap: 20px; }
 
   .new_hero .left h1 span {
-    font-size: 50px; }
+    font-size: 40px; }
 
   .new_hero .left h1 .span_image img {
     width: 150px; }
