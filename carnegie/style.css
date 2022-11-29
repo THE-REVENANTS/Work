@@ -1,0 +1,261 @@
+* {
+    font-family: 'Tajawal', sans-serif !important;
+    font-weight: 500 !important;
+    text-decoration: none!important;
+    scroll-behavior: smooth;
+}  
+:root {
+  --main-color: #e4ba00;
+}
+/* hide google */
+iframe.goog-te-banner-frame  {
+  display: none !important;
+}
+.text-center {
+  text-align: center !important;
+}
+body.home .new-homepage .about {
+  background-size: cover;
+}
+.skiptranslate span {
+  display: none;
+}
+.site-title {
+  width: fit-content;
+}
+.site-logo{
+  background: none !important; 
+  width: fit-content !important;  
+  display: flex;
+  align-items: center;
+}
+.site-logo img{
+  width: 110px;  
+  display: block !important;
+}
+.icon-cancel-circle::before {
+  display: none!important;
+}
+/* navbar will go down here */ 
+/* Dropdown Button */
+.dropbtn {
+    background-color:var(--main-color);
+    color: white;  
+    font-size: 17px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;  
+    height: 70px ;
+    border-radius: 0;
+} 
+.dropbtn:after {
+    display: none;
+}
+  /* Dropdown button on hover & focus */
+.header-new .bottom-nav .mega-menu.banded {
+  background: #eee;
+} 
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#e6e7e8;
+    color: var(--main-color);
+    min-width: 160px;
+    width: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+  }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+/* priorities section goes here */
+.landing.about .our-priorities .col.col-33 .container {
+  background-size: cover;
+}
+/* colored class */
+.colored {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.footer-logo {
+  background-image: url(logo.png);
+}
+.header-new .navResource>li.active .mega-menu.navicon .nav-block a {
+  color: var(--main-color);
+  font-weight: bold !important;
+}
+.header-new .navResource > li.active .mega-menu.navicon .secondary.active .mega-menu-sub .mega-menu-sub-wrap {
+  background: white;
+}
+.header-new .navResource > li.active .mega-menu.navicon .mega-menu-wrap {
+  background: #eee;
+}
+body.home .new-homepage .section-title.bordered-box--header {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+body.home .new-homepage .recent-list .topic-title {
+  color: var(--main-color);
+}
+body.home .new-homepage .events li .date {
+  color: var(--main-color);
+}
+body.home .new-homepage .events li .play-button  {
+  background: var(--main-color);
+}
+.button {
+  background: var(--main-color) !important;
+  border: 1px solid #eee;
+}
+.carousel-nav a:hover {
+  color: var(--main-color) !important;
+}
+body.home .new-homepage .ceip-home-carousel .slide-content .feature-wrap .containerFeature .topic-name {
+  color: var(--main-color);
+}
+body.home .new-homepage .slide-bottom-section .more-title {
+  color: var(--main-color);
+}
+/* body */
+body.home .section.about {
+  margin-bottom: 0;
+}
+/* nowrap list */
+.header-new .top-nav ul.navResource.first-level .mega-menu {
+  white-space: nowrap;
+  width: fit-content;
+  
+}
+/* remove small icon in the end of the topic */
+.doc-end {
+  background: none;
+}
+/* secondary */
+.header-wrap .nav-block a:hover{
+  background: #e4ba00 !important;
+  color: white !important;
+}
+.header-wrap .primary.global .secondary.active .submenu-trigger {
+  background: #e4ba00 !important;
+  color: white !important;
+}
+.header-new .navResource>li.active .mega-menu.navicon .secondary.active .mega-menu-sub .mega-menu-sub-wrap a {
+  background: #e4ba00 !important;
+  color: white !important;
+  border-bottom: 2px solid #ffffff4d;
+}
+.header-new .navResource>li.active .mega-menu.navicon .secondary.active .mega-menu-sub .mega-menu-sub-wrap a:hover {
+  background: white !important;
+  color: #e4ba00 !important;
+}
+/* countries images */
+body.home .new-homepage .about .city-graphic.france .image-container{
+  background-image: url(countries/france.jpg);
+}
+body.home .new-homepage .about .city-graphic.germany .image-container{
+  background-image: url(countries/germany.jpg);
+}
+body.home .new-homepage .about .city-graphic.italy .image-container {
+  background-image: url(countries/italy.jpg);
+}
+body.home .new-homepage .about .city-graphic.spain .image-container{
+  background-image: url(countries/spain.jpg);
+}
+body.home .new-homepage .about .city-graphic.netherlands .image-container {
+  background-image: url(countries/netherlands.jpg);
+}
+/* flag for menu translate */
+.language_dropdown {
+  min-width:150px;
+  max-width:fit-content;
+  white-space:nowrap;
+  vertical-align: middle;
+  margin-top: 5px;
+  position: relative;
+}
+.language_dropdown .default {
+  height: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 7px;
+  padding-right: 7px;
+  color:white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .2s;
+}
+.language_dropdown .default i{
+  margin-left: auto;
+}
+.language_dropdown .options {
+  display: none;
+  position: absolute;
+  top: 30px;
+  z-index: 20;
+  background: #00a79d;
+  width: 100%;
+  overflow: hidden;
+  border-top: none;
+}
+.language_dropdown .options .option{
+  color: white;
+  padding: 5px 7px ;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.language_dropdown .options .option:hover{
+  background: #e4ba00;
+  color: white;
+}
+.language_dropdown .options .option.active{
+  background: #e4ba00;
+  font-weight: bold;
+}
+.language_dropdown .default img{
+  width: 15px;
+}
+.language_dropdown .options .option img{
+  width: 15px;
+}
+
+/* in open mode */
+.language_dropdown.openDropdown .options{
+  display: block;
+}
+.language_dropdown.openDropdown .default{ 
+  background: #00a79d;
+}
+/* remove the j from the footer */
+a.external-link:after {
+  content: '';
+}
+#goog-gt-tt {
+  display: none !important;
+}
+.goog-text-highlight {
+  background: none !important;
+  box-shadow: none !important;
+}

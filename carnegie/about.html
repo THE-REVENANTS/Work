@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Citizinens United - About</title>
+    <link rel="stylesheet" href="/css/one.css" media="screen">
+    <link rel="stylesheet" href="/css/two.css" media="print">
+    <link rel="stylesheet" href="/css/three.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+</head>
+<body class="brussels  en">
+    <div class="header-wrap header-new" id="header">
+        <div class="container-max-width top-nav">
+            <ul class="navResource first-level clean-list">
+                <li class="primary about-link js-element" id="about"><a class="menu-trigger header-navigation-trigger" href="/about">About</a>
+                    <div class="mega-menu">
+                        <ul class="clean-list">
+                            <li> <a href="/subpages/subpage-1.html">Mission and Vision</a></li>
+                            <li> <a href="/subpages/subpage-2.html">Towards a Citizen-Centric EU</a></li>
+                            <li> <a href="/subpages/subpage-3.html">Our Network</a></li>
+                            <li> <a href="/subpages/subpage-4.html">Vacancies</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="primary contact-link js-element" id="contact"><a class="menu-trigger header-navigation-trigger" href="#">Contact</a>
+                    <div class="mega-menu">
+                        <ul class="clean-list">
+                            <li  style="text-align: left;"> <a href="mailto:info@ecu-org.eu">info@ecu-org.eu</a></li>
+                            <li style="text-align: left;">
+                                <a>
+                                    <strong>Location:</strong> <br>
+                                    European Citizens United <br>
+                                    Alexanderveld 5 <br>
+                                    2585 ​​DB The Hague <br>
+                                    The netherlands
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="primary donate-link js-element" >
+                    <div id="google_translate_element" style="display: none;"></div>
+                    <div class="language_dropdown">
+                        <div class="default">
+                          <img src="/flags/english.png"> English <i class="bi bi-chevron-down"></i>
+                        </div>
+                        <div class="options">
+                            <div class="option english_lg active">
+                                <img src="/flags/english.png" alt=""> English
+                              </div>
+                              <div class="option dutch_lg">
+                                <img src="/flags/dutch.png" alt=""> Dutch
+                              </div>
+                              <div class="option french_lg">
+                                <img src="/flags/french.png" alt=""> French
+                              </div>
+                              <div class="option german_lg">
+                                <img src="/flags/germany.png" alt=""> German
+                              </div>
+                              <div class="option portuguese_lg">
+                                <img src="/flags/portugal.png" alt=""> Portuguese
+                              </div>
+                              <div class="option spanish_lg">
+                                <img src="/flags/spain.png" alt=""> Spanish
+                              </div>
+                              <div class="option italian_lg">
+                                <img src="/flags/italy.png" alt=""> Italian
+                              </div>
+                              <div class="option czech_lg">
+                                <img src="/flags/czech-republic.png" alt=""> Czech
+                              </div>
+                              <div class="option polish_lg">
+                                <img src="/flags/poland.png" alt=""> Polish
+                              </div>
+                        </div>
+                      </div>
+                </li>
+            </ul>
+        </div>
+        <div class="container-max-width bottom-nav">
+            <div class="site-title">
+                <h1 class="visuallyhidden no-print">Carnegie Endowment for International Peace</h1><a class="site-logo" href="../index.html"><img class="for-print" src="logo.png" alt="Carnegie Endowment for International Peace"></a></div>
+            <ul class="navResource first-level clean-list">
+                <li class="primary search" id="search"><a class="menu-trigger main-search-trigger header-navigation-trigger" href="/search/"><span>Search</span><i class="bi bi-search"></i></a>
+                    <div class="mega-menu" id="basicSearch">
+                        <form name="solrSearchBasic" id="solrSearchBasic" action="https://carnegieendowment.org/search/" method="get" enctype="multipart/form-data"><input type="hidden" name="search_op" value="and"><label for="KeywordSearchHeader"><input class="txtFld" name="qry" id="KeywordSearchHeader" type="text" placeholder="Enter search terms"></label>
+                            <div class="tabs-wrap"><strong class="roman-condensed-book">Search In:</strong><input type="hidden" name="center" value="">
+                                <ul class="tabs header" role="tablist">
+                                    <li class="secondary active" id="local-search"><a href="#" data-toggle="tab" onclick="justThisSite();"><em> Just Washington</em></a></li>
+                                    <li class="secondary" id="global-search"><a href="#" data-toggle="tab" onclick="allCenters();">All Centers</a></li>
+                                </ul>
+                            </div>
+                            <div class="button-wrap"><button type="submit" onclick="ga('send', 'event', 'Header', 'Tab', 'Search');ga('globalTracker.send', 'event', 'Header', 'Tab', 'Search');">Search</button></div>
+                        </form>
+                        <script>
+                            function justThisSite() {
+                                document.getElementById("solrSearchBasic").action = '/search/'
+                                document.getElementById("solrSearchBasic").center.value = "";
+                            }
+
+                            function allCenters() {
+                                document.getElementById("solrSearchBasic").action = 'https://carnegieendowment.org/search/'
+                                document.getElementById("solrSearchBasic").center.value = "global";
+                            }
+                        </script>
+                    </div>
+                </li>
+                <li class="primary global js-element" id="global"><a class="menu-trigger navicon header-navigation-trigger" href="#"><span>Global Resources</span><i class="bi bi-list"></i></a>
+                    <div class="mega-menu banded navicon">
+                        <div class="mega-menu-wrap" id="respondMenu" style="height: 832px;">
+                            <!-- mobile pages in first lvl -->
+                            <ul class="nav-block local-links"> 
+                                <li class="secondary pubs"><a href="publications.html">Publications</a></li>
+                                <li class="secondary experts"><a href="news.html">News</a></li>
+                                <li class="secondary about"><a href="events.html">Events</a></li>  
+                                <li class="secondary research-areas"><a class="submenu-trigger menu-trigger" href="#">About</a>
+                                    <div class="mega-menu-sub">
+                                        <div class="mega-menu-sub-wrap" style="height: 858px;">
+                                            <ul class="categories">
+                                                <li><a href="subpages/subpage-1.html">Mission and Vision</a></li>
+                                                <li><a href="subpages/subpage-2.html">Towards a Citizen-Centric EU</a></li>
+                                                <li><a href="subpages/subpage-3.html">Our Network</a></li> 
+                                                <li><a href="subpages/subpage-4.html">Vacancies</a></li> 
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="secondary research-areas"><a class="submenu-trigger menu-trigger" href="#">EU rights </a>
+                                    <div class="mega-menu-sub">
+                                        <div class="mega-menu-sub-wrap" style="height: 858px;">
+                                            <ul class="categories"> 
+                                                <li><a href="subpages/subpage-5.html">Your Europe Advice (YEA) </a></li>
+                                                <li><a href="subpages/subpage-6.html">European Citizens Catalyst (EURCICA)
+                                                </a></li>
+                                                <li><a href="subpages/subpage-7.html">EU Law Clinic</a></li> 
+                                                <li><a href="subpages/subpage-8.html">ENLAC</a></li>  
+                                                  
+                                                <li><a href="subpages/subpage-10.html">COER</a></li>  
+                                                <li><a href="subpages/subpage-11.html">pop AI</a></li>  
+                                                <li><a href="subpages/subpage-12.html">Promise</a></li>  
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="secondary research-areas"><a class="submenu-trigger menu-trigger" href="#">Projects  </a>
+                                    <div class="mega-menu-sub">
+                                        <div class="mega-menu-sub-wrap" style="height: 858px;">
+                                            <ul class="categories">
+                                                <li><a href="subpages/subpage-13.html">MORE for EU Citizens</a></li>
+                                                <li><a href="subpages/subpage-14.html">IPEU </a></li>
+                                                <li><a href="subpages/subpage-15.html">TI-EU</a></li> 
+                                                  
+                                                <li><a href="subpages/subpage-17.html">FAIR EU</a></li>  
+                                                <li><a href="subpages/subpage-18.html">ACTION for Free Movement </a></li>  
+                                                <li><a href="subpages/subpage-19.html">Brexit Observatory </a></li>  
+                                                <li><a href="subpages/subpage-20.html">Brexit Takeaways</a></li>  
+                                                <li><a href="subpages/subpage-21.html">European Voluntary Service (EVS)</a></li>  
+                                                <li><a href="subpages/subpage-22.html">Study on EU Residence Cards and Ids</a></li>  
+                                                <li><a href="subpages/subpage-23.html">Benefit Tourism</a></li>  
+                                                <li><a href="subpages/subpage-24.html">My Mobility Mentor</a></li>  
+                                                <li><a href="subpages/subpage-25.html">One-Stop-Shops for Political Participation</a></li>  
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="secondary research-areas"><a class="submenu-trigger menu-trigger" href="#">Our Network  </a>
+                                    <div class="mega-menu-sub">
+                                        <div class="mega-menu-sub-wrap" style="height: 858px;">
+                                            <ul class="categories"> 
+                                                <li><a href="subpages/subpage-26.html">Austria </a></li> 
+                                                <li><a href="subpages/subpage-27.html">Belgium </a></li> 
+                                                <li><a href="subpages/subpage-28.html"><!---->France </a></li> 
+                                                <li><a href="subpages/subpage-29.html">Germany </a></li> 
+                                                <li><a href="subpages/subpage-30.html">Ireland </a></li> 
+                                                <li><a href="subpages/subpage-31.html">Italy </a></li> 
+                                                <li><a href="subpages/subpage-32.html">Poland </a></li> 
+                                                <li><a href="subpages/subpage-33.html">Portugal </a></li> 
+                                                <li><a href="subpages/subpage-34.html">Spain </a></li> 
+                                                <li><a href="subpages/subpage-35.html">The Czech Republic </a></li> 
+                                                <li><a href="subpages/subpage-36.html">The Netherlands </a></li>
+                                            </ul> 
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>  
+                        </div>
+                    </div>
+                </li>
+            </ul> 
+            <!-- navigation in desktop -->
+            <ul class="ceip-navigation navSection first-level clean-list">
+                <li class="primary centers" id="centers">
+                    <a class="menu-trigger header-navigation-trigger" href="#">
+                        <span>About Us</span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="mega-menu banded center-list">
+                        <ul class="clean-list">
+                            <li>
+                                <a class="external-link carnegie-link" href="subpages/subpage-1.html">
+                                    Mission and Vision
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-2.html">
+                                    Towards a Citizen-Centric EU
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-3.html">
+                                    Our Network
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-4.html">
+                                    Vacancies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> 
+                <li class="primary centers" id="centers">
+                    <a class="menu-trigger header-navigation-trigger" href="#">
+                        <span>EU rights </span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="mega-menu banded center-list">
+                        <ul class="clean-list">
+                            <li>
+                                <a class="external-link carnegie-link" href="subpages/subpage-5.html">
+                                    Your Europe Advice (YEA)
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-6.html">
+                                    European Citizens Catalyst (EURCICA)
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-7.html">
+                                    EU Law Clinic
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-8.html">
+                                    ENLAC
+                                </a>
+                            </li>
+                            
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-10.html">
+                                    COER
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-11.html">
+                                    pop AI
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-12.html">
+                                    Promise
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>  
+
+                <li class="primary centers" id="centers">
+                    <a class="menu-trigger header-navigation-trigger" href="#">
+                        <span>Projects </span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="mega-menu banded center-list">
+                        <ul class="clean-list">
+                            <li>
+                                <a class="external-link carnegie-link" href="subpages/subpage-13.html">
+                                    MORE for EU Citizens
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-14.html">
+                                    IPEU
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-15.html">
+                                    TI-EU
+                                </a>
+                            </li>
+                            
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-17.html">
+                                    FAIR EU
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-18.html">
+                                    ACTION for Free Movement
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-19.html">
+                                    Brexit Observatory 
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-20.html">
+                                    Brexit Takeaways
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-21.html">
+                                    European Voluntary Service (EVS)
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-22.html">
+                                    Study on EU Residence Cards and Ids
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-23.html">
+                                    Benefit Tourism
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-24.html">
+                                    My Mobility Mentor
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-25.html">
+                                    One-Stop-Shops for Political Participation
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> 
+                <li class="primary centers" id="centers">
+                    <a class="menu-trigger header-navigation-trigger" href="#">
+                        <span>Our network </span>
+                        <i class="bi bi-caret-down-fill"></i>
+                    </a>
+                    <div class="mega-menu banded center-list">
+                        <ul class="clean-list">
+                            <li>
+                                <a class="external-link carnegie-link" href="subpages/subpage-26.html">
+                                    Austria
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-27.html">
+                                    Belgium
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-28.html">
+                                    France
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-29.html">
+                                    Germany
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-30.html">
+                                    Ireland
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-31.html">
+                                    Italy
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-32.html">
+                                    Poland
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-33.html">
+                                    Portugal
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-34.html">
+                                    Spain
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-35.html">
+                                    The Czech Republic
+                                </a>
+                            </li>
+                            <li> 
+                                <a class="external-link carnegie-link" href="subpages/subpage-36.html">
+                                    The Netherlands
+                                </a>
+                            </li>  
+                        </ul>
+                    </div>
+                </li>  
+                <li class="primary research" id="research"><a class="header-navigation-link" href="publications.html">Publications</a></li>
+                <li class="primary experts" id="experts"><a class="header-navigation-link" href="news.html">News</a></li>
+                <li class="primary events dc" id="events"><a class="header-navigation-link" href="events.html">Events</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="landing about brussels">
+        <script>
+            function popUpiApplicants(URL) {
+                day = new Date();
+                id = day.getTime();
+                eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=0,width=1100,height=500,left=100,top=100');");
+            }
+        </script>
+        <div class="section demo background-video first" id="openingBackground">
+            <div class="video-container"><video class="active" autoplay muted loop id="openingVideo"><source src="https://ceipfiles.s3.amazonaws.com/mp4/about-us-landing-hero-loop_Europe.mp4" type="video/mp4"></video></div>
+            <div class="foreground">
+                <h1><span>About</span>European Citizinens United</h1>
+            </div>
+        </div>
+        <div class="section top-section">
+            <div class="foreground mobile-zero">
+                <p>
+                    The European Citizens United (ECU) is an international, non-profit organisation with a pan-European membership and experience in empowering citizens in order to create a more inclusive and stronger European Union by: 
+                    <br>
+                    <br>
+                    Promoting and defending citizens’ rights, and developing and supporting mechanisms to increase citizens and citizen organisations’ democratic participation in, and engagement with, the EU. 
+                    <br>
+                    <br>
+                    ECU believes in an inclusive, transparent, citizen-centric and democratic European Union in which citizens’ rights are at the heart of decision-making at all levels and in which citizens are informed, consulted and active participants. 
+                    ECU delivers its mission by implementing projects, services to citizens, advocacy and awareness-raising campaigns, research and high-level events in two focus areas: EU RIGHTS and EUROPEAN DEMOCRACY.  
+                </p>
+                <div class="container-connector center">
+                    <div class="connector ceip-icon icon-arrow-down title"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section our-priorities">
+            <div class="foreground">
+                <h2 class="section-title"><span>Our values </span></h2>
+                <div class="cols clean-list extra-top-padding same-height cols--equal-heights">
+                    <div class="col col-33 trigger-center gutter-bottom" ID="priority1">
+                        <div class="gutters container europes-global-role">
+                            <h3>Non-partisanship:</h3>
+                            <p>Free from affiliation with any political party</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 trigger-center gutter-bottom" ID="priority2">
+                        <div class="gutters container europes-governace-challenge">
+                            <h3>Professionalism: </h3>
+                            <p>Striving for excellence in all aspects of our work.</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 trigger-center gutter-bottom" ID="priority3">
+                        <div class="gutters container europes-future">
+                            <h3>Empowerment:</h3>
+                            <p>Enabling citizens to understand and utilise their rights</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 trigger-center gutter-bottom" ID="priority4">
+                        <div class="gutters container europes-future">
+                            <h3>Inclusiveness:</h3>
+                            <p> Ensuring that all EU citizens can fully enjoy their rights</p>
+                        </div>
+                    </div>
+                    <div class="col col-33 trigger-center gutter-bottom" ID="priority5">
+                        <div class="gutters container europes-future">
+                            <h3>Innovation:</h3>
+                            <p> Applying unique and modern solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section featured-expert no-connector">
+            <div class="foreground">
+                <h2 class="section-title"><span>Featured</span></h2>
+                <div class="section cols">
+                    <div class="col col-40">
+                        <div class="head-shot">
+                            <div class="name-container">
+                                <h3>Rosa Balfour</h3><strong>Center Director</strong></div>
+                        </div>
+                    </div>
+                    <div class="col col-60">
+                        <div class="gutters">
+                            <p>Balfour writes regularly to explore the relationship between Europe’s domestic politics and its role in the world. She has particularly highlighted the ways in which the coronavirus pandemic has opened new possibilities for
+                                Europe to lead on reforming global governance. Beyond that, her work focuses on EU foreign policy, EU enlargement, international support for civil society, and human rights and democracy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section contact-list scholar-list no-connector">
+            <div class="foreground">
+                <h2 class="section-title"><span>Center Scholars</span></h2>
+                <div class="section cols cols--equal-heights">
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/916">Cornelius Adebahr</a></div>
+                            <div class="title">Nonresident Fellow<br>European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1827">Rosa Balfour</a></div>
+                            <div class="title">Director<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/2127">Dimitar Bechev</a></div>
+                            <div class="title">Visiting Scholar <br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1939">Allison Carragher</a></div>
+                            <div class="title">Visiting Scholar <br/> European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1709">Raluca Csernatoni</a></div>
+                            <div class="title">Fellow<br/>European Citizinens United </div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/479">Thomas de Waal</a></div>
+                            <div class="title">Senior Fellow<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/693">Judy Dempsey</a></div>
+                            <div class="title">Nonresident Senior Fellow<br />European Citizinens United<br />Editor in chief<br /><em>Strategic Europe</em></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1443">Peter Kellner</a></div>
+                            <div class="title">Nonresident Scholar<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1858">Olivia  Lazard</a></div>
+                            <div class="title">Fellow<br/>European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/634">Stefan Lehne</a></div>
+                            <div class="title">Senior Fellow<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/758">Marc Pierini</a></div>
+                            <div class="title">Senior Fellow<br/>European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/993">Gwendolyn Sasse</a></div>
+                            <div class="title">Nonresident Senior Fellow<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/2170">Adam Tooze</a></div>
+                            <div class="title">Nonresident Scholar <br /> Europe Program<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/547">Sinan Ülgen</a></div>
+                            <div class="title">Senior Fellow<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1041">Pierre Vimont</a></div>
+                            <div class="title">Senior Fellow<br />European Citizinens United</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/828">Richard Youngs</a></div>
+                            <div class="title">Senior Fellow<br />Democracy, Conflict, and Governance Program</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section contact-list staff-list no-connector"><a class="anchor-point" name="staff"></a>
+            <div class="foreground">
+                <h2 class="section-title"><span>Center Staff</span></h2>
+                <div class="section cols cols--equal-heights">
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Mattia Bagherini</div>
+                            <div class="title">Communications Assistant</div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/704">Lizza Bomassi</a></div>
+                            <div class="title">Deputy Director<br>European Citizinens United</div>
+                            <div class="email"><a href="lbomassi@ceip.org">lbomassi@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Cyrine Drissi</div>
+                            <div class="title">Program Assistant</div>
+                            <div class="email"><a href="cyrine.drissi@ceip.org">cyrine.drissi@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Indre Krivaite</div>
+                            <div class="title">Communications Coordinator</div>
+                            <div class="email"><a href="indre.krivaite@ceip.org">indre.krivaite@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Liza Kurukulasuriya</div>
+                            <div class="title">Senior Development Manager</div>
+                            <div class="email"><a href="lkurukulasuriya@ceip.org">lkurukulasuriya@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Marta Natalini</div>
+                            <div class="title">Office Manager</div>
+                            <div class="email"><a href="Marta.Natalini@ceip.org">Marta.Natalini@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Malte Peters</div>
+                            <div class="title">Program Coordinator and Research Assistant</div>
+                            <div class="email"><a href="malte.peters@ceip.org">malte.peters@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Pavi Prakash Nair</div>
+                            <div class="title">Development Coordinator and Research Assistant</div>
+                            <div class="email"><a href="pavi.prakashnair@ceip.org">pavi.prakashnair@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name"><a href="/experts/1876">Francesco Siccardi</a></div>
+                            <div class="title">Senior Program Manager</div>
+                            <div class="email"><a href="fsiccardi@ceip.org">fsiccardi@ceip.org</a></div>
+                        </div>
+                    </div>
+                    <div class="col col-33">
+                        <div class="gutters">
+                            <div class="name">Midori Tanaka</div>
+                            <div class="title">Communications Manager</div>
+                            <div class="email"><a href="midori.tanaka@ceip.org">midori.tanaka@ceip.org</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section cta cta-connect-with-us no-connector">
+            <div class="foreground">
+                <h2 class="section-title"><span>Connect With Us</span></h2>
+                <div class="section cols center-positons">
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <p>In an increasingly crowded, chaotic, and contested world and marketplace of ideas, European Citizinens United offers decisionmakers global, independent, and strategic insight and innovative ideas that advance international peace.</p><strong>Follow Us</strong>
+                            <ul
+                                class="list-across-spaced">
+                                <li class="twitter-icon"><a href="http://twitter.com/Carnegie_Europe"><span class="hide">Carnegie on Twitter</span></a></li>
+                                <li class="facebook-icon"><a href="http://www.facebook.com/pages/Brussels-Belgium/Carnegie-Europe/74341131538?ref=s"><span class="hide">Carnegie on Facebook</span></a></li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <div class="zone-2__item tablet-wide">
+                                <div class="marketo-form-container analytics-stay-in-the-know">
+                                    <h3 class="roman-normal-light gutter-half-bottom tighten-line-height">Sign up for
+                                        <div class="roman-normal-book">Carnegie Email</div>
+                                    </h3>
+                                    <div class="program-sign-up">
+                                        <form id="mktoForm_1001"></form>
+                                        <div id="confirmFormCTW" style="display:none;"><strong>Thank you!</strong>
+                                            <p>Check your email for details on your request.</p>
+                                        </div>
+                                        <script>
+                                            MktoForms2.loadForm("//813-XYU-422.mktoweb.com", "813-XYU-422", 1001, function(form) {
+                                                // Set values for the hidden fields, "Site_Source__c"
+                                                // Note that these fields were configured in the form editor as hidden fields already
+                                                form.vals({
+                                                    "Site_Source__c": "CE About Landing Mkto"
+                                                });
+                                            });
+                                            MktoForms2.whenReady(function(form) {
+                                                //Add an onSubmit to add hidden field values
+                                                form.onSubmit(function(form) {
+                                                    form.addHiddenFields({
+                                                        englishNewsletterAll: 'communique'
+                                                    });
+                                                    form.addHiddenFields({
+                                                        centerAffiliationAll: 'brussels'
+                                                    });
+                                                });
+                                                //Add an onSuccess handler
+                                                form.onSuccess(function(values, followUpUrl) {
+                                                    //get the form's jQuery element and hide it
+                                                    form.getFormElem().hide();
+                                                    document.getElementById('confirmFormCTW').style.display = 'block';
+                                                    //return false to prevent the submission handler from taking the lead to the follow up url.
+                                                    return false;
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section featured-basic no-connector">
+            <div class="foreground">
+                <h2 class="section-title"><span>Join the Team</span></h2>
+                <h3>Working at European Citizinens United</h3>
+                <div class="section cols center-positons">
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <p>European Citizinens United seeks to attract research fellows and staff members from a diverse array of disciplines and backgrounds, who are passionate about the intersection of international affairs and Europe. As the European center
+                                of the Carnegie Endowment, European Citizinens United aims to bring a global perspective to Brussels and to share a European lens to the world with the ultimate objective of advancing international peace. </p>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <ul class="clean-list">
+                                <li><a class="button" href="javascript:popUpiApplicants('http://carnegieendowment.applicantpro.com/')">Browse Job Listings</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h3>Internships at European Citizinens United</h3>
+                <div class="section cols center-internships">
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <p>European Citizinens United offers academic internships in research, communications, and development. Interns will not only cultivate skills that complement their education but will also benefit from joining Carnegie’s growing global network,
+                                which includes offices in Asia, Beirut, Brussels, New Delhi, Silicon Valley, and Washington.</p>
+                        </div>
+                    </div>
+                    <div class="col col-50">
+                        <div class="gutters">
+                            <ul class="clean-list">
+                                <li><a class="button" href="/jobs/">Browse Internships</a></li>
+                                <li><a class="button" href="/jobs/1477497.html">Communications Intern</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section disclaimer">
+                    <p>All eligible applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, disability, protected veteran status, sexual orientation, gender identity, or any other protected group.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer footer-new">
+        <div class="foreground section no-margin-top">
+            <div class="cols">
+                <div class="col col-25">
+                    <div class="gutters"><a class="footer-logo section" href="/" title="European Citizinens United"><span class="visuallyhidden">European Citizinens United</span></a>
+                        <p class="address">
+                            <br>European Citizens United
+                            <br>Alexanderveld 5 <br>
+                            2585 ​​DB The Hague <br> 
+                            The netherlands
+                        </p>
+                        <p class="contact-numbers">info@ecu-org.eu</p>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="gutters">
+                        <div class="footer-title teal">Our Network</div>
+                        <ul class="clean-list">
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-26.html">Austria</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-27.html">Belgium</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-28.html">France</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-29.html">Germany</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-30.html">Ireland</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-31.html">Italy</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-32.html">Poland</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-33.html">Portugal</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-34.html">Spain</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-35.html">The czech Republic</a></li>
+                            <li> <a class="external-link carnegie-link" href="/subpages/subpage-36.html">The Netherlands</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="gutters">
+                        <ul class="clean-list">
+                            <li> <a href="mailto:info@ecu-org.eu">Contact By Email</a></li>
+                            <li> <a href="/news.html">News</a></li>
+                            <li> <a href="/publications.html">Publications</a></li>
+                            <li> <a href="/events.html">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col col-25">
+                    <div class="gutters">
+                        <div class="footer-title teal">support ECU</div>
+                        <p>ECU believes in an inclusive, transparent, citizen-centric and democratic European Union where citizens' rights are at the heart of decision-making at all levels and where citizens are informed, consulted and actively participate. </p>
+                        <a class="button teal external-link carnegie-link" href="/news.html">
+                            View News
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="col col-25">
+                    <div class="gutters">
+                        <div class="footer-title teal">Follow Us</div>
+                        <div class="social-logos"> 
+                            <a class="twitter" href="#">
+                                <span class="visuallyhidden">Twitter</span>
+                            </a>
+                            <a class="facebook" href="#">
+                                <span class="visuallyhidden">Facebook</span>
+                            </a>
+                            <a class="youtube" href="#">
+                                <span class="visuallyhidden">YouTube</span>
+                            </a>
+                            <a class="linkedin" href="#">
+                                <span class="visuallyhidden">LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-75">
+                    <div class="gutters">
+                        <p class="copyright">&copy; 2022 All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- script links goes here -->
+    <script src="/js/one.js"></script>
+    <script src="/js/two.js" async type="text/javascript" ></script>
+    <script src="/js/three.js"></script>
+    <script src="/js/four.js"></script>
+    <script type="text/javascript" src="/js/google_translate.js"></script>
+    <script src="/js/translate_options.js"></script>
+    <script src="https://kit.fontawesome.com/38516d3f67.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- script links ends here -->
+</body>
+
+</html>
