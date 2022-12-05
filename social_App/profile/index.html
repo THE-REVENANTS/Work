@@ -12,7 +12,66 @@
         <!-- Favicon -->
         <link rel="shortcut icon" href="../assets/favicon.PNG" type="image/x-icon">
     </head>
-    <body>
+    <body id="profile_page">
+        <!-- create post modal -->
+        <div class="modal_overlay hide" id="modal_overlay">
+            <div class="modal">
+                <div class="modal_header">
+                    <h2>Create a post</h2>
+                    <i class="fa-solid fa-x" id="close_modal"></i>
+                </div>
+                <div class="modal_body">
+                    <div class="post_owner">
+                        <img src="../assets/images/center1.png" alt="Owner Image">
+                        <div class="username_and_privacy">
+                            <div class="username">John</div>
+                            <div class="create_post_privacy">
+                                <div class="current">
+                                    <div class="inner_current">
+                                        <i class="fa-duotone fa-earth-americas"></i>
+                                        <strong>Public</strong>
+                                    </div>
+                                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropdown-option active">
+                                        <i class="fa-duotone fa-earth-americas"></i>
+                                        <strong>Public</strong>
+                                    </div>
+                                    <div class="dropdown-option">
+                                        <i class="fa-duotone fa-lock"></i>
+                                        <strong>Private</strong>
+                                    </div>
+                                    <div class="dropdown-option">
+                                        <i class="fa-duotone fa-user-group"></i>
+                                        <strong>Friends Only</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post_content">
+                        <textarea placeholder="Share What's in your mind, John"></textarea>
+                        <div class="content_icons">
+                            <i class="fa-solid fa-font-case"></i>
+                            <i class="fa-solid fa-at"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="icons_modal_footer">
+                        <a href="#"> <i class="fa-solid fa-camera"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-video"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-paperclip"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-gift"></i> </a>
+                    </div>
+                    <a href="#" class="post_button">Post</a>
+                </div>
+            </div>
+        </div>
+
+
         <div class="sidebar">
             <div class="logo_content">
                 <div class="logo"> 
@@ -124,35 +183,44 @@
             <div class="home">
                 <div class="container">
                     <div class="home-weapper" id="profile">
-                        <div class="profile_section"> 
-                            <img 
-                             src="profile_images/profile-background.jpg" 
-                             alt="Profile wallpaper" 
-                             class="profile_wallpaper"> 
-                            <!-- infos -->
-                            <div class="bottom_profile">
-                                <div class="profile_info">
-                                    <div class="user_img_box">
-                                        <img src="profile_images/user.png" class="user_img" alt="Personal Image">
-                                    </div>
-                                    <div class="username">John</div>
-                                    <div class="more_info">
-                                        <div class="follow_info">
-                                            <div class="followers"><strong>16</strong> followers</div>
-                                            <div class="following"><strong>13</strong> following</div>
+                        <div class="profile_section">
+                            <div class="profile_content">
+                                <img 
+                                 src="profile_images/profile-background.jpg" 
+                                 alt="Profile wallpaper" 
+                                 class="profile_wallpaper"> 
+                                <!-- infos -->
+                                <div class="bottom_profile">
+                                    <div class="profile_info">
+                                        <div class="user_img_box">
+                                            <img src="profile_images/user.png" class="user_img" alt="Personal Image">
                                         </div>
-                                        <div class="join_info">
-                                            @John . Joined November 22
+                                        <div class="username">John</div>
+                                        <div class="more_info">
+                                            <div class="follow_info">
+                                                <div class="followers"><strong>16</strong> followers</div>
+                                                <div class="following"><strong>13</strong> following</div>
+                                            </div>
+                                            <div class="join_info">
+                                                @John . Joined November 22
+                                            </div>
+                                            <div class="social"></div>
                                         </div>
-                                        <div class="social"></div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- navigation profile -->
+                            <nav>
+                                <a href="#" class="active">Timeline</a>
+                                <a href="#">Photos <span class="navigation_count">12</span></a>
+                                <a href="#">Videos <span class="navigation_count">3</span></a>
+                                <a href="#">Documents</a>
+                            </nav>
                         </div>
 
                         <!-- home left start here -->
                         <div class="home-left">
-                            <div class="event-friend">
+                            <div class="pannel">
                                 <h4>I'm following <span>16</span></h4>
                                 <div class="people_images">
                                     <img src="../assets/images/center1.png" alt="messenger" />
@@ -173,6 +241,63 @@
                                     <img src="../assets/images/luna.png" alt="messenger" />
                                 </div>
                             </div>
+                            <div class="pannel">
+                                <h4>My Connections</h4>
+                                <div class="my_conntections_tab_control">
+                                    <a>NEWEST</a>
+                                    <a class="active">ACTIVE</a>
+                                    <a>POPULAR</a>
+                                </div>
+                                <div class="connections_tab hide" data-tab-name="newest">
+                                    <label>
+                                        <img src="../assets/images/jessica.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Jessica
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="connections_tab" data-tab-name="active">
+                                    <label>
+                                        <img src="../assets/images/arian.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Arian
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <img src="../assets/images/alyss.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Alyss
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <img src="../assets/images/emli.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Emli
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <img src="../assets/images/jenn.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Jenn
+                                        </span>
+                                    </label>
+                                    <label>
+                                        <img src="../assets/images/jessica.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Jessica
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="connections_tab hide" data-tab-name="popular">
+                                    <label>
+                                        <img src="../assets/images/alyss.png" alt="messenger" />
+                                        <span style="color: black;">
+                                            Alyss
+                                        </span>
+                                    </label>
+                                </div>
+                                <button class="see-more-btn">See all</button>
+                            </div>
                         </div>
                         <!-- home left end-->
 
@@ -180,7 +305,7 @@
                         <div class="home-center">
                             <div class="home-center-wrapper">
                                 <h2>Activity Feed</h2>
-                                <div class="createPost">
+                                <div class="createPost" id="create_post_trigger">
                                     <div class="post-text">
                                         <img src="../assets/images/center1.png" alt="user" />
                                         <input type="text-area" placeholder="Share What's on your mind, John" />
@@ -373,10 +498,10 @@
                         <!-- right content starts -->
                         <div class="home-right">
                             <div class="home-right-wrapper">
-                                <div class="event-friend">
+                                <div class="pannel">
                                     <h4>Complete Your Profile</h4>
-                                    <div class="event">
-                                        <div class="semi-donut margin" style="--percentage: 90;">
+                                    <div>
+                                        <div class="semi-donut" style="--percentage: 90;">
                                             <span>
                                                 73 <span style="color: grey; font-size: 17px;">%</span>
                                             </span>
@@ -385,33 +510,30 @@
                                         <!-- <button><i class="fa-regular fa-star"></i> interested</button> -->
                                     </div>
                                     <div class="profile-status">
-                                        <i class="fa fa-circle"></i>
                                         <span>
-                                          General Information 
-                                          <span class="span2">5/6</span>
-                                        </span> 
-                                        <br/>
-                                        <span class="line1">|</span> 
-                                        <br/>
-                                        <i class="fa fa-circle"></i> 
-                                        <span>Work Experience 
-                                          <span class="span2" style="margin-left: 46px;">1/3</span>
-                                        </span> 
-                                        <br/>
-                                        <span class="line2">|</span> 
-                                        <br/>
+                                            <i class="fa-light fa-circle"></i>
+                                            General Information 
+                                            <div class="status_count">5/6</div>
+                                        </span>
+                                        <span class="line1">|</span>
+                                        <span>
+                                            <i class="fa-light fa-circle"></i>
+                                            Work Experience 
+                                            <div class="status_count">1/3</div>
+                                        </span>
+                                        <span class="line2">|</span>
                                         <div class="active-status">
-                                            <i class="fa fa-check-circle"></i> 
                                             <span>
-                                              Profile Photo <span class="span2">1/1</span>
+                                                <i class="fa fa-check-circle"></i> 
+                                                Profile Photo 
+                                                <span class="span2"></span>
+                                                <div class="status_count">1/1</div>
                                             </span>
-                                            <br/>
-                                            <span class="line3">|</span> 
-                                            <br/>
-                                            <i class="fa fa-check-circle"></i> 
+                                            <span class="line3">|</span>
                                             <span>
-                                              Cover Photo 
-                                              <span class="span2">1/1</span>
+                                                <i class="fa fa-check-circle"></i> 
+                                                Cover Photo 
+                                                <div class="status_count">1/1</div>
                                             </span>
                                         </div>
                                     </div>
@@ -419,9 +541,9 @@
                                     <hr />
                                 </div>
 
-                                <div class="event-friend">
+                                <div class="pannel">
                                     <h4>Latest Updates</h4>
-                                    <div class="right-pages">
+                                    <div class="pannel_content">
                                         <label>
                                             <img src="../assets/images/center1.png" alt="messenger" />
                                             <span style="color: black;">
