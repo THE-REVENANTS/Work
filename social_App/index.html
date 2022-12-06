@@ -13,6 +13,63 @@
         <link rel="shortcut icon" href="assets/favicon.PNG" type="image/x-icon">
     </head>
     <body>
+        <!-- create post modal -->
+        <div class="modal_overlay hide" id="modal_overlay">
+            <div class="modal">
+                <div class="modal_header">
+                    <h2>Create a post</h2>
+                    <i class="fa-solid fa-x" id="close_modal"></i>
+                </div>
+                <div class="modal_body">
+                    <div class="post_owner">
+                        <img src="../assets/images/center1.png" alt="Owner Image">
+                        <div class="username_and_privacy">
+                            <div class="username">John</div>
+                            <div class="create_post_privacy">
+                                <div class="current">
+                                    <div class="inner_current">
+                                        <i class="fa-duotone fa-earth-americas"></i>
+                                        <strong>Public</strong>
+                                    </div>
+                                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                </div>
+                                <div class="dropdown">
+                                    <div class="dropdown-option active">
+                                        <i class="fa-duotone fa-earth-americas"></i>
+                                        <strong>Public</strong>
+                                    </div>
+                                    <div class="dropdown-option">
+                                        <i class="fa-duotone fa-lock"></i>
+                                        <strong>Private</strong>
+                                    </div>
+                                    <div class="dropdown-option">
+                                        <i class="fa-duotone fa-user-group"></i>
+                                        <strong>Friends Only</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post_content">
+                        <textarea placeholder="Share What's in your mind, John"></textarea>
+                        <div class="content_icons">
+                            <i class="fa-solid fa-font-case"></i>
+                            <i class="fa-solid fa-at"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="icons_modal_footer">
+                        <a href="#"> <i class="fa-solid fa-camera"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-video"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-paperclip"></i> </a>
+                        <a href="#"> <i class="fa-solid fa-gift"></i> </a>
+                    </div>
+                    <a href="#" class="post_button">Post</a>
+                </div>
+            </div>
+        </div>
         <div class="sidebar">
             <div class="logo_content">
                 <div class="logo"> 
@@ -83,6 +140,7 @@
 
         <div class="home_content">
             <!-- header starts -->
+            <div class="header_placeholder"></div>
             <header>
                 <div class="header-container">
                     <div class="header-wrapper">
@@ -91,12 +149,17 @@
                             <img src="assets/images/logo.svg" alt="logo" />
                         </div>
                         <div class="icons icons_middle">
-                            <i class="bx bx-pulse active_link"></i>
-                            <i class="fa-light fa-circle-user"></i>
-                            <i class="fa-light fa-users"></i>
-                            <i class="fa-light fa-message-lines"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-light fa-file-lines"></i>
+                            <a href="/" class="active_link">
+                                <i class="bx bx-pulse"></i>
+                            </a>
+                            <a href="/profile">
+                                <i class="fa-light fa-circle-user"></i>
+                            </a>
+                            <a href="#"><i class="fa-light fa-users"></i></a>
+                            <a href="#"><i class="fa-light fa-users"></i></a>
+                            <a href="#"><i class="fa-light fa-message-lines"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-light fa-file-lines"></i></a>
                         </div>
                         <div class="icons icons_right">
                             <i class="fa-light fa-magnifying-glass search_icon"></i>
@@ -199,7 +262,7 @@
                         <div class="home-center">
                             <div class="home-center-wrapper">
                                 <h2>Activity Feed</h2>
-                                <div class="createPost">
+                                <div class="createPost" id="create_post_trigger">
                                     <div class="post-text">
                                         <img src="assets/images/center1.png" alt="user" />
                                         <input type="text-area" placeholder="Share What's on your mind, John" />
@@ -223,7 +286,247 @@
                                     <div class="post"> 
                                         <div class="post-top">
                                             <div class="post-title">
-                                                <img src="assets/images/center1.png" alt="user picture" />
+                                                <img src="assets/images/arian.png" alt="user picture"  />
+                                                <ul>
+                                                    <li class="s-between">
+                                                        <h4>Nicolina<span> posted an update</span></h4>
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date_posted">
+                                                            3 years ago
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h5 class="post_description">During our 3month road trip around the states and Canda, we stayed in Seqouia national park. The treees were the obvious attraction, but whilst there, we came across Moro rofk, we clambered to the edge to catch the perfectly timed sunset which we could just about see throught the mass of flies 🌄</h5>
+                                            <div class="post-content">
+                                                <img src="assets/images/mountain_post_img.jpg" alt="">
+                                            </div>
+                                            <div class="likes_comments_top">
+                                                <div class="counts">
+                                                    You like this
+                                                    <div class="separator">&nbsp; . &nbsp; </div>
+                                                    3 comments
+                                                </div>
+                                                <div class="count_icons">
+                                                    <div class="icon_elm">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                        <div id="like_txt">Unlike</div>
+                                                    </div>
+                                                    <div class="icon_elm">
+                                                        <i class="fa-regular fa-message"></i>
+                                                        <div id="like_txt">Comment</div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <!-- comments (post bottom) -->
+                                        <div class="post-bottom">
+                                            <div class="comment">
+                                                <div class="comment_content">
+                                                    <img src="assets/images/jenn.png" alt="user picture" class="user_pic" />
+                                                    <div class="comment_details">
+                                                        <h4 class="s-between">
+                                                            <strong>Jennifer<span> 3 years ago</span></strong>
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </h4>
+                                                        <p>
+                                                            Wow this is amazing  <a href="" class="main_color">@nicolina</a>! can i join you next time? 😄
+                                                        </p>
+                                                        <a class="reply" href="#">Reply</a>
+                                                        <!-- replies -->
+                                                        <div class="comment">
+                                                            <div class="comment_content">
+                                                                <img src="assets/images/arian.png" alt="user picture" class="user_pic" />
+                                                                <div class="comment_details">
+                                                                    <h4 class="s-between">
+                                                                        <strong>Nicolina<span> 3 years ago</span></strong>
+                                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                                    </h4>
+                                                                    <p>
+                                                                        Sure <a href="#" class="main_color">@Jennifer</a> 🤗
+                                                                    </p>
+                                                                    <a class="reply" href="#">Reply</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="comment">
+                                                <div class="comment_content">
+                                                    <img src="assets/images/emli.png" alt="user picture" class="user_pic" />
+                                                    <div class="comment_details">
+                                                        <h4 class="s-between">
+                                                            <strong>Emli<span> 3 years ago</span></strong>
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </h4>
+                                                        <p>
+                                                            Cool! I've been there last week. That place is amazing!
+                                                        </p>
+                                                        <img src="assets/images/gif.gif" alt="" class="comment_img">
+                                                        <a class="reply" href="#">Reply</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post"> 
+                                        <div class="post-top">
+                                            <div class="post-title">
+                                                <img src="assets/images/center1.png" alt="user picture"  />
+                                                <ul>
+                                                    <li class="s-between">
+                                                        <h4>John<span> posted an update</span></h4>
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date_posted">
+                                                            2 years ago .
+                                                            <div class="privacy_icons">
+                                                                <div class="privacy_dropdown">
+                                                                    <a>Public</a>
+                                                                    <a>Only me</a>
+                                                                    <a>Friends only</a>
+                                                                </div>
+                                                                <i class="fa-regular fa-earth-americas"></i>
+                                                                <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="post-content">
+                                                <div class="border_radius_fit">
+                                                    <img src="assets/images/logos.jpg" alt="">
+                                                    <div class="file">
+                                                        <div class="file_icon">
+                                                            <i class="fa-duotone fa-file-pdf"></i>
+                                                        </div>
+                                                        <div class="file_info">
+                                                            <div class="file_name">
+                                                                stensils-logo.pdf
+                                                            </div>
+                                                            <div class="file_description">
+                                                                <span class="file_size">
+                                                                    290 kb
+                                                                </span>
+                                                                <span class="file_type">
+                                                                    PDF-
+                                                                </span>
+                                                                <a href="#">Click to view</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="file_actions">
+                                                            <div class="action download">
+                                                                <i class="fa-light fa-arrow-down-to-bracket"></i>
+                                                            </div>
+                                                            <div class="action dots">
+                                                                <i class="fa-solid fa-ellipsis"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="likes_comments_top">
+                                                <div class="counts">
+                                                    1 comments
+                                                </div>
+                                                <div class="count_icons">
+                                                    <div class="icon_elm">
+                                                        <i class="fa-solid fa-thumbs-up"></i>
+                                                        <div id="like_txt">Unlike</div>
+                                                    </div>
+                                                    <div class="icon_elm">
+                                                        <i class="fa-regular fa-message"></i>
+                                                        <div id="like_txt">Comment</div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <!-- comments (post bottom) -->
+                                        <div class="post-bottom">
+                                            <div class="comment">
+                                                <div class="comment_content">
+                                                    <img src="assets/images/alyss.png" alt="user picture" class="user_pic" />
+                                                    <div class="comment_details">
+                                                        <h4 class="s-between">
+                                                            <strong>Alyssa<span> 2 years ago</span></strong>
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </h4>
+                                                        <p>
+                                                            Batiful
+                                                        </p>
+                                                        <a class="reply" href="#">Reply</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post"> 
+                                        <div class="post-top">
+                                            <div class="post-title">
+                                                <img src="assets/images/jenn.png" alt="user picture" />
+                                                <ul>
+                                                    <li class="s-between">
+                                                        <h4>Jennifer<span> posted an update in the group</span> ☕ Coffe Addicts</h4>
+                                                        <i class="fa-solid fa-ellipsis"></i>
+                                                    </li>
+                                                    <li>
+                                                        <div class="date_posted">
+                                                            2 years ago 
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="post-content">
+                                                <div class="file">
+                                                    <div class="file_icon">
+                                                        <i class="fa-duotone fa-file-code"></i>
+                                                    </div>
+                                                    <div class="file_info">
+                                                        <div class="file_name">
+                                                            samsung-galaxy-mockup.psd
+                                                        </div>
+                                                        <div class="file_description">
+                                                            <span class="file_size">
+                                                                3 mb
+                                                            </span>
+                                                            <span class="file_type">
+                                                                Photoshop Document-
+                                                            </span>
+                                                            <a href="#">Click to view</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="file_actions">
+                                                        <div class="action download">
+                                                            <i class="fa-light fa-arrow-down-to-bracket"></i>
+                                                        </div>
+                                                        <div class="action dots">
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="likes_comments_top">
+                                                <div class="count_icons">
+                                                    <div class="icon_elm">
+                                                        <i class="fa-light fa-thumbs-up"></i>
+                                                        <div id="like_txt">Like</div>
+                                                    </div>
+                                                    <div class="icon_elm">
+                                                        <i class="fa-regular fa-message"></i>
+                                                        <div id="like_txt">Comment</div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="post"> 
+                                        <div class="post-top">
+                                            <div class="post-title">
+                                                <img src="assets/images/center1.png" alt="user picture"/>
                                                 <ul>
                                                     <li class="s-between">
                                                         <h4>John<span> posted an update</span></h4>
@@ -275,7 +578,7 @@
                                         <div class="post-bottom">
                                             <div class="comment">
                                                 <div class="comment_content">
-                                                    <img src="assets/images/jenn.png" alt="user picture" />
+                                                    <img src="assets/images/jenn.png" alt="user picture" class="user_pic" />
                                                     <div class="comment_details">
                                                         <h4 class="s-between">
                                                             <strong>Jennifer<span> a year ago</span></strong>
@@ -288,7 +591,7 @@
                                                         <!-- replies -->
                                                         <div class="comment">
                                                             <div class="comment_content">
-                                                                <img src="assets/images/center1.png" alt="user picture" />
+                                                                <img src="assets/images/center1.png" alt="user picture" class="user_pic" />
                                                                 <div class="comment_details">
                                                                     <h4 class="s-between">
                                                                         <strong>John<span> a year ago</span></strong>
@@ -368,7 +671,7 @@
                                         <div class="post-bottom">
                                             <div class="comment">
                                                 <div class="comment_content">
-                                                    <img src="assets/images/center1.png" alt="user picture" />
+                                                    <img src="assets/images/center1.png" alt="user picture" class="user_pic" />
                                                     <div class="comment_details">
                                                         <h4 class="s-between">
                                                             <strong>John<span> a year ago</span></strong>
@@ -390,54 +693,50 @@
                         <!-- center content end -->
 
                         <!-- right content starts -->
+                        <div class="complete_profile pannel">
+                            <h4>Complete Your Profile</h4>
+                            <div>
+                                <div class="semi-donut" style="--percentage: 90;">
+                                    <span>
+                                        73 <span style="color: grey; font-size: 17px;">%</span>
+                                    </span>
+                                    <strong>Complete</strong>
+                                </div>
+                                <!-- <button><i class="fa-regular fa-star"></i> interested</button> -->
+                            </div>
+                            <div class="profile-status">
+                                <span>
+                                    <i class="fa-light fa-circle"></i>
+                                    General Information 
+                                    <div class="status_count">5/6</div>
+                                </span>
+                                <span class="line1">|</span>
+                                <span>
+                                    <i class="fa-light fa-circle"></i>
+                                    Work Experience 
+                                    <div class="status_count">1/3</div>
+                                </span>
+                                <span class="line2">|</span>
+                                <div class="active-status">
+                                    <span>
+                                        <i class="fa fa-check-circle"></i> 
+                                        Profile Photo 
+                                        <span class="span2"></span>
+                                        <div class="status_count">1/1</div>
+                                    </span>
+                                    <span class="line3">|</span>
+                                    <span>
+                                        <i class="fa fa-check-circle"></i> 
+                                        Cover Photo 
+                                        <div class="status_count">1/1</div>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <hr />
+                        </div>
                         <div class="home-right">
                             <div class="home-right-wrapper">
-                                <div class="pannel">
-                                    <h4>Complete Your Profile</h4>
-                                    <div>
-                                        <div class="semi-donut" style="--percentage: 90;">
-                                            <span>
-                                                73 <span style="color: grey; font-size: 17px;">%</span>
-                                            </span>
-                                            <strong>Complete</strong>
-                                        </div>
-                                        <!-- <button><i class="fa-regular fa-star"></i> interested</button> -->
-                                    </div>
-                                    <div class="profile-status">
-                                        <i class="fa fa-circle"></i>
-                                        <span>
-                                          General Information 
-                                          <span class="span2">5/6</span>
-                                        </span> 
-                                        <br/>
-                                        <span class="line1">|</span> 
-                                        <br/>
-                                        <i class="fa fa-circle"></i> 
-                                        <span>Work Experience 
-                                          <span class="span2" style="margin-left: 46px;">1/3</span>
-                                        </span> 
-                                        <br/>
-                                        <span class="line2">|</span> 
-                                        <br/>
-                                        <div class="active-status">
-                                            <i class="fa fa-check-circle"></i> 
-                                            <span>
-                                              Profile Photo <span class="span2">1/1</span>
-                                            </span>
-                                            <br/>
-                                            <span class="line3">|</span> 
-                                            <br/>
-                                            <i class="fa fa-check-circle"></i> 
-                                            <span>
-                                              Cover Photo 
-                                              <span class="span2">1/1</span>
-                                            </span>
-                                        </div>
-                                    </div>
-
-                                    <hr />
-                                </div>
-
                                 <div class="pannel">
                                     <h4>Latest Updates</h4>
                                     <div class="pannel_content">
