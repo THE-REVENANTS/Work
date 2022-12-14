@@ -1,3 +1,5 @@
+let body = document.querySelector('body');
+
 const menu_icon = document.querySelector('#menu_icon');
 const header_menu = document.querySelector('#header_menu');
 const header = document.querySelector('header');
@@ -58,3 +60,5 @@ function showPopup() {
   checkoutPopup.classList.add('show_popup');
 }
 UpgradeProForm.addEventListener('submit' , showPopup);
+
+

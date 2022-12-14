@@ -13,6 +13,8 @@
   * input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
+  * a {
+    cursor: pointer; }
 
 @media (min-width: 950px) {
   .hide-desktop {
@@ -92,7 +94,8 @@
     width: 100%;
     border: 2px solid #07d3ff;
     overflow: hidden;
-    cursor: pointer; }
+    cursor: pointer;
+    height: 180px; }
     .artist_gallery .poster_box::before {
       position: absolute;
       top: 0;
@@ -147,7 +150,7 @@
       .artist_gallery .poster_box .hint.movie::before {
         content: 'Movie'; }
       .artist_gallery .poster_box .hint.number::before {
-        content: 'Posters in Set';
+        content: 'Artist Posters';
         bottom: unset;
         left: unset;
         transform: unset;
@@ -256,6 +259,26 @@
 @media (max-width: 550px) {
   .artist_gallery {
     grid-template-columns: repeat(2, 1fr); } }
+.no_uploads_yet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px; }
+
+.no_uploads_yet .no_uploads_heading {
+  font-size: 30px; }
+
+.no_uploads_yet .start_now_btn {
+  background: #0f84b1;
+  background: linear-gradient(90deg, rgba(8, 44, 58, 0.1) 0%, #add0e6 21%);
+  color: black;
+  font-size: 19px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: fit-content;
+  padding: 5px 50px; }
+
 .membership_main {
   overflow: hidden; }
   .membership_main .available_packs {
@@ -438,7 +461,8 @@
         transform: translate(-50%, -50%);
         object-fit: contain;
         user-select: none; }
-      .signin_main .from_container form input {
+      .signin_main .from_container form input,
+      .signin_main .from_container form select {
         position: relative;
         width: 400px;
         border: 1px solid black;
@@ -447,10 +471,12 @@
         background: #202020;
         color: white; }
       @media (max-width: 450px) {
-        .signin_main .from_container form input {
+        .signin_main .from_container form input,
+        .signin_main .from_container form select {
           width: 280px; } }
       @media (max-width: 300px) {
-        .signin_main .from_container form input {
+        .signin_main .from_container form input,
+        .signin_main .from_container form select {
           width: 240px; } }
       .signin_main .from_container form input[type=submit] {
         background: #0f84b1;
@@ -496,7 +522,8 @@
       .signup_main form .inputs .element label {
         color: white;
         padding-bottom: 5px; }
-      .signup_main form .inputs .element input {
+      .signup_main form .inputs .element input,
+      .signup_main form .inputs .element select {
         position: relative;
         width: 100%;
         border: 1px solid #07d3ff;
@@ -573,7 +600,8 @@
         color: white;
         padding-bottom: 5px;
         font-size: 20px; }
-      .pro_account_main form .inputs .element input {
+      .pro_account_main form .inputs .element input,
+      .pro_account_main form .inputs .element select {
         position: relative;
         width: 100%;
         border: 1px solid #07d3ff;
@@ -739,20 +767,24 @@
             #checkout form .inputs_container .element .input_container .cards img {
               width: 17px;
               height: fit-content; }
-          #checkout form .inputs_container .element .input_container input {
+          #checkout form .inputs_container .element .input_container input,
+          #checkout form .inputs_container .element .input_container select {
             width: 100%;
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0; }
         #checkout form .inputs_container .element .two_inputs {
           display: flex; }
-          #checkout form .inputs_container .element .two_inputs input {
+          #checkout form .inputs_container .element .two_inputs input,
+          #checkout form .inputs_container .element .two_inputs select {
             width: 50%;
             border-radius: 0;
             border-top: none; }
-            #checkout form .inputs_container .element .two_inputs input:nth-child(1) {
+            #checkout form .inputs_container .element .two_inputs input:nth-child(1),
+            #checkout form .inputs_container .element .two_inputs select:nth-child(1) {
               border-bottom-left-radius: 5px;
               border-right: none; }
-            #checkout form .inputs_container .element .two_inputs input:nth-child(2) {
+            #checkout form .inputs_container .element .two_inputs input:nth-child(2),
+            #checkout form .inputs_container .element .two_inputs select:nth-child(2) {
               border-bottom-right-radius: 5px; }
         #checkout form .inputs_container .element select {
           border-bottom-left-radius: 0;
@@ -913,6 +945,71 @@
     font-size: 17px;
     letter-spacing: 1px; } }
 
+.upload_main form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .upload_main form h3 {
+    color: white;
+    font-size: 36px; }
+  .upload_main form .inputs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    padding: 30px 10%; }
+    .upload_main form .inputs .element {
+      width: 31.5%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      .upload_main form .inputs .element:nth-child(1) {
+        width: 100%; }
+      .upload_main form .inputs .element:nth-child(2) {
+        width: 100%; }
+      .upload_main form .inputs .element label {
+        color: white;
+        padding-bottom: 5px; }
+      .upload_main form .inputs .element input,
+      .upload_main form .inputs .element select {
+        position: relative;
+        width: 100%;
+        border: 1px solid #07d3ff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        background: #202020;
+        color: white; }
+  .upload_main form input[type=submit] {
+    background: #0f84b1;
+    background: linear-gradient(90deg, rgba(8, 44, 58, 0.1) 0%, #add0e6 21%);
+    color: black;
+    font-size: 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px 50px;
+    margin-left: auto; }
+@media (max-width: 950px) {
+  .upload_main form {
+    width: 95%; }
+    .upload_main form .inputs {
+      padding: 20px; }
+      .upload_main form .inputs .element {
+        width: 100% !important; }
+    .upload_main form input[type=submit] {
+      background: #0f84b1;
+      background: linear-gradient(90deg, rgba(8, 44, 58, 0.1) 0%, #add0e6 21%);
+      color: black;
+      font-size: 19px;
+      border-radius: 20px;
+      cursor: pointer;
+      width: fit-content;
+      padding: 5px 50px;
+      margin-left: auto; } }
+
 body {
   background: url(../images/BkGnd.jpg);
   background-size: cover;
@@ -920,6 +1017,13 @@ body {
   background-position: center center;
   color: white;
   min-height: 100vh; }
+
+.not_confirmed_banner {
+  background: black;
+  padding: 10px 5%;
+  color: white;
+  font-size: 17px;
+  border-bottom: 1px solid white; }
 
 header {
   display: flex;
@@ -947,6 +1051,34 @@ header {
       padding-right: none; }
     header .right a.upgrade {
       color: #07d3ff; }
+
+.error_message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 0, 0, 0.6);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  animation: fade 1s linear;
+  z-index: 10;
+  border-radius: 5px;
+  letter-spacing: 1px; }
+
+.success_message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 166, 30, 0.6);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  animation: fade 1s linear;
+  z-index: 10;
+  border-radius: 5px;
+  letter-spacing: 1px; }
 
 @media (max-width: 950px) {
   header {
@@ -997,11 +1129,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 30px;
   transition: 1s; }
   main h1 {
     color: #07d3ff;
     font-size: 25px; }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   main input[type=search] {
     width: 300px;
     border-radius: 30px;
@@ -1018,14 +1156,16 @@ main {
     display: flex;
     flex-direction: column;
     width: 80%;
-    align-items: flex-start;
     gap: 20px; }
     main .gallery_container h3 {
+      text-align: left;
       font-size: 30px; }
       main .gallery_container h3 a {
         font-size: 16px; }
     main .gallery_container .gallery {
       display: grid;
+      align-items: center;
+      justify-content: center;
       grid-template-columns: repeat(5, 1fr);
       grid-gap: 20px; }
       main .gallery_container .gallery .poster_box {
@@ -1034,7 +1174,8 @@ main {
         border-radius: 10px;
         border: 2px solid #07d3ff;
         overflow: hidden;
-        cursor: pointer; }
+        cursor: pointer;
+        height: 300px; }
         main .gallery_container .gallery .poster_box::before {
           position: absolute;
           top: 0;
@@ -1090,7 +1231,7 @@ main {
           main .gallery_container .gallery .poster_box .hint.movie::before {
             content: 'Movie'; }
           main .gallery_container .gallery .poster_box .hint.number::before {
-            content: 'Posters in Set';
+            content: 'Artist Posters';
             bottom: unset;
             left: unset;
             transform: unset;
@@ -1202,12 +1343,14 @@ footer {
   padding-bottom: 50px; }
   footer .top {
     display: grid;
+    justify-content: center;
     width: 100%;
     grid-template-columns: repeat(4, 1fr); }
     footer .top .column {
       width: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       gap: 10px; }
       footer .top .column .title {

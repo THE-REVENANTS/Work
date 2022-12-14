@@ -56,6 +56,7 @@
         border: 2px solid $main-color;
         overflow: hidden;
         cursor: pointer;
+        height: 180px;
         &::before {
             position: absolute;
             top: 0;
@@ -122,7 +123,7 @@
                 content: 'Movie';
             }
             &.number::before {
-                content: 'Posters in Set';
+                content: 'Artist Posters';
                 bottom: unset;
                 left: unset;
                 transform: unset;
@@ -264,4 +265,26 @@
     .artist_gallery {
         grid-template-columns: repeat(2 , 1fr);
     }
+}
+
+// if the artis has no uploads
+.no_uploads_yet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
+}
+.no_uploads_yet .no_uploads_heading{
+    font-size: 30px;
+}
+.no_uploads_yet .start_now_btn{
+    background: #0f84b1;
+    background: linear-gradient(90deg, rgba(8, 44, 58, 0.1) 0%, #add0e6 21%);
+    color: black;
+    font-size: 19px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: fit-content;
+    padding: 5px 50px;
 }
