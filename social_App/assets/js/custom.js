@@ -1,10 +1,3 @@
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
-
-btn.onclick = function(){
-    sidebar.classList.toggle("active");
-}
-
 // open privacy dropdown
 let privacy_icons = document.querySelectorAll('.privacy_icons');
 privacy_icons.forEach(e => {
@@ -38,19 +31,6 @@ play_video.forEach(e => {
             }
     }
 })
-
-// open menu on mobile
-let mobile_open_menu = document.querySelector('#mobile_open_menu');
-let mobile_close_menu = document.querySelector('#close_mobile');
-function OpenSideBarMobile() {
-    sidebar.classList.toggle('show_mobile');
-};
-function CloseSideBarMobile() {
-    sidebar.classList.toggle('show_mobile');
-};
-
-mobile_open_menu.addEventListener('click' , OpenSideBarMobile);
-mobile_close_menu.addEventListener('click' , OpenSideBarMobile);
 
 // My connections tabs control
 let connections_tab_control = document.querySelectorAll('.my_conntections_tab_control a');
