@@ -1,0 +1,235 @@
+.sign_page {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+    & > .left {
+        @include toCenter();
+        position: relative;
+        background-color: #f5efe9;
+        min-height: 150px;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            content:'';
+            background-image: url(/Sign/images/v2.png);
+            background-size: cover;
+            z-index: 1;
+            opacity: .4;
+        }
+        .text_container {
+            display: flex; 
+            flex-direction: column;
+            gap: 10px;
+            max-width: 80%;
+            padding: 10px;
+            z-index: 2;
+            h1 {
+                font-size: 24px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+    & > .right {
+        @include toCenter();
+        background:#faf9f7;
+        .forms_container {
+            display: flex;
+            flex-direction: column;
+            max-width: 90%;
+            width:50%;
+            gap: 15px;
+            img.logo_image {
+                width: 50%;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                &.hide {
+                    display: none !important;
+                }
+                h2 {
+                    font-size: 19px;
+                }
+                .alert {
+                    padding: 10px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    color: white;
+                    &.blue {
+                        background: #007cff;
+                    }
+                    &.red {
+                        background: #ef3e46;
+                    }                        
+                    &.green {
+                        background: #188351;
+                    }                        
+                }
+                .input_element {
+                    position: relative;
+                    width: 100%;
+                    input,
+                    select {
+                        width: 100%;
+                        padding: 7px 7px 7px 10%;
+                        background: white;
+                        border-radius: 5px;
+                        border: 1px solid var(--border-color);
+                        transition: .4s;
+                        &::placeholder {
+                            color: #c6c9cc;
+                        }
+                        &:focus {
+                            border-color: #d86649;
+                        }
+                        &:focus + i {
+                            color: #d86649;
+                        }
+                        &::-webkit-calendar-picker-indicator {
+                            position: absolute;
+                            left: 5%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+                    i {
+                        position: absolute;
+                        left: 5%;
+                        top: 50%;
+                        transform: translate(-50%,-50%);
+                    }
+                    &.no_icon {
+                        input {
+                            padding: 7px 10px;
+                        }
+                    }
+                }
+                select {
+                    cursor: pointer;
+                    option {
+                        cursor: pointer;
+                    }
+                }
+                .form_bottom {
+                    .left {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        label {
+                            cursor: pointer;
+                            font-size: 13px;
+                        }
+                        input {
+                            cursor: pointer;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 5px;
+                            border: 1px solid var(--border-color);
+                            &:checked {
+                                accent-color: var(--main-color);
+                                color: white;
+                            }
+                        }
+                    }
+                    a.right {
+                        font-size: 13px;
+                        color: gray;
+                        text-decoration: none;
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+                button {
+                    border: 0;
+                    background: #606099;
+                    padding: 7px;
+                    font-size: 13px;
+                    color: white;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: .3s;
+                    gap: 5px;
+                    @include toCenter();
+                    i {
+                        transition: .3s;
+                    }
+                    &:hover {
+                        opacity: .85;
+                        gap:10px;
+                    }
+                }
+                .other_options {
+                    display: flex;
+                    justify-content: space-between;
+                    a.button {
+                        @include toCenter();
+                        width: 49%;
+                        gap: 6px;
+                        font-size: 12px;
+                        background: white;
+                        border: 1px solid var(--border-color);
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                        color: #606099;
+                        transition: .2s;
+                        img {
+                            width: 15px;
+                        }
+                        &:hover {
+                            background:#efefff;
+                            border-color: #606099;
+                        }
+                    }
+                }
+                .back_to_sign_in {
+                    color: #222;
+                    font-size: 12px;
+                    text-align: center;
+                    justify-content: center;
+                    font-weight: 400;
+                    width: fit-content;
+                    margin: 0 auto;
+                    margin-bottom: 10px;
+                    &:hover {
+                        font-weight: 600;
+                    }
+                }
+            }
+            .terms_of_service {
+                color: #222;
+                font-size: 12px;
+                text-align: center;
+                justify-content: center;
+                font-weight: 400;
+                width: fit-content;
+                margin: 0 auto;
+                &:hover {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1024px) {
+    .sign_page {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        & > .left {
+            height: 150px;
+        }
+        & > .right .forms_container {
+            width: 85%;
+        }
+    }
+}
