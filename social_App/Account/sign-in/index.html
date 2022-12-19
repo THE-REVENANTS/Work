@@ -29,11 +29,11 @@
                 <form class="sign_in_form">
                     <div class="alert blue">You are now logged out.</div>
                     <div class="input_element">
-                        <input type="email" placeholder="Email Adress">
+                        <input type="text" required placeholder="Email Adress" id="email_username">
                         <i class="fa-light fa-user"></i>
                     </div>
                     <div class="input_element">
-                        <input type="password" placeholder="Password">
+                        <input type="password" required placeholder="Password">
                         <i class="fa-solid fa-key-skeleton"></i>
                     </div>
                     <div class="s-between form_bottom">
@@ -49,12 +49,13 @@
                             <img src="/assets/images/google.png" alt="google">
                             Login with goole
                         </a>
-                        <a href="#" class="button">
+                        <a href="../sign-up" class="button">
                             <i class="fa-regular fa-user-plus"></i>
                             Sign up
                         </a>
                     </div>
                 </form>
+
                 <!-- forget password -->
                 <form class="forget_password hide">
                     <div class="alert red"><strong>Error:</strong> There's no account with that username or email adress</div>

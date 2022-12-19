@@ -75,6 +75,42 @@
                 </div>
             </div>
         </div>
+        <!-- Upload Video modal -->
+        <div id="upload_video_modal" class="hide">
+            <div class="upload_video_container">
+                <div class="upload_video_header">
+                    <h2>Create a post</h2>
+                    <i class="fa-solid fa-x" id="close_upload_video"></i>
+                </div>
+                <div class="upload_video_body">
+                    <textarea placeholder="Write something about your videos, to be showen on your timeline."></textarea>
+                    <input type="file" id="Videos_Input" accept="video/*" onchange="loadVideo(event)" multiple class="hide">
+                    <label for="Videos_Input" id="upload_video_label">
+                        <i class="fa-solid fa-video"></i>
+                        <h2>Add videos</h2>
+                        <h3>or drag and drop</h3>
+                    </label>
+                    <div id="uploaded_videos"></div>
+                    <select>
+                        <option>Public</option>
+                        <option>Only me</option>
+                        <option>Friends Only</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- file is too large modal -->
+        <div id="file_too_large" class="hide">
+            <div class="file_too_large_container">
+                <div class="file_too_large_header">
+                    <h2>Create a post</h2>
+                    <i class="fa-solid fa-x" id="close_file_too_large"></i>
+                </div>
+                <div class="file_too_large_body">
+                    File is too large (<span id="write_file_size"></span> MB). Max filesize: 20 MB.
+                </div>
+            </div>
+        </div>
 
 
         <div class="sidebar">
@@ -149,7 +185,7 @@
             <include src="/Header"></include>
             <div class="home">
                 <div class="container">
-                    <div class="home-weapper" id="profile">
+                    <div class="home-weapper width_contain" id="profile">
                         <div class="profile_section">
                             <div class="profile_content">
                                 <img 
@@ -177,11 +213,19 @@
                                 </div>
                             </div>
                             <!-- navigation profile -->
-                            <nav>
-                                <a href="#" class="active">Timeline</a>
-                                <a href="#">Photos <span class="navigation_count">12</span></a>
-                                <a href="#">Videos <span class="navigation_count">3</span></a>
-                                <a href="#">Documents</a>
+                            <nav class="my_profile_tab_control">
+                                <a class="active">
+                                    Timeline
+                                </a>
+                                <a class="full_width">
+                                    Photos <span class="navigation_count">12</span>
+                                </a>
+                                <a class="full_width">
+                                    Videos <span class="navigation_count">3</span>
+                                </a>
+                                <a class="full_width">
+                                    Documents
+                                </a>
                             </nav>
                         </div>
 
@@ -270,7 +314,7 @@
 
                         <!-- center content start -->
                         <div class="home-center">
-                            <div class="home-center-wrapper">
+                            <div class="home-center-wrapper hide">
                                 <h2>Activity Feed</h2>
                                 <div class="createPost" id="create_post_trigger">
                                     <div class="post-text">
@@ -473,7 +517,139 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- home center wrapper end -->
+                            <div class="home-center-wrapper profile_tab">
+                                <div class="tab_head nowrap">
+                                    <h2>Photos</h2>
+                                    <div class="right">
+                                        <a class="button_icon" id="photos_modal_show_btn">
+                                            Add photos
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="photos_albums_toggle">
+                                    <a class="toggle">Photos</a>
+                                    <a class="toggle">Albums</a>
+                                </div>
+                                <div class="tab_colored_icons">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                            </div>
+                            <div class="home-center-wrapper profile_tab hide">
+                                <div class="tab_head nowrap">
+                                    <h2>Videos</h2>
+                                    <div class="right">
+                                        <a class="button_icon" id="videos_modal_show_btn">
+                                            Add Videos
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tab_colored_icons">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                                <div class="videos">
+                                    <div class="vid_container">
+                                        <video src="../assets/video/vacation.mp4">
+                                            <source src="../assets/video/vacation.mp4">
+                                        </video>
+                                        <i class="fa-solid fa-play play_video"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-center-wrapper profile_tab hide">
+                                <div class="tab_head">
+                                    <h2>Documents</h2>
+                                    <div class="right">
+                                        <div class="search_box">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <input type="text" placeholder="Search Documents...">
+                                        </div>
+                                        <a class="button_icon">
+                                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                            Upload Files
+                                        </a>
+                                        <a class="button_icon">
+                                            <i class="fa-regular fa-folder-closed"></i>
+                                            Create Folder
+                                        </a>
+                                    </div>
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>NAME <i class="fa-solid fa-caret-down"></i></td>
+                                            <td>MODIFIED <i class="fa-solid fa-caret-down"></i></td>
+                                            <td>VISIBILITY <i class="fa-solid fa-caret-down"></i></td>
+                                            <td></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="fa-regular fa-folder-closed"></i> Assets</td>
+                                            <td>June 5, 2020</td>
+                                            <td>Public</td>
+                                            <td>
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-regular fa-file-pdf"></i>
+                                                Miele-March-To-Augus-2020.pdf
+                                            </td>
+                                            <td>June 5, 2020</td>
+                                            <td>Public</td>
+                                            <td>
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-regular fa-folder-closed"></i> 
+                                                Presetations
+                                            </td>
+                                            <td>June 2, 2021</td>
+                                            <td>My Connections</td>
+                                            <td>
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-regular fa-file-zipper"></i>
+                                                Reports.zip
+                                            </td>
+                                            <td>June 5, 2020</td>
+                                            <td>My Connections</td>
+                                            <td>
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-regular fa-file-pdf"></i>
+                                                Stensils-logo.pdf
+                                            </td>
+                                            <td>June 5, 2020</td>
+                                            <td>Public</td>
+                                            <td>
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                         <!-- center content end -->
 
