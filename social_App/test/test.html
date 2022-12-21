@@ -1,0 +1,15 @@
+
+<script>
+/* Hide mobile nav when chat is open */
+let open_chat = document.querySelector('#button-body');
+let close_chat = document.querySelector('.exit-chat');
+let mobile_nav = document.querySelector('.nav-mobile');
+function HideMobileNav() {
+    mobile_nav.setAttribute('style' , 'display:none !important');
+}
+function ShowMobileNav() {
+    mobile_nav.setAttribute('style' , 'display:block !important');
+}
+open_chat.addEventListener('click' , HideMobileNav);
+close_chat.addEventListener('click' , ShowMobileNav);
+</script>

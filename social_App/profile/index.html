@@ -99,6 +99,33 @@
                 </div>
             </div>
         </div>
+        <!-- Upload photo modal -->
+        <div id="upload_photo_modal" class="hide" >
+            <div class="upload_photo_container">
+                <div class="upload_photo_header">
+                    <h2>Upload</h2>
+                    <i class="fa-solid fa-x" id="close_upload_photo"></i>
+                </div>
+                <div class="upload_photo_body">
+                    <textarea placeholder="Write something about your photos, to be showen on your timeline."></textarea>
+                    <input type="file" id="photos_Input" accept="image/*" multiple class="hide">
+                    <label for="photos_Input" id="upload_photo_label">
+                        <i class="fa-light fa-image"></i>
+                        <h2>Add photos</h2>
+                        <h3>or drag and drop</h3>
+                    </label>
+                    <div id="uploaded_photos"></div>
+                    <div class="select_album">
+                        <i class="fa-light fa-folder-closed"></i> Select Album
+                    </div>
+                    <select>
+                        <option>Public</option>
+                        <option>Only me</option>
+                        <option>Friends Only</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         <!-- file is too large modal -->
         <div id="file_too_large" class="hide">
             <div class="file_too_large_container">
@@ -527,12 +554,43 @@
                                     </div>
                                 </div>
                                 <div class="photos_albums_toggle">
-                                    <a class="toggle">Photos</a>
+                                    <a class="toggle active">Photos</a>
                                     <a class="toggle">Albums</a>
                                 </div>
                                 <div class="tab_colored_icons">
                                     <i class="fa-solid fa-trash-can"></i>
                                     <i class="fa-regular fa-circle-check"></i>
+                                </div>
+                                <div class="photos_albums_grid">
+                                    <div class="photos">
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                    </div>
+                                    <div class="albums hide">
+                                        <h2>Just Albums</h2>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/profile_images.jpg">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="home-center-wrapper profile_tab hide">

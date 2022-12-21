@@ -981,6 +981,176 @@ i {
         #upload_video_modal .upload_video_container .upload_video_body select:focus {
           border-color: #d86649; }
 
+#upload_photo_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100; }
+  #upload_photo_modal.hide {
+    display: none !important; }
+  #upload_photo_modal .upload_photo_container {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
+    #upload_photo_modal .upload_photo_container .upload_photo_header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 20px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color); }
+      #upload_photo_modal .upload_photo_container .upload_photo_header h2 {
+        white-space: nowrap;
+        font-size: 18px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_header h2 span {
+          color: #a2a4a5;
+          font-size: 13px;
+          padding-left: 10px;
+          font-weight: 300; }
+      #upload_photo_modal .upload_photo_container .upload_photo_header i {
+        font-size: 16px;
+        cursor: pointer; }
+    #upload_photo_modal .upload_photo_container .upload_photo_body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px 5%; }
+      #upload_photo_modal .upload_photo_container .upload_photo_body textarea {
+        border: 1px solid var(--border-color);
+        padding: 10px 15px;
+        border-radius: 5px;
+        resize: none;
+        height: 100px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body textarea::placeholder {
+          color: #aeaeae; }
+      #upload_photo_modal .upload_photo_container .upload_photo_body label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 5%;
+        flex-direction: column;
+        gap: 5px;
+        background: #fbfaf9;
+        cursor: pointer;
+        border-radius: 5px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body label.grid_view {
+          padding: 10px; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body label.grid_view h2 {
+            font-size: 15px; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body label.grid_view h3 {
+            font-size: 11px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body label i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #aaaaaa;
+          background: #eeedec;
+          height: 45px;
+          width: 45px;
+          border-radius: 50% !important; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body label h2 {
+          color: #393e41;
+          font-size: 18px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body label h3 {
+          color: #c6c9cc;
+          font-size: 14px; }
+      #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        grid-template-areas: "a b c";
+        max-height: 250px;
+        padding-right: 10px;
+        overflow-y: scroll; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos label {
+          grid-area: a; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .img_container {
+          position: relative;
+          width: 100%;
+          height: 140px;
+          min-height: 100%;
+          border-radius: 6px;
+          box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+          overflow: hidden;
+          background: #eee; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .img_container i {
+            position: absolute;
+            border-radius: 50% !important;
+            background: white;
+            color: black;
+            border: 1px solid #eee;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            right: 10px;
+            top: 10px;
+            z-index: 10;
+            cursor: pointer; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .img_container.loading_image::after {
+            content: '\f030';
+            font-family: 'Font Awesome 6 pro';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            height: 40px;
+            width: 40px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff703d;
+            font-size: 15px;
+            color: white;
+            border-radius: 50% !important; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .img_container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: blur(5px); }
+            #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .img_container img.no_blur {
+              filter: unset; }
+      @media (max-width: 756px) {
+        #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas: "a b"; }
+          #upload_photo_modal .upload_photo_container .upload_photo_body #uploaded_photos .vid_container {
+            height: 90px; } }
+      #upload_photo_modal .upload_photo_container .upload_photo_body .select_album {
+        color: #ff703d;
+        cursor: pointer;
+        font-size: 14px; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body .select_album i {
+          font-size: 16px;
+          padding-right: 5px; }
+      #upload_photo_modal .upload_photo_container .upload_photo_body select {
+        width: 100%;
+        padding: 5px 10px;
+        cursor: pointer;
+        background: white;
+        border-radius: 5px;
+        border: 1px solid var(--border-color);
+        transition: .4s;
+        width: 150px;
+        max-width: 100%; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body select::placeholder {
+          color: #c6c9cc; }
+        #upload_photo_modal .upload_photo_container .upload_photo_body select:focus {
+          border-color: #d86649; }
+
 #file_too_large {
   position: fixed;
   top: 0;
@@ -1080,6 +1250,42 @@ i {
       color: #ff703d;
       font-size: 20px;
       cursor: pointer; }
+  #profile_page .profile_tab .photos_albums_toggle {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px; }
+    #profile_page .profile_tab .photos_albums_toggle a {
+      cursor: pointer;
+      font-size: 13px; }
+      #profile_page .profile_tab .photos_albums_toggle a.active {
+        background: white;
+        border: 1px solid var(--border-color);
+        padding: 2px 10px;
+        border-radius: 5px; }
+  #profile_page .profile_tab .photos_albums_grid {
+    margin-top: 20px; }
+    #profile_page .profile_tab .photos_albums_grid .photos,
+    #profile_page .profile_tab .photos_albums_grid .albums {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 10px; }
+      #profile_page .profile_tab .photos_albums_grid .photos .image_box,
+      #profile_page .profile_tab .photos_albums_grid .albums .image_box {
+        width: 100%;
+        height: 160px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2); }
+        #profile_page .profile_tab .photos_albums_grid .photos .image_box img,
+        #profile_page .profile_tab .photos_albums_grid .albums .image_box img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover; }
+  @media (max-width: 1024px) {
+    #profile_page .profile_tab .photos_albums_grid .photos,
+    #profile_page .profile_tab .photos_albums_grid .albums {
+      grid-template-columns: repeat(2, 1fr); } }
   #profile_page .profile_tab .videos {
     display: grid;
     grid-template-columns: repeat(4, 1fr); }

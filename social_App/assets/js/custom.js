@@ -129,3 +129,53 @@ var loadVideo = function(event) {
         playVideoFunction(video_container);
     }
 };
+// Upload photos open/close
+let open_upload_photos = document.querySelector('#photos_modal_show_btn');
+let close_upload_photos = document.querySelector('#close_upload_photo');
+let upload_photo_modal = document.querySelector('#upload_photo_modal');
+open_upload_photos.setAttribute('onclick' , 'toggleHide_class(upload_photo_modal)');
+close_upload_photos.setAttribute('onclick' , 'toggleHide_class(upload_photo_modal)');
+// Upload form
+let uploaded_photos = document.querySelector('#uploaded_photos');
+let upload_photo_label = document.querySelector('#upload_photo_label');
+let photos_Input = document.querySelector('#photos_Input');
+let Upload_photo_status = document.querySelector('#upload_photo_modal .upload_photo_header h2')
+photos_Input.addEventListener('change' , (e) => {
+    uploaded_photos.appendChild(upload_photo_label);
+    upload_photo_label.classList.add('grid_view');
+    let filess = e.target.files;
+    Upload_photo_status.innerHTML = `Uploading... <span>1 out of ${filess.length} Uploaded</span>`;
+    for (let i = 0; i < filess.length; i++) {
+        let photo_container = document.createElement('div');
+        photo_container.classList.add('img_container');
+        photo_container.classList.add('loading_image');
+        let Uploaded_photo = document.createElement('img');
+        uploaded_photos.appendChild(photo_container);
+        photo_container.innerHTML += '<i class="fa-solid fa-xmark"></i>';
+        const imgReader = new FileReader();
+        imgReader.addEventListener("load", function (event) {
+            Uploaded_photo.src = event.target.result;
+            photo_container.appendChild(Uploaded_photo);
+            setTimeout(function timer() {
+                photo_container.classList.remove('loading_image')
+                Uploaded_photo.classList.add('no_blur');
+                Upload_photo_status.innerHTML = `Uploading... <span>${i + 1} out of ${filess.length} Uploaded</span>`;
+                if(filess.length - 1 === i) {
+                    Upload_photo_status.innerHTML = `Upload <span>${filess.length} out of ${filess.length} uploaded</span>`;
+                }
+            }, i * 2000);
+        });
+        imgReader.readAsDataURL(filess[i]);
+    }
+    // delete uploaded photos function
+    let uploaded_photos_children = document.querySelectorAll('.img_container');
+    let uploaded_photos_close = document.querySelectorAll('.img_container i');
+    uploaded_photos_close.forEach((e,e_index) => {
+        e.onclick = function () {
+            uploaded_photos_children[e_index].remove();
+        }
+    });
+});
+
+// toggle between photos and albums
+let photos_toggle_tab = document.querySelector('')

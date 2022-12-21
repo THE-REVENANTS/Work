@@ -341,6 +341,202 @@
         }
     }
 }
+// photos tab
+#upload_photo_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #fff, $alpha: .8);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    &.hide {
+        display: none !important;
+    }
+    .upload_photo_container {
+        background: white;
+        width:600px;
+        max-width: 90%;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 5px 0px rgba($color: #000000, $alpha: .2);
+        .upload_photo_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 20px;
+            background:#ffffff;
+            border-bottom: 1px solid var(--border-color);
+            h2 {
+                white-space: nowrap;
+                font-size: 18px;
+                span {
+                    color: #a2a4a5;
+                    font-size: 13px;
+                    padding-left: 10px;
+                    font-weight: 300;
+                }
+            }
+            i {
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+        .upload_photo_body {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px 5%;
+            textarea {
+                border: 1px solid var(--border-color);
+                padding: 10px 15px;
+                border-radius: 5px;
+                resize: none;
+                height: 100px;
+                &::placeholder {
+                    color: #aeaeae;
+                }
+            }
+            label {
+                @include toCenter();
+                padding: 40px 5%;
+                flex-direction: column;
+                gap: 5px;
+                background: #fbfaf9;
+                cursor: pointer;
+                border-radius: 5px;
+                &.grid_view {
+                    padding: 10px;
+                    h2 {
+                        font-size: 15px
+                    }
+                    h3 {
+                        font-size: 11px
+                    }
+                }
+                i {
+                    @include toCenter();
+                    color: #aaaaaa;
+                    background: #eeedec;
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50% !important;
+                }
+                h2 {
+                    color: #393e41;
+                    font-size: 18px;
+                }
+                h3 {
+                    color:#c6c9cc;
+                    font-size: 14px;
+                }
+            }
+            #uploaded_photos {
+                display: grid;
+                grid-template-columns: repeat(3 , 1fr);
+                grid-gap: 10px;
+                grid-template-areas: "a b c";
+                max-height: 250px;
+                padding-right: 10px;
+                overflow-y: scroll;
+                label {
+                    grid-area: a;
+                }
+                .img_container {
+                    position: relative;
+                    width: 100%;
+                    height: 140px;
+                    min-height: 100%;
+                    border-radius: 6px;
+                    box-shadow: 0 0 5px 0px rgba($color: #000000, $alpha: .2);
+                    overflow: hidden;
+                    background: #eee;
+                    i {
+                        position: absolute;
+                        border-radius: 50% !important;
+                        background: white;
+                        color: black;
+                        border: 1px solid #eee;
+                        height: 30px;
+                        width: 30px;
+                        @include toCenter();
+                        right: 10px;
+                        top: 10px;
+                        z-index: 10;
+                        cursor: pointer;
+                    }
+                    &.loading_image {
+                        &::after {
+                            content: '\f030';
+                            font-family: 'Font Awesome 6 pro';
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            height: 40px;
+                            width: 40px;
+                            font-weight: bold;
+                            @include toCenter();
+                            transform: translate(-50%,-50%);
+                            background: rgba($color: #000000, $alpha: .7);
+                            border: 2px solid #ff703d;
+                            font-size: 15px;
+                            color: white;
+                            border-radius: 50% !important;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        filter: blur(5px);
+                        &.no_blur {
+                            filter: unset;
+                        }
+                    }
+                }
+            }
+            @media (max-width: 756px) {
+                #uploaded_photos {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "a b";
+                    .vid_container {
+                        height: 90px;
+                    }
+                }
+            }
+            .select_album {
+                color: #ff703d;
+                cursor: pointer;
+                font-size: 14px;
+                i {
+                    font-size: 16px;
+                    padding-right: 5px;
+                }
+            }
+            select {
+                width: 100%;
+                padding: 5px 10px;
+                cursor: pointer;
+                background: white;
+                border-radius: 5px;
+                border: 1px solid var(--border-color);
+                transition: .4s;
+                &::placeholder {
+                    color: #c6c9cc;
+                }
+                &:focus {
+                    border-color: #d86649;
+                }
+                width: 150px;
+                max-width: 100%;
+            }
+        }
+    }
+}
 // File is too large
 #file_too_large {
     position: fixed;
@@ -456,7 +652,51 @@
             }
         }
         // PHOTOS
-        
+        .photos_albums_toggle {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            gap:10px;
+            a {
+                cursor: pointer;
+                font-size: 13px;
+                &.active {
+                    background: white;
+                    border: 1px solid var(--border-color);
+                    padding: 2px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .photos_albums_grid {
+            margin-top: 20px;
+            .photos,
+            .albums {
+                display: grid;
+                grid-template-columns: repeat(5 , 1fr);
+                grid-gap: 10px;
+                .image_box {
+                    width: 100%;
+                    height: 160px;
+                    border-radius: 6px;
+                    overflow: hidden;
+                    box-shadow: 0 0 5px 0px rgba($color: #000000, $alpha: .2);
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        @media (max-width:1024px) {
+            .photos_albums_grid {
+                .photos,
+                .albums {
+                    grid-template-columns: repeat(2 , 1fr);
+                }
+            }
+        }
         // VIDEOS
         .videos {
             display: grid;
