@@ -79,7 +79,7 @@
         <div id="upload_video_modal" class="hide">
             <div class="upload_video_container">
                 <div class="upload_video_header">
-                    <h2>Create a post</h2>
+                    <h2>Upload</h2>
                     <i class="fa-solid fa-x" id="close_upload_video"></i>
                 </div>
                 <div class="upload_video_body">
@@ -91,11 +91,14 @@
                         <h3>or drag and drop</h3>
                     </label>
                     <div id="uploaded_videos"></div>
+                </div>
+                <div class="upload_video_footer">
                     <select>
                         <option>Public</option>
                         <option>Only me</option>
                         <option>Friends Only</option>
                     </select>
+                    <a class="done hide">Done</a>
                 </div>
             </div>
         </div>
@@ -118,11 +121,14 @@
                     <div class="select_album">
                         <i class="fa-light fa-folder-closed"></i> Select Album
                     </div>
+                </div>
+                <div class="upload_photo_footer">
                     <select>
                         <option>Public</option>
                         <option>Only me</option>
                         <option>Friends Only</option>
                     </select>
+                    <a class="done hide">Done</a>                    
                 </div>
             </div>
         </div>
@@ -245,7 +251,10 @@
                                     Timeline
                                 </a>
                                 <a class="full_width">
-                                    Photos <span class="navigation_count">12</span>
+                                    Photos <span class="navigation_count">9</span>
+                                </a>
+                                <a class="full_width">
+                                    Connections <span class="navigation_count">12</span>
                                 </a>
                                 <a class="full_width">
                                     Videos <span class="navigation_count">3</span>
@@ -544,18 +553,28 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="home-center-wrapper profile_tab">
-                                <div class="tab_head nowrap">
-                                    <h2>Photos</h2>
-                                    <div class="right">
-                                        <a class="button_icon" id="photos_modal_show_btn">
-                                            Add photos
-                                        </a>
+                            <div class="home-center-wrapper profile_tab hide">
+                                <div class="photos_albums_tab_heads">
+                                    <div class="tab_head nowrap">
+                                        <h2>Photos</h2>
+                                        <div class="right">
+                                            <a class="button_icon" id="photos_modal_show_btn">
+                                                Add photos
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="tab_head nowrap hide">
+                                        <h2>Albums</h2>
+                                        <div class="right">
+                                            <a class="button_icon" id="photos_modal_show_btn">
+                                                + Create Album
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="photos_albums_toggle">
-                                    <a class="toggle active">Photos</a>
-                                    <a class="toggle">Albums</a>
+                                    <a class="toggle photos_toggler active">Photos</a>
+                                    <a class="toggle albums_toggler">Albums</a>
                                 </div>
                                 <div class="tab_colored_icons">
                                     <i class="fa-solid fa-trash-can"></i>
@@ -567,34 +586,235 @@
                                             <img src="/assets/images/profile_images.jpg">
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/image1.JPG">
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_photos_2.jpg">
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_photos_3.jpg">
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_photos_1.jpg">
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_photos_4.jpg">
                                         </div>
                                     </div>
                                     <div class="albums hide">
-                                        <h2>Just Albums</h2>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_album.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Nature</div>
+                                                <time>May 30, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        4
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="image_box">
-                                            <img src="/assets/images/profile_images.jpg">
+                                            <img src="/assets/images/for_album_2.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Christmas</div>
+                                                <time>Nov 20, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        10
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        4
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_albums_3.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Fashion</div>
+                                                <time>May 23, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        6
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_album.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Nature</div>
+                                                <time>May 30, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        4
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_album_2.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Christmas</div>
+                                                <time>Nov 20, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        10
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        4
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_albums_3.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Fashion</div>
+                                                <time>May 23, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        6
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_album.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Nature</div>
+                                                <time>May 30, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        4
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        0
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="image_box">
+                                            <img src="/assets/images/for_album_2.jpg">
+                                            <div class="album_details">
+                                                <div class="album_title">Christmas</div>
+                                                <time>Nov 20, 2019</time>
+                                                <div class="album_assets">
+                                                    <div class="element">
+                                                        <i class="fa-regular fa-images"></i>
+                                                        10
+                                                    </div>
+                                                    <div class="element">.</div>
+                                                    <div class="element">
+                                                        <i class="fa-solid fa-video"></i>
+                                                        4
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-center-wrapper">
+                                <div class="conntections_requests_container">
+                                    <a class="toggle active">My connections</a>
+                                    <a class="toggle">Requests</a>
+                                </div>
+                                <div class="connections_requests">
+                                    <div class="connections_container">
+                                        <div class="connections_nav s-between">
+                                            <div class="search_box">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                <input type="text" placeholder="Search Feed...">
+                                            </div>
+                                            <div class="right">
+                                                <select>
+                                                    <option value="recently_active">Recently Active</option>
+                                                </select>
+                                                <div class="grid_list_view_toggler">
+                                                    <div class="icon_box to_grid active">
+                                                        <i class="fa-solid fa-grid"></i>
+                                                    </div>
+                                                    <div class="icon_box to_list">
+                                                        <i class="fa-solid fa-list"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="connections" class="connections grid">
+                                            <div class="single_connection">
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                                <div class="user_image">
+                                                    <img src="/assets/images/alyss.png">
+                                                    <span class="badge">Coach</span>
+                                                </div>
+                                                <div class="user_name">
+                                                    Alyssa
+                                                    <span>Coach</span>
+                                                </div>
+                                                <div class="join_date">
+                                                    Joined Apr 2019
+                                                </div>
+                                                <div class="followers">
+                                                    <strong>14 </strong> followers
+                                                </div>
+                                                <div class="send_message">
+                                                    <i class="fa-light fa-envelope"></i>
+                                                    Send Message
+                                                </div>
+                                                <div class="single_connection_footer">
+                                                    <i class="fa-solid fa-bullhorn"></i>
+                                                    <i class="fa-solid fa-user-check"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="requests_container hide">
+                                        <div class="notify">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            You have no pending requests to connect.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="home-center-wrapper profile_tab hide">
-                                <div class="tab_head nowrap">
+                                <div class="tab_head nowrap"> 
                                     <h2>Videos</h2>
                                     <div class="right">
                                         <a class="button_icon" id="videos_modal_show_btn">
@@ -648,8 +868,34 @@
                                             <td>June 5, 2020</td>
                                             <td>Public</td>
                                             <td>
-                                                <div class="icon_box">
+                                                <div class="elipsis_dropdown">
                                                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    <div class="dropdown_content chat_dropdown">
+                                                        <div class="option">
+                                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                                            Download
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-copy"></i>
+                                                            Copy download link
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-lock"></i>
+                                                            Edit privacy
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-pen-to-square"></i>
+                                                            Rename
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-folders"></i>
+                                                            Move
+                                                        </div> 
+                                                        <div class="option danger_option">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            Trash
+                                                        </div> 
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -661,8 +907,34 @@
                                             <td>June 5, 2020</td>
                                             <td>Public</td>
                                             <td>
-                                                <div class="icon_box">
+                                                <div class="elipsis_dropdown">
                                                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    <div class="dropdown_content chat_dropdown">
+                                                        <div class="option">
+                                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                                            Download
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-copy"></i>
+                                                            Copy download link
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-lock"></i>
+                                                            Edit privacy
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-pen-to-square"></i>
+                                                            Rename
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-folders"></i>
+                                                            Move
+                                                        </div> 
+                                                        <div class="option danger_option">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            Trash
+                                                        </div> 
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -674,8 +946,34 @@
                                             <td>June 2, 2021</td>
                                             <td>My Connections</td>
                                             <td>
-                                                <div class="icon_box">
+                                                <div class="elipsis_dropdown">
                                                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    <div class="dropdown_content chat_dropdown">
+                                                        <div class="option">
+                                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                                            Download
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-copy"></i>
+                                                            Copy download link
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-lock"></i>
+                                                            Edit privacy
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-pen-to-square"></i>
+                                                            Rename
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-folders"></i>
+                                                            Move
+                                                        </div> 
+                                                        <div class="option danger_option">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            Trash
+                                                        </div> 
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -687,8 +985,34 @@
                                             <td>June 5, 2020</td>
                                             <td>My Connections</td>
                                             <td>
-                                                <div class="icon_box">
+                                                <div class="elipsis_dropdown">
                                                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    <div class="dropdown_content chat_dropdown">
+                                                        <div class="option">
+                                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                                            Download
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-copy"></i>
+                                                            Copy download link
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-lock"></i>
+                                                            Edit privacy
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-pen-to-square"></i>
+                                                            Rename
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-folders"></i>
+                                                            Move
+                                                        </div> 
+                                                        <div class="option danger_option">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            Trash
+                                                        </div> 
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
@@ -700,8 +1024,34 @@
                                             <td>June 5, 2020</td>
                                             <td>Public</td>
                                             <td>
-                                                <div class="icon_box">
+                                                <div class="elipsis_dropdown">
                                                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                    <div class="dropdown_content chat_dropdown">
+                                                        <div class="option">
+                                                            <i class="fa-regular fa-down-to-bracket"></i>
+                                                            Download
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-copy"></i>
+                                                            Copy download link
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-lock"></i>
+                                                            Edit privacy
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-pen-to-square"></i>
+                                                            Rename
+                                                        </div> 
+                                                        <div class="option">
+                                                            <i class="fa-light fa-folders"></i>
+                                                            Move
+                                                        </div> 
+                                                        <div class="option danger_option">
+                                                            <i class="fa-solid fa-trash-can"></i>
+                                                            Trash
+                                                        </div> 
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>

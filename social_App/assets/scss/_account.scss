@@ -225,6 +225,7 @@
     .sign_page {
         grid-template-columns: 1fr;
         grid-gap: 20px;
+        height: auto;
         & > .left {
             height: 150px;
         }

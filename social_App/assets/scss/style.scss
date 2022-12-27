@@ -602,7 +602,7 @@ header {
                     box-shadow: 0 0 3px 0 rgba($color: #000000, $alpha: .2);
                     overflow: hidden;
                     border-radius: 5px;
-                    width: 340px;
+                    width: 400px;
                     max-width: 92vw;
                     display: none;
                     &.show {
@@ -627,12 +627,14 @@ header {
                     }
                     .Messages_body {
                         padding: 10px;
+                        max-height: 350px;
+                        overflow-y: scroll;
                         .single_message {
                             position: relative;
                             display: flex;
                             align-items: center;
                             gap: 10px;
-                            padding: 10px 5px;
+                            padding: 15px 10px;
                             border-radius: 5px;
                             cursor: pointer;
                             transition: .3s;
@@ -655,22 +657,18 @@ header {
                             }
                             &:hover {
                                 background: #fff1ec;
-                                &::after { 
-                                    opacity: 0;
-                                    pointer-events: none;
-                                }
                             }
                             .group_image {
                                 position: relative;
                                 height: 50px;
                                 width: 50px;
                                 img {
-                                    height: 70%;
-                                    height: 70%;
+                                    height: 75%;
+                                    height: 75%;
                                     aspect-ratio: 1 / 1;
                                     object-fit: cover;
-                                    border-radius: 50%;
-                                    border: 3px solid white;
+                                    border-radius: 100%;
+                                    border: 2px solid white;
                                     position: absolute;
                                     top: 0;
                                     left: 0;
@@ -684,8 +682,8 @@ header {
                             img.contact_image {
                                 border-radius: 50%;
                                 object-fit: cover;
-                                height: 35px;
-                                width: 35px;
+                                height: 50px;
+                                width: 50px;
                             }
                             .contact_info {
                                 display: flex;
@@ -723,7 +721,7 @@ header {
                         right:unset;
                         left:50%;
                         top: 70px;
-                        transform: scale(.90) translateX(-50%);
+                        transform: scale(0.9) translateX(-50%) translateY(-7%);
                     }
                 }
             }

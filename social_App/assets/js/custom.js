@@ -65,6 +65,20 @@ create_post_trigger.onclick = function () {
 }
 
 
+
+let dropdowns_trigger = document.querySelectorAll('.elipsis_dropdown > i'); 
+let dropdowns_content = document.querySelectorAll('.elipsis_dropdown .dropdown_content'); 
+dropdowns_trigger.forEach((e , e_index) => {
+    e.onclick = function () {
+        for (let i = 0; i < dropdowns_content.length; i++) {
+            if (!i == e_index) {
+                dropdowns_content[i].classList.remove('show');            
+            }
+        }
+        dropdowns_content[e_index].classList.toggle('show');
+    }
+}); 
+
 // My profile tabs PHOTOS/VIDEOS/FILES
 let profile_tab_control = document.querySelectorAll('.my_profile_tab_control a');
 let profile_tabs = document.querySelectorAll('.home-center-wrapper');
@@ -94,21 +108,22 @@ let upload_video_modal = document.querySelector('#upload_video_modal');
 let close_upload_video = document.querySelector('#close_upload_video'); 
 close_upload_video.setAttribute('onclick' , "toggleHide_class(upload_video_modal)");
 videos_modal_show_btn.setAttribute('onclick' , "toggleHide_class(upload_video_modal)");
+let Upload_video_done = document.querySelector('#upload_video_modal a.done');
 // file is too large modal event
 let file_is_too_large_modal = document.querySelector('#file_too_large');
 let close_file_is_too_large_modal = document.querySelector('#close_file_too_large');
 close_file_is_too_large_modal.setAttribute('onclick' , "toggleHide_class(file_is_too_large_modal)");
 let write_file_size = document.querySelector('#write_file_size');
-// file is too large modal ends... [open condition is inside loadVideo() function ]
-
 function floorFigure(figure, decimals){
     if (!decimals) decimals = 2;
     var d = Math.pow(10,decimals);
     return (parseInt(figure*d)/d).toFixed(decimals);
 };
+// file is too large modal ends... [open condition is inside loadVideo() function ]
 let uploaded_videos = document.querySelector('#uploaded_videos');
 let upload_video_label = document.querySelector('#upload_video_label');
 var loadVideo = function(event) {
+    Upload_video_done.classList.remove('hide');
     uploaded_videos.appendChild(upload_video_label);
     upload_video_label.classList.add('grid_view');
     let filess = event.target.files;
@@ -139,8 +154,10 @@ close_upload_photos.setAttribute('onclick' , 'toggleHide_class(upload_photo_moda
 let uploaded_photos = document.querySelector('#uploaded_photos');
 let upload_photo_label = document.querySelector('#upload_photo_label');
 let photos_Input = document.querySelector('#photos_Input');
-let Upload_photo_status = document.querySelector('#upload_photo_modal .upload_photo_header h2')
+let Upload_photo_status = document.querySelector('#upload_photo_modal .upload_photo_header h2');
+let Upload_photo_done = document.querySelector('#upload_photo_modal a.done');
 photos_Input.addEventListener('change' , (e) => {
+    Upload_photo_done.classList.remove('hide');
     uploaded_photos.appendChild(upload_photo_label);
     upload_photo_label.classList.add('grid_view');
     let filess = e.target.files;
@@ -178,4 +195,60 @@ photos_Input.addEventListener('change' , (e) => {
 });
 
 // toggle between photos and albums
-let photos_toggle_tab = document.querySelector('')
+let photos_albums_toggler = document.querySelectorAll('.photos_albums_toggle .toggle');
+let photos_albums_tab_heads = document.querySelectorAll('.photos_albums_tab_heads .tab_head');
+let photos_albums_tabs = document.querySelector('.photos_albums_grid').children;
+function toggle_albums_photos(e, e_index) {
+    e.onclick = function () {
+        for (let i = 0; i < photos_albums_toggler.length; i++) {
+            photos_albums_toggler[i].classList.remove('active');
+            photos_albums_tabs[i].classList.add('hide');
+            photos_albums_tab_heads[i].classList.add('hide');
+        }
+        photos_albums_toggler[e_index].classList.add('active');
+        photos_albums_tabs[e_index].classList.remove('hide');        
+        photos_albums_tab_heads[e_index].classList.remove('hide');        
+    }
+}
+photos_albums_toggler.forEach(toggle_albums_photos);
+
+
+// tab system function
+function tabSystem(navArray, content_array) {
+    navArray.forEach((e , e_index) => {
+        e.onclick = function () {
+            for (let i = 0; i < navArray.length; i++) {
+                navArray[i].classList.remove('active');
+                content_array[i].classList.add('hide');
+            }
+            navArray[e_index].classList.add('active');
+            content_array[e_index].classList.remove('hide');
+        }
+    });
+}
+// tab system applied to
+let connections_requests_toggler = document.querySelectorAll('.conntections_requests_container .toggle');
+let connections_requests_tabs = document.querySelector('.connections_requests').children;
+tabSystem(connections_requests_toggler, connections_requests_tabs);
+
+
+// classes change function
+function changeClass(toNewEvent, backToDefaultEvent,currentClass, newClass, Victim) {
+    toNewEvent.onclick = function () {
+        Victim.classList.add(newClass);
+        Victim.classList.remove(currentClass);
+        backToDefaultEvent.classList.remove('active');
+        toNewEvent.classList.add('active');
+    }
+    backToDefaultEvent.onclick = function () {
+        Victim.classList.add(currentClass)
+        Victim.classList.remove(newClass)
+        toNewEvent.classList.remove('active');
+        backToDefaultEvent.classList.add('active');
+    }
+}
+// will apply to:
+let connections = document.querySelector('#connections');
+let gridIcon = document.querySelector('.grid_list_view_toggler .to_grid');
+let listIcon = document.querySelector('.grid_list_view_toggler .to_list');
+changeClass(listIcon,gridIcon,"grid","list",connections);
