@@ -227,9 +227,13 @@ function tabSystem(navArray, content_array) {
     });
 }
 // tab system applied to
-let connections_requests_toggler = document.querySelectorAll('.conntections_requests_container .toggle');
-let connections_requests_tabs = document.querySelector('.connections_requests').children;
-tabSystem(connections_requests_toggler, connections_requests_tabs);
+    let connections_requests_toggler = document.querySelectorAll('.conntections_requests_container .toggle');
+    let connections_requests_tabs = document.querySelector('.connections_requests').children;
+    tabSystem(connections_requests_toggler, connections_requests_tabs);
+    //////
+    let groups_invitations_toggler = document.querySelectorAll('.groups_invitations_container .toggle');
+    let groups_invitations_tabs = document.querySelector('.groups_invitations').children;
+    tabSystem(groups_invitations_toggler, groups_invitations_tabs);
 
 
 // classes change function
@@ -249,6 +253,64 @@ function changeClass(toNewEvent, backToDefaultEvent,currentClass, newClass, Vict
 }
 // will apply to:
 let connections = document.querySelector('#connections');
-let gridIcon = document.querySelector('.grid_list_view_toggler .to_grid');
-let listIcon = document.querySelector('.grid_list_view_toggler .to_list');
+let gridIcon = document.querySelector('.connections_nav .grid_list_view_toggler .to_grid');
+let listIcon = document.querySelector('.connections_nav .grid_list_view_toggler .to_list');
 changeClass(listIcon,gridIcon,"grid","list",connections);
+// second apply to:
+let groups_container = document.querySelector('#groups');
+let groups_gridIcon = document.querySelector('.groups_nav .grid_list_view_toggler .to_grid');
+let groups_listIcon = document.querySelector('.groups_nav .grid_list_view_toggler .to_list');
+changeClass(groups_listIcon,groups_gridIcon,"grid","list",groups_container);
+
+
+
+// remove connections modal
+let remove_connection_trigger = document.querySelectorAll('.remove_connection_trigger');
+let remove_connection = document.querySelector('#remove_connection');
+let cancel_remove_connection = document.querySelector('#cancel_remove_connection');
+let close_remove_connection = document.querySelector('#close_remove_connection');
+let users_names = document.querySelectorAll('.connections .single_connection .user_name .inner');
+let singles_connections = document.querySelectorAll('.connections .single_connection');
+let confirm_remove_connection = document.querySelector('#confirm_remove_connection');
+let write_connection_name = document.querySelector('#write_connection_name');
+remove_connection_trigger.forEach((e , e_index) => {
+    e.onclick = function () {
+        remove_connection.classList.remove('hide');
+        write_connection_name.innerHTML = users_names[e_index].textContent;
+        confirm_remove_connection.onclick = function () {
+            singles_connections[e_index].remove();
+            remove_connection.classList.add('hide');
+        }
+    }
+}); 
+close_remove_connection.onclick = function () {
+    remove_connection.classList.add('hide');
+} 
+cancel_remove_connection.onclick = function () {
+    remove_connection.classList.add('hide');
+}
+// remove groups modal
+let leave_group_trigger = document.querySelectorAll('.leave_group_trigger');
+let leave_group = document.querySelector('#leave_group');
+let cancel_leave_group = document.querySelector('#cancel_leave_group');
+let close_leave_group = document.querySelector('#close_leave_group');
+let groups_names = document.querySelectorAll('.groups .single_group .middle h2');
+let singles_group = document.querySelectorAll('.groups .single_group');
+let confirm_leave_group = document.querySelector('#confirm_leave_group');
+let write_group_name = document.querySelector('#write_group_name');
+leave_group_trigger.forEach((e , e_index) => {
+    e.onclick = function () {
+        leave_group.classList.remove('hide');
+        write_group_name.innerHTML = groups_names[e_index].textContent;
+        confirm_leave_group.onclick = function () {
+            singles_group[e_index].remove();
+            leave_group.classList.add('hide');
+        }
+    }
+}); 
+close_leave_group.onclick = function () {
+    leave_group.classList.add('hide');
+} 
+cancel_leave_group.onclick = function () {
+    leave_group.classList.add('hide');
+}

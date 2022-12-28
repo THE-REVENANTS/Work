@@ -136,11 +136,47 @@
         <div id="file_too_large" class="hide">
             <div class="file_too_large_container">
                 <div class="file_too_large_header">
-                    <h2>Create a post</h2>
+                    <h2>Alert</h2>
                     <i class="fa-solid fa-x" id="close_file_too_large"></i>
                 </div>
                 <div class="file_too_large_body">
                     File is too large (<span id="write_file_size"></span> MB). Max filesize: 20 MB.
+                </div>
+            </div>
+        </div>
+        <!-- Remove connections modal -->
+        <div id="remove_connection" class="hide">
+            <div class="remove_connection_container">
+                <div class="remove_connection_header">
+                    <h2>Remove connection</h2>
+                    <i class="fa-solid fa-x" id="close_remove_connection"></i>
+                </div>
+                <div class="remove_connection_body">
+                    Are you sure you want to remove <span class="main_color" id="write_connection_name"></span> from your connections?
+                </div>
+                <div class="remove_connection_footer">
+                    <div class="right">
+                        <div class="cancel" id="cancel_remove_connection">cancel</div>
+                        <div class="confirm" id="confirm_remove_connection">confirm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Leave group modal -->
+        <div id="leave_group" class="hide">
+            <div class="leave_group_container">
+                <div class="leave_group_header">
+                    <h2>Leave Group</h2>
+                    <i class="fa-solid fa-x" id="close_leave_group"></i>
+                </div>
+                <div class="leave_group_body">
+                    Are you sure you want to Leave <span class="main_color" id="write_group_name"></span>
+                </div>
+                <div class="leave_group_footer">
+                    <div class="right">
+                        <div class="cancel" id="cancel_leave_group">cancel</div>
+                        <div class="confirm" id="confirm_leave_group">confirm</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,6 +291,9 @@
                                 </a>
                                 <a class="full_width">
                                     Connections <span class="navigation_count">12</span>
+                                </a>
+                                <a class="full_width">
+                                    Groups <span class="navigation_count">7</span>
                                 </a>
                                 <a class="full_width">
                                     Videos <span class="navigation_count">3</span>
@@ -749,7 +788,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="home-center-wrapper">
+                            <div class="home-center-wrapper hide">
                                 <div class="conntections_requests_container">
                                     <a class="toggle active">My connections</a>
                                     <a class="toggle">Requests</a>
@@ -781,11 +820,11 @@
                                                     <i class="fa-solid fa-ellipsis"></i>
                                                 </div>
                                                 <div class="user_image">
-                                                    <img src="/assets/images/alyss.png">
+                                                    <img src="/assets/images/person_4.jpg">
                                                     <span class="badge">Coach</span>
                                                 </div>
                                                 <div class="user_name">
-                                                    Alyssa
+                                                    <div class="inner">Alyssa</div>
                                                     <span>Coach</span>
                                                 </div>
                                                 <div class="join_date">
@@ -800,7 +839,61 @@
                                                 </div>
                                                 <div class="single_connection_footer">
                                                     <i class="fa-solid fa-bullhorn"></i>
-                                                    <i class="fa-solid fa-user-check"></i>
+                                                    <i class="fa-solid fa-user-check remove_connection_trigger"></i>
+                                                </div>
+                                            </div>
+                                            <div class="single_connection">
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                                <div class="user_image">
+                                                    <img src="/assets/images/person_2.png">
+                                                    <span class="badge">Student</span>
+                                                </div>
+                                                <div class="user_name">
+                                                    <div class="inner">Arian</div>
+                                                    <span>Student</span>
+                                                </div>
+                                                <div class="join_date">
+                                                    Joined Mar 2018
+                                                </div>
+                                                <div class="followers">
+                                                    <strong>24 </strong> followers
+                                                </div>
+                                                <div class="send_message">
+                                                    <i class="fa-light fa-envelope"></i>
+                                                    Send Message
+                                                </div>
+                                                <div class="single_connection_footer">
+                                                    <i class="fa-solid fa-bullhorn"></i>
+                                                    <i class="fa-solid fa-user-check remove_connection_trigger"></i>
+                                                </div>
+                                            </div>
+                                            <div class="single_connection">
+                                                <div class="icon_box">
+                                                    <i class="fa-solid fa-ellipsis"></i>
+                                                </div>
+                                                <div class="user_image">
+                                                    <img src="/assets/images/person_5.jpg">
+                                                    <span class="badge">Teacher</span>
+                                                </div>
+                                                <div class="user_name">
+                                                    <div class="inner">Mateo</div>
+                                                    <span>Teacher</span>
+                                                </div>
+                                                <div class="join_date">
+                                                    Joined Mar 2018
+                                                </div>
+                                                <div class="followers">
+                                                    <strong>24 </strong> followers
+                                                </div>
+                                                <div class="send_message">
+                                                    <i class="fa-light fa-envelope"></i>
+                                                    Send Message
+                                                </div>
+                                                <div class="single_connection_footer">
+                                                    <i class="fa-solid fa-bullhorn"></i>
+                                                    <i class="fa-solid fa-user-check remove_connection_trigger"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -809,6 +902,107 @@
                                         <div class="notify">
                                             <i class="fa-solid fa-circle-info"></i>
                                             You have no pending requests to connect.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="home-center-wrapper">
+                                <div class="groups_invitations_container">
+                                    <a class="toggle active">Groups</a>
+                                    <a class="toggle">Invitations</a>
+                                </div>
+                                <div class="groups_invitations">
+                                    <div class="groups_container">
+                                        <div class="groups_nav s-between">
+                                            <div></div>
+                                            <div class="right">
+                                                <select>
+                                                    <option value="recently_active">Recently Active</option>
+                                                </select>
+                                                <div class="grid_list_view_toggler">
+                                                    <div class="icon_box to_grid active">
+                                                        <i class="fa-solid fa-grid"></i>
+                                                    </div>
+                                                    <div class="icon_box to_list">
+                                                        <i class="fa-solid fa-list"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="groups" class="groups list">
+                                            <div class="single_group">
+                                                <div class="top">
+                                                    <img src="/assets/images/for_photos_3.jpg" class="background">
+                                                    <img src="/assets/images/person_2.jpg" class="group_img">
+                                                </div>
+                                                <div class="middle">
+                                                    <h2>Sports Players</h2>
+                                                    <div class="status">Public . Group</div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="members">
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/alyss.png">
+                                                            <span>Alyss</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/arian.png">
+                                                            <span>Arian</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/emli.png">
+                                                            <span>Emli</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                            <span>+7 members</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button leave_group_trigger">
+                                                        <i class="fa-solid fa-check"></i> Organizer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="single_group">
+                                                <div class="top">
+                                                    <img src="/assets/images/for_photos_4.jpg" class="background">
+                                                    <img src="/assets/images/for_photos_3.jpg" class="group_img">
+                                                </div>
+                                                <div class="middle">
+                                                    <h2>Bicycles Riders</h2>
+                                                    <div class="status">Public . Group</div>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="members">
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/alyss.png">
+                                                            <span>Alyss</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/arian.png">
+                                                            <span>Arian</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <img src="/assets/images/emli.png">
+                                                            <span>Emli</span>
+                                                        </div>
+                                                        <div class="img_container">
+                                                            <i class="fa-solid fa-ellipsis"></i>
+                                                            <span>+7 members</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="button leave_group_trigger">
+                                                        <i class="fa-solid fa-check"></i> Organizer
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="invitations_container hide">
+                                        <h2>Group Invites</h2>
+                                        <div class="notify">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            You have no outstanding group invitations.
                                         </div>
                                     </div>
                                 </div>
