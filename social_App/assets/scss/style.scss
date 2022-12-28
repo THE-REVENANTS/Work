@@ -822,6 +822,14 @@ header {
                     margin-bottom:unset;
                     height: fit-content !important;
                 }
+                .someone_latest_updates {
+                    position: sticky;
+                    top: var(--header-height);
+                    margin-top: auto;
+                    grid-area: k;
+                    margin-bottom:unset;
+                    height: fit-content !important;
+                }
                 .home-right {
                     width: 100%;
                     grid-area: c;

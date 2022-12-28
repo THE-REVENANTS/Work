@@ -1482,7 +1482,7 @@
                     }
                 }
                 #groups {
-                    margin-top: 15px;
+                    margin-top: 24px;
                     &.grid {
                         display: grid;
                         grid-template-columns: repeat(3 , 1fr);
@@ -1654,6 +1654,9 @@
                                 }
                             }
                         }
+                        @media (max-width:900px) {
+                            grid-template-columns: 1fr;
+                        }
                     }
                     &.list {
                         display: flex;
@@ -1821,6 +1824,21 @@
                                             opacity: 1;
                                         }                                    
                                     }
+                                }
+                            }
+                        }
+                        @media (max-width:900px) {
+                            .single_group {
+                                grid-template-columns: 80px calc(100% - 80px);
+                                grid-template-areas: 
+                                "topLeft topRight"
+                                "details  details";
+                                .top {
+                                    grid-area: topLeft;
+                                }
+                                grid-area: topRight;
+                                .bottom {
+                                    grid-area: details;
                                 }
                             }
                         }
