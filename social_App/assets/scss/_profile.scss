@@ -1528,6 +1528,9 @@
                                     color: gray;
                                     font-size: 14px;
                                 }
+                                p {
+                                    display: none;
+                                }
                             }
                             .bottom {
                                 display: flex;
@@ -1695,7 +1698,7 @@
                                     font-size: 12px;
                                 }
                                 p {
-                                    font-size: 12px;
+                                    font-size: 11px;
                                     width: 97%;
                                 }
                             }
