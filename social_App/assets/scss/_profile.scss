@@ -1662,7 +1662,7 @@
                             width: 100%;
                             overflow: hidden;
                             display: grid;
-                            grid-template-columns: 80px calc(70% - 80px) 25%;
+                            grid-template-columns: 80px calc(75% - 80px) 25%;
                             padding: 10px 20px;
                             border-bottom: 1px solid var(--border-color);
                             background: white;
@@ -1683,13 +1683,16 @@
                                 width: 100%;
                                 display: flex;
                                 flex-direction: column;
+                                gap: 5px;
                                 padding-left: 10px;
                                 h2 {
-                                    font-size: 18px;
+                                    font-size: 16px;
+                                    color: #222;
+                                    font-weight: bold;
                                 }
                                 .status {
                                     color: gray;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                 }
                                 p {
                                     font-size: 12px;
