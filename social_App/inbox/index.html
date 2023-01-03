@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Online Communities</title>
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- fontAwsome CDN -->
+        <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+        <!-- Boxicons CDN Link -->
+        <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/assets/favicon.PNG" type="image/x-icon">
+    </head>
+    <body>
+        <!-- Loading -->
+        <div id="loading">
+            <img src="/assets/images/logo.svg" alt="Website Logo">
+            <h6>Loading...</h6>
+        </div>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo"> 
+                </div>
+                <i class="fa-sharp fa-solid fa-bars-staggered" id="btn"></i>
+                <i class="fa-solid fa-xmark" id="close_mobile"></i>
+            </div>
+            <ul class="nav_list">
+                <li class="links_name">
+                    <span>Personal</span>
+                </li>
+                <li>
+                    <a href="/profile/">
+                        <i class="fa-light fa-user"></i>
+                        <span class="links_name">My Profile</span>
+                    </a>
+                    <span class="tooltip">My Profile</span>
+                </li>
+                <li>
+                    <a href="/">
+                        <i class="bx bx-pulse"></i>
+                        <span class="links_name">My Timeline</span>
+                    </a>
+                    <span class="tooltip">My Timeline</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-light fa-inbox"></i>
+                        <span class="links_name">My Inbox</span>
+                    </a>
+                    <span class="tooltip">My Inbox</span>
+                </li>
+
+                <li class="links_name">
+                    <span>COMMUNITY</span>
+                </li>
+                <div class="sidebar_separator"></div>
+                <li>
+                    <a href="#">
+                        <i class="fa-thin fa-users"></i>
+                        <span class="links_name">My Groups</span>
+                    </a>
+                    <span class="tooltip">My Groups</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-thin fa-users"></i>
+                        <span class="links_name">My Connections</span>
+                    </a>
+                    <span class="tooltip">Connections</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-light fa-message-dots"></i>
+                        <span class="links_name">My Discussion</span>
+                    </a>
+                    <span class="tooltip">Discussion</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-light fa-graduation-cap"></i>
+                        <span class="links_name">My Courses</span>
+                    </a>
+                    <span class="tooltip">Courses</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="home_content">
+            <include src="/Header"></include>
+
+            <div class="home">
+                <div class="container">
+                    <div class="inbox_mobile_help" id="open_in_mobile">
+                        <i class="fa-solid fa-inboxes"></i>
+                        Select a chat
+                    </div>
+                    <div class="inbox_page">
+                        <div class="inbox_left ">
+                            <div class="inbox_left_header">
+                                <div class="top">
+                                    <h3>Messages</h3>
+                                    <div class="icons">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                        <i class="fa-solid fa-pen-to-square" id="open_create_message_overlay"></i>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <div class="search_field">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <input type="text" id="search_txt" placeholder="Search...">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inbox_left_body">
+                                <div id="no_results">
+                                    <i class="fa-solid fa-message-slash"></i>
+                                    <h5>No Messages</h5>
+                                    <p>When you have new messages, They will appear here.</p>
+                                </div>
+                                <div class="contact_component">
+                                    <img src="/assets/images/comm6.png" alt="contact image" class="contact_image">
+                                    <div class="contact_info">
+                                        <h4>Nature Lovers</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">You:</span>
+                                                <span>check</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                Nov 2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component unread_message">
+                                    <div class="group_image">
+                                        <img src="/assets/images/alyss.png" alt="group member">
+                                        <img src="/assets/images/arian.png" alt="group member">
+                                    </div>
+                                    <div class="contact_info">
+                                        <h4>Neville, Trint, Steve</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">You:</span>
+                                                <span>Thanks</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                May 25, 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component">
+                                    <div class="group_image">
+                                        <img src="/assets/images/center1.png" alt="group member" >
+                                        <img src="/assets/images/person_4.jpg" alt="group member">
+                                    </div>
+                                    <div class="contact_info">
+                                        <h4>Mateo, Sana</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">Sana:</span>
+                                                <span>Sent a GIF</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                May 22, 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component">
+                                    <img src="/assets/images/person_5.jpg" alt="contact image" class="contact_image">
+                                    <div class="contact_info">
+                                        <h4>Mateo</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">Mateo:</span>
+                                                <span>That's so fu...</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                Nov 2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component">
+                                    <img src="/assets/images/comm6.png" alt="contact image" class="contact_image">
+                                    <div class="contact_info">
+                                        <h4>Nature Lovers</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">You:</span>
+                                                <span>Okay see y...</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                Nov 2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component unread_message">
+                                    <div class="group_image">
+                                        <img src="/assets/images/alyss.png" alt="group member">
+                                        <img src="/assets/images/arian.png" alt="group member">
+                                    </div>
+                                    <div class="contact_info">
+                                        <h4>Neville, Trint, Steve</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">Trint:</span>
+                                                <span>Thanks</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                May 25, 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component">
+                                    <div class="group_image">
+                                        <img src="/assets/images/center1.png" alt="group member" >
+                                        <img src="/assets/images/comm2.jpg" alt="group member">
+                                    </div>
+                                    <div class="contact_info">
+                                        <h4>Mateo, Sana</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">Mateo:</span>
+                                                <span>Sent a GIF</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                May 22, 2019
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact_component">
+                                    <img src="/assets/images/person_5.jpg" alt="contact image" class="contact_image">
+                                    <div class="contact_info">
+                                        <h4>Mateo</h4>
+                                        <div class="chat_and_date">
+                                            <div class="chat_txt">
+                                                <span class="who">You:</span>
+                                                <span>Let see what ...</span>
+                                            </div>
+                                            <div class="chat_date">
+                                                Nov 2
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elipsis_dropdown">
+                                        <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                        <div class="dropdown_content chat_dropdown">
+                                            <div class="option">
+                                                <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                                Mark as unread
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                                Archieve
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-light fa-users"></i>
+                                                View members
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-ban"></i>
+                                                Block a member
+                                            </div>
+                                            <div class="option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete your messages
+                                            </div>
+                                            <div class="option danger_option">
+                                                <i class="fa-solid fa-trash-can"></i>
+                                                Delete conversation
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inbox_right">
+                            <div class="create_message_overlay" id="create_message_overlay">
+                                <div class="top">
+                                    <div class="to_container">
+                                        <label for="message_to">To:</label>
+                                        <input type="text" id="message_to">
+                                    </div>
+                                    <i class="fa-solid fa-x" id="close_create_message_overlay"></i>
+                                    <div class="hint" id="start_typing_hint">Start typing to find members</div>
+                                </div>
+                            </div>
+                            <div class="inbox_right_header">
+                                <div class="group_image">
+                                    <img src="/assets/images/center1.png" alt="group member" >
+                                    <img src="/assets/images/person_4.jpg" alt="group member">
+                                </div>
+                                <div class="contact_info">
+                                    <h4>Mateo, Sana</h4>
+                                    <small>Started May 13, 2019</small>
+                                </div>
+                                <div class="elipsis_dropdown">
+                                    <i class="fa-solid fa-ellipsis elipsis chat_dropdown_trigger"></i>
+                                    <div class="dropdown_content chat_dropdown">
+                                        <div class="option">
+                                            <i class="fa-sharp fa-solid fa-eye-slash"></i>
+                                            Mark as unread
+                                        </div>
+                                        <div class="option">
+                                            <i class="fa-regular fa-arrow-down-to-bracket"></i>
+                                            Archieve
+                                        </div>
+                                        <div class="option">
+                                            <i class="fa-light fa-users"></i>
+                                            View members
+                                        </div>
+                                        <div class="option">
+                                            <i class="fa-solid fa-ban"></i>
+                                            Block a member
+                                        </div>
+                                        <div class="option">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                            Delete your messages
+                                        </div>
+                                        <div class="option danger_option">
+                                            <i class="fa-solid fa-trash-can"></i>
+                                            Delete conversation
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inbox_right_body">
+                                <div class="conversation">
+                                    <div class="conversation_start_date">May 13, 2019</div>
+                                    <div class="message">
+                                        <img src="/assets/images/person_4.jpg" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                Hey guys!!!🏀
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <img src="/assets/images/person_4.jpg" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                How are you?? 🤩
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <img src="/assets/images/center1.png" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                Yes. we are good and you?
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <img src="/assets/images/person_4.jpg" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                Hey guys!!!🏀
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <img src="/assets/images/person_4.jpg" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                How are you?? 🤩
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="message">
+                                        <img src="/assets/images/center1.png" alt="member image" class="sender_image">
+                                        <div class="message_right">
+                                            <div class="sender_details">
+                                                Sana 
+                                                <span class="message_time">10:47 AM</span>
+                                            </div>
+                                            <div class="sender_message">
+                                                Yes. we are good and you?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="create_message_container">
+                                    <div class="create_message">
+                                        <input type="text-area" placeholder="Write a message..." />
+                                        <div class="message-icon">
+                                            <div class="left">
+                                                <i class="fa-solid fa-camera"></i>
+                                                <i class="fa-solid fa-video"></i>
+                                                <i class="fa-solid fa-paperclip"></i>
+                                                <i class="fa-solid fa-gift"></i>
+                                            </div>
+                                            <div class="right">
+                                                <i class="fa-solid fa-font-case"></i>
+                                                <i class="fa-solid fa-face-smile"></i>
+                                                <a href="#" class="send">
+                                                    <i class="fa-solid fa-paper-plane"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- custom link -->
+        <script src="/Header/header.js"></script>
+        <script src="/assets/js/inbox.js"></script>
+        <!-- jquery cdn link -->
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+        <!-- INCLUDE FUNCTION -->
+        <script src="/assets/js/include_function.js"></script>
+    </body>
+</html>

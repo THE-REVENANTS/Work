@@ -1,0 +1,88 @@
+<style>
+    .elipsis_dropdown {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        * {
+            user-select: none;
+        }
+        &:hover .elipsis{
+            background: #fff1ec;
+            border: 1px solid var(--border-color);
+            color: black;
+        }
+        .elipsis {
+            font-weight: bold;
+            color: gray;
+            transition: .3s;
+            font-size: 16px;
+            height: 30px;
+            width: 30px;
+            border-radius: 5px !important;
+            @include toCenter();
+            border: 1px solid var(--border-color);
+        }
+        .dropdown_content {
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 4px 0 rgba($color: #000000, $alpha: .2);
+            padding: 10px;
+            display: none;
+            &.show {
+                display: block;
+            }
+            .option {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 7px;
+                white-space: nowrap;
+                font-size: 12px;
+                border-radius: 5px;
+                &:hover {
+                    background: #eee;
+                    font-weight: bold;
+                }
+                &.danger_option:hover {
+                    background: #ffaaac;
+                }
+                i {
+                    color: rgb(90, 90, 90);
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+</style>
+<div class="elipsis_dropdown">
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+    <div class="dropdown_content chat_dropdown">
+        <div class="option">
+            <i class="fa-regular fa-down-to-bracket"></i>
+            Download
+        </div> 
+        <div class="option">
+            <i class="fa-light fa-copy"></i>
+            Copy download link
+        </div> 
+        <div class="option">
+            <i class="fa-light fa-lock"></i>
+            Edit privacy
+        </div> 
+        <div class="option">
+            <i class="fa-light fa-pen-to-square"></i>
+            Rename
+        </div> 
+        <div class="option">
+            <i class="fa-light fa-folders"></i>
+            Move
+        </div> 
+        <div class="option danger_option">
+            <i class="fa-solid fa-trash-can"></i>
+            Trash
+        </div> 
+    </div>
+</div>
