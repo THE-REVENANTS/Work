@@ -349,8 +349,17 @@ function slide_left() {
     if (slideshow_index == 0) {
         slideshow_to_left.classList.add('hide');
         return false;
+    } else if (slideshow_index == 1) {
+        slideshow_to_left.classList.add('hide');
+        slideshow_to_right.classList.remove('hide');
+        slideshow_index--
+        for (let a = 0; a < slideshow_images.length; a++) {
+            const element = slideshow_images[a];
+            element.classList.add('fade');
+        }
+        slideshow_images[slideshow_index].classList.remove('fade'); 
     } else {
-        slideshow_to_left.classList.remove('hide');
+        slideshow_to_right.classList.remove('hide');
         slideshow_index--
         for (let a = 0; a < slideshow_images.length; a++) {
             const element = slideshow_images[a];
@@ -361,11 +370,19 @@ function slide_left() {
 }
 function slide_right() {
     if (slideshow_index == images_slideshow_arr.length - 1) {
-        slideshow_to_right.classList.add('hide');
         return false;
-    } else {
-        slideshow_to_right.classList.remove('hide');
+    } else if (slideshow_index == images_slideshow_arr.length - 2) {
+        slideshow_to_right.classList.add('hide');
         slideshow_index++
+        slideshow_to_left.classList.remove('hide');
+        for (let a = 0; a < slideshow_images.length; a++) {
+            const element = slideshow_images[a];
+            element.classList.add('fade');
+        }
+        slideshow_images[slideshow_index].classList.remove('fade'); 
+    } else {
+        slideshow_index++
+        slideshow_to_left.classList.remove('hide');
         for (let a = 0; a < slideshow_images.length; a++) {
             const element = slideshow_images[a];
             element.classList.add('fade');

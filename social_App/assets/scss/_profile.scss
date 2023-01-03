@@ -940,6 +940,95 @@
         border: 1px solid var(--border-color);
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+        .post-title {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                object-fit: cover;
+            }
+            .fa-ellipsis {
+                height: 30px;
+                width: 30px;
+                border-radius: 50% !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: .2s;
+                &:hover {
+                    background: #e0dfdb;
+                }
+            }
+            ul {
+                width: 87%;
+                margin-bottom: 20px;
+                list-style: none;
+                li {
+                    h4 {
+                        span {
+                            color: gray;
+                            font-weight: 400;
+                        }
+                    }
+                    .date_posted {
+                        color: #445059;
+                        font-weight: 400;
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+            .privacy_icons {
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: flex;
+                gap: 5px;
+                cursor: pointer;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin-left: 10px;
+                .fa-caret-down {
+                    color: #c4c5c6;
+                    font-size: 17px;
+                }
+                &:hover {
+                    background: #f1f3f6;
+                }
+                .privacy_dropdown {
+                    background: white;
+                    display: none;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+                    border-radius: 5px;
+                    overflow: hidden;
+                    z-index: 1;
+                    a {
+                        text-decoration: none;
+                        color: gray;
+                        padding: 7px 10px;
+                        white-space: nowrap;
+                        &:hover {
+                            background: #f1f3f6;
+                        }
+                    }
+                }
+                .privacy_dropdown.show {
+                    display: flex;
+                }
+            }
+        }
     }
 }
 #profile_page {
