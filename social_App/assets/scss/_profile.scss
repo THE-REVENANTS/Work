@@ -870,7 +870,7 @@
     }
 }
 #slideshow,
-#videos_slideshow {
+#video_slideshow {
     position: fixed;
     top: 0;
     left: 0;
@@ -939,12 +939,13 @@
         }
         @include toCenter();
         .image_slides,
-        .videos_slides {
+        .video_slides {
             @include toCenter();
             height: 100%;
             width: 100%;
             position: relative;
-            img {
+            img,
+            video {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -956,6 +957,9 @@
                     opacity: 0;
                     pointer-events: none;
                 }
+            }
+            video i {
+                pointer-events: none;
             }
         }
     }
@@ -1209,7 +1213,8 @@
     }
 }
 @media (max-width:1024px) {
-    #slideshow {
+    #slideshow,
+    #video_slideshow {
         grid-template-columns: 1fr;
         grid-template-rows: 40% 60%;
         padding: 5px 15px;

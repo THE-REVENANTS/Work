@@ -386,36 +386,59 @@ const slideshowContainer = document.querySelector('#slideshow_container');
 const closeButton = document.querySelector('#close_slideshow');
 const leftButton = document.querySelector('#slideshow_to_left');
 const rightButton = document.querySelector('#slideshow_to_right');
+
+// Create a copy of the original images and add them to the slideshow container
 for (const originalImage of originalImages) {
   const newImage = document.createElement('img');
   newImage.src = originalImage.src;
   slideshowContainer.appendChild(newImage);
 }
+
+// Get the images in the slideshow container
 const slideshowImages = document.querySelectorAll('#slideshow_container img');
+
+// Set up a click event listener for each of the original images
 originalImages.forEach((originalImage, i) => {
   originalImage.addEventListener('click', () => {
+    // Set the current slideshow index to the index of the clicked image
     slideshowIndex = i;
+    // Display the slideshow element and update the displayed image
     slideshowElement.classList.remove('hide');
     updateSlideshow();
   });
 });
+
+// Set up a click event listener for the left button
 leftButton.addEventListener('click', () => {
+  // Decrement the slideshow index and update the displayed image
   slideshowIndex--;
   updateSlideshow();
 });
+
+// Set up a click event listener for the right button
 rightButton.addEventListener('click', () => {
+  // Increment the slideshow index and update the displayed image
   slideshowIndex++;
   updateSlideshow();
 });
+
+// Set up a click event listener for the close button
 closeButton.addEventListener('click', () => {
+  // Hide the slideshow element
   slideshowElement.classList.add('hide');
 });
+
+// Update the displayed image in the slideshow
 function updateSlideshow() {
+  // Apply the fade class to all images in the slideshow container
   slideshowImages.forEach((img) => img.classList.add('fade'));
+  // Remove the fade class from the image at the current slideshow index
   slideshowImages[slideshowIndex].classList.remove('fade');
+  // Toggle the hide class on the left and right buttons based on the current slideshow index
   leftButton.classList.toggle('hide', slideshowIndex === 0);
   rightButton.classList.toggle('hide', slideshowIndex === originalImages.length - 1);
 }
+
 ///////////////////////////////////////////////////////////////////////////
 ///                                                                     ///
 ///    A beautiful video slideshow to showcase your precious videos     ///
@@ -424,44 +447,43 @@ function updateSlideshow() {
 
 const originalVideos = document.querySelectorAll('.profile_tab .videos .video_container video');
 let video_slideshowIndex = 0;
-const video_slideshowElement = document.querySelector('#videos_slideshow');
-const video_slideshowContainer = document.querySelector('#slideshow_container');
-const video_closeButton = document.querySelector('#close_slideshow');
-const video_leftButton = document.querySelector('#slideshow_to_left');
-const video_rightButton = document.querySelector('#slideshow_to_right');
+const video_slideshowElement = document.querySelector('#video_slideshow');
+const video_slideshowContainer = document.querySelector('#videos_slideshow_container');
+const video_closeButton = document.querySelector('#close_video_slideshow');
+const video_leftButton = document.querySelector('#videos_slideshow_to_left');
+const video_rightButton = document.querySelector('#videos_slideshow_to_right');
 
 for (const originalVideo of originalVideos) {
   const newVideo = document.createElement('video');
   newVideo.src = originalVideo.src;
-  video_slideshowContainer.innerHTML = ''; // empty the container
   newVideo.setAttribute('controls' , '')
   video_slideshowContainer.appendChild(newVideo);
 }
 
-const slideshowVideos = document.querySelectorAll('#slideshow_container video');
+const slideshowVideos = document.querySelectorAll('#videos_slideshow_container video');
 originalVideos.forEach((originalVideo, i) => {
   originalVideo.addEventListener('click', () => {
     video_slideshowIndex = i;
     video_slideshowElement.classList.remove('hide');
-    updateSlideshow();
+    updateSlideshowVideos();
   });
 });
 
 video_leftButton.addEventListener('click', () => {
   video_slideshowIndex--;
-  updateSlideshow();
+  updateSlideshowVideos();
 });
 
 video_rightButton.addEventListener('click', () => {
   video_slideshowIndex++;
-  updateSlideshow();
+  updateSlideshowVideos();
 });
 
 video_closeButton.addEventListener('click', () => {
   video_slideshowElement.classList.add('hide');
 });
 
-function updateSlideshow() {
+function updateSlideshowVideos() {
   slideshowVideos.forEach((video) => video.classList.add('fade'));
   slideshowVideos[video_slideshowIndex].classList.remove('fade');
   video_leftButton.classList.toggle('hide', video_slideshowIndex === 0);
