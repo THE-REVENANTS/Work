@@ -36,6 +36,60 @@ function playVideoFunction(e) {
 }
 play_video.forEach(playVideoFunction);
 
+
+// like and unlike
+let like_buttons = document.querySelectorAll('.like_button');
+let like_button_icons = document.querySelectorAll('.like_button i');
+let like_button_text = document.querySelectorAll('.like_button div');
+like_buttons.forEach( (e , e_index) => {
+    e.onclick = function () {
+        if (e.classList.contains('liked')) {
+            like_button_icons[e_index].classList.remove('fa-solid');
+            like_button_icons[e_index].classList.add('fa-light');
+            like_button_text[e_index].textContent = "Like";            
+            e.classList.remove('liked');
+        } else {
+            like_button_icons[e_index].classList.add('fa-solid');
+            like_button_icons[e_index].classList.remove('fa-light');
+            like_button_text[e_index].textContent = "Unlike";
+            e.classList.add('liked');
+        }
+    }
+});
+
+// comment and reply triggers
+let comment_triggers = document.querySelectorAll('.comment_trigger');
+let add_comment = document.querySelectorAll('.add_comment');
+comment_triggers.forEach( (comment , comment_index) => {
+    comment.onclick = function () {
+        add_comment[comment_index].classList.toggle('hide');
+    }
+});
+let cancel_comment = document.querySelectorAll('.add_comment .buttons .false');
+cancel_comment.forEach( (e , e_index) => {
+    e.onclick = function () {
+        add_comment[e_index].classList.toggle('hide');
+    }
+});
+
+// Description triggers
+let description_triggers = document.querySelectorAll('.description_trigger');
+let add_description = document.querySelectorAll('div.add_description');
+description_triggers.forEach( (e , e_index) => {
+    e.onclick = function () {
+        e.classList.toggle('hide');
+        add_description[e_index].classList.toggle('hide');
+    }
+});
+let cancel_description = document.querySelectorAll('.add_description .buttons .cancel');
+cancel_description.forEach( (e , e_index) => {
+    e.onclick = function () {
+        add_description[e_index].classList.toggle('hide');
+        description_triggers[e_index].classList.toggle('hide');
+    }
+});
+
+
 // My connections tabs control
 let connections_tab_control = document.querySelectorAll('.my_conntections_tab_control a');
 let connections_tabs = document.querySelectorAll('.connections_tab');
@@ -316,79 +370,100 @@ cancel_leave_group.onclick = function () {
 }
 
 
-// images slideshow
-let slideshow_index = 0;
 
-let slideshow = document.querySelector('#slideshow');
-let images_slideshow_container = document.querySelector('#slideshow_container');
-let images_slideshow = document.querySelectorAll('.photos_albums_grid .photos .image_box > img');
-for (let i = 0; i < images_slideshow.length; i++) {
-    let created_img = document.createElement('img');
-    const image_src = images_slideshow[i].src;
-    created_img.setAttribute('src', image_src);
-    images_slideshow_container.appendChild(created_img);
+
+
+///////////////////////////////////////////////////////////////////////////
+///                                                                     ///
+///    A beautiful image slideshow to showcase your precious photos     ///
+///                                                                     ///
+///////////////////////////////////////////////////////////////////////////
+
+const originalImages = document.querySelectorAll('.photos_albums_grid .photos .image_box img');
+let slideshowIndex = 0;
+const slideshowElement = document.querySelector('#slideshow');
+const slideshowContainer = document.querySelector('#slideshow_container');
+const closeButton = document.querySelector('#close_slideshow');
+const leftButton = document.querySelector('#slideshow_to_left');
+const rightButton = document.querySelector('#slideshow_to_right');
+for (const originalImage of originalImages) {
+  const newImage = document.createElement('img');
+  newImage.src = originalImage.src;
+  slideshowContainer.appendChild(newImage);
 }
-let slideshow_images = document.querySelectorAll('#slideshow_container img');
-let images_slideshow_arr = document.querySelectorAll('.photos_albums_grid .photos .image_box img');
-console.log(images_slideshow_arr);
-images_slideshow_arr.forEach( (single_img , img_indx) => {
-    single_img.onclick = function () {
-        slideshow_index = img_indx;
-        slideshow.classList.remove('hide');
-        for (let a = 0; a < slideshow_images.length; a++) {
-            const element = slideshow_images[a];
-            element.classList.add('fade');
-            slideshow_images[img_indx].classList.remove('fade'); 
-        }
-    }
+const slideshowImages = document.querySelectorAll('#slideshow_container img');
+originalImages.forEach((originalImage, i) => {
+  originalImage.addEventListener('click', () => {
+    slideshowIndex = i;
+    slideshowElement.classList.remove('hide');
+    updateSlideshow();
+  });
+});
+leftButton.addEventListener('click', () => {
+  slideshowIndex--;
+  updateSlideshow();
+});
+rightButton.addEventListener('click', () => {
+  slideshowIndex++;
+  updateSlideshow();
+});
+closeButton.addEventListener('click', () => {
+  slideshowElement.classList.add('hide');
+});
+function updateSlideshow() {
+  slideshowImages.forEach((img) => img.classList.add('fade'));
+  slideshowImages[slideshowIndex].classList.remove('fade');
+  leftButton.classList.toggle('hide', slideshowIndex === 0);
+  rightButton.classList.toggle('hide', slideshowIndex === originalImages.length - 1);
+}
+///////////////////////////////////////////////////////////////////////////
+///                                                                     ///
+///    A beautiful video slideshow to showcase your precious videos     ///
+///                                                                     ///
+///////////////////////////////////////////////////////////////////////////
+
+const originalVideos = document.querySelectorAll('.profile_tab .videos .video_container video');
+let video_slideshowIndex = 0;
+const video_slideshowElement = document.querySelector('#videos_slideshow');
+const video_slideshowContainer = document.querySelector('#slideshow_container');
+const video_closeButton = document.querySelector('#close_slideshow');
+const video_leftButton = document.querySelector('#slideshow_to_left');
+const video_rightButton = document.querySelector('#slideshow_to_right');
+
+for (const originalVideo of originalVideos) {
+  const newVideo = document.createElement('video');
+  newVideo.src = originalVideo.src;
+  video_slideshowContainer.innerHTML = ''; // empty the container
+  newVideo.setAttribute('controls' , '')
+  video_slideshowContainer.appendChild(newVideo);
+}
+
+const slideshowVideos = document.querySelectorAll('#slideshow_container video');
+originalVideos.forEach((originalVideo, i) => {
+  originalVideo.addEventListener('click', () => {
+    video_slideshowIndex = i;
+    video_slideshowElement.classList.remove('hide');
+    updateSlideshow();
+  });
 });
 
-let slideshow_to_right = document.querySelector('#slideshow_to_right');
-let slideshow_to_left = document.querySelector('#slideshow_to_left');
-function slide_left() {
-    if (slideshow_index == 0) {
-        slideshow_to_left.classList.add('hide');
-        return false;
-    } else if (slideshow_index == 1) {
-        slideshow_to_left.classList.add('hide');
-        slideshow_to_right.classList.remove('hide');
-        slideshow_index--
-        for (let a = 0; a < slideshow_images.length; a++) {
-            const element = slideshow_images[a];
-            element.classList.add('fade');
-        }
-        slideshow_images[slideshow_index].classList.remove('fade'); 
-    } else {
-        slideshow_to_right.classList.remove('hide');
-        slideshow_index--
-        for (let a = 0; a < slideshow_images.length; a++) {
-            const element = slideshow_images[a];
-            element.classList.add('fade');
-        }
-        slideshow_images[slideshow_index].classList.remove('fade'); 
-    }
+video_leftButton.addEventListener('click', () => {
+  video_slideshowIndex--;
+  updateSlideshow();
+});
+
+video_rightButton.addEventListener('click', () => {
+  video_slideshowIndex++;
+  updateSlideshow();
+});
+
+video_closeButton.addEventListener('click', () => {
+  video_slideshowElement.classList.add('hide');
+});
+
+function updateSlideshow() {
+  slideshowVideos.forEach((video) => video.classList.add('fade'));
+  slideshowVideos[video_slideshowIndex].classList.remove('fade');
+  video_leftButton.classList.toggle('hide', video_slideshowIndex === 0);
+  video_rightButton.classList.toggle('hide', video_slideshowIndex === originalVideos.length - 1);
 }
-function slide_right() {
-    if (slideshow_index == images_slideshow_arr.length - 1) {
-        return false;
-    } else if (slideshow_index == images_slideshow_arr.length - 2) {
-        slideshow_to_right.classList.add('hide');
-        slideshow_index++
-        slideshow_to_left.classList.remove('hide');
-        for (let a = 0; a < slideshow_images.length; a++) {
-            const element = slideshow_images[a];
-            element.classList.add('fade');
-        }
-        slideshow_images[slideshow_index].classList.remove('fade'); 
-    } else {
-        slideshow_index++
-        slideshow_to_left.classList.remove('hide');
-        for (let a = 0; a < slideshow_images.length; a++) {
-            const element = slideshow_images[a];
-            element.classList.add('fade');
-        }
-        slideshow_images[slideshow_index].classList.remove('fade'); 
-    }
-}
-slideshow_to_left.addEventListener('click' , slide_left);
-slideshow_to_right.addEventListener('click' , slide_right);

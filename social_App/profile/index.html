@@ -181,8 +181,11 @@
             </div>
         </div>
         <!-- Slideshow modal -->
-        <div id="slideshow" class="hide">
+        <!-- <div id="slideshow" class="hide">
             <div class="slider">
+                <div class="exit" id="close_slideshow">
+                    <i class="fa-regular fa-xmark"></i>
+                </div>
                 <i class="fa-solid fa-chevron-left to_left" id="slideshow_to_left"></i>
                 <div class="image_slides" id="slideshow_container"></div>
                 <i class="fa-solid fa-chevron-right to_right" id="slideshow_to_right"></i>
@@ -210,6 +213,132 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div class="description_trigger">
+                    <i class="fa-light fa-pen-to-square"></i> Add description
+                </div>
+                <div class="add_description hide">
+                    <textarea class="add_description" placeholder="Add Description"></textarea>
+                    <div class="buttons">
+                        <div class="done_editing">Done Editing</div>
+                        <div class="cancel">cancel</div>
+                    </div>
+                </div>
+                <div class="likes_comments_top">
+                    <div class="counts">
+                        Adele likes this
+                    </div>
+                    <div class="count_icons">
+                        <div class="icon_elm like_button  liked">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <div id="like_txt">Unlike</div>
+                        </div>
+                        <div class="icon_elm comment_trigger">
+                            <i class="fa-regular fa-message"></i>
+                            <div id="like_txt">Comment</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add_comment hide">
+                    <div class="my_image">
+                        <img src="/assets/images/center1.png">
+                    </div>
+                    <div class="comment_controls">
+                        <textarea></textarea>
+                        <div class="content_icons">
+                            <i class="fa-solid fa-font-case"></i>
+                            <i class="fa-solid fa-at"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div class="buttons">
+                            <div class="true">Post</div>
+                            <div class="false">Cancel</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download">
+                    Download
+                </div>
+            </div>
+        </div> -->
+        <!-- Slideshow modal -->
+        <div id="videos_slideshow" class="hide">
+            <div class="slider">
+                <div class="exit" id="close_video_slideshow">
+                    <i class="fa-regular fa-xmark"></i>
+                </div>
+                <i class="fa-solid fa-chevron-left to_left" id="videos_slideshow_to_left"></i>
+                <div class="video_slides" id="videos_slideshow_container"></div>
+                <i class="fa-solid fa-chevron-right to_right" id="videos_slideshow_to_right"></i>
+            </div>
+            <div class="post_details">
+                <div class="post-title">
+                    <img src="../assets/images/center1.png" alt="user picture">
+                    <ul>
+                        <li class="s-between">
+                            <h4>John<span> posted an update</span></h4>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </li>
+                        <li>
+                            <div class="date_posted">
+                                2 years ago .
+                                <div class="privacy_icons">
+                                    <div class="privacy_dropdown">
+                                        <a>Public</a>
+                                        <a>Only me</a>
+                                        <a>Friends only</a>
+                                    </div>
+                                    <i class="fa-regular fa-earth-americas"></i>
+                                    <i class="fa-sharp fa-solid fa-caret-down"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="description_trigger">
+                    <i class="fa-light fa-pen-to-square"></i> Add description
+                </div>
+                <div class="add_description hide">
+                    <textarea class="add_description" placeholder="Add Description"></textarea>
+                    <div class="buttons">
+                        <div class="done_editing">Done Editing</div>
+                        <div class="cancel">cancel</div>
+                    </div>
+                </div>
+                <div class="likes_comments_top">
+                    <div class="counts">
+                        Adele likes this
+                    </div>
+                    <div class="count_icons">
+                        <div class="icon_elm like_button  liked">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <div id="like_txt">Unlike</div>
+                        </div>
+                        <div class="icon_elm comment_trigger">
+                            <i class="fa-regular fa-message"></i>
+                            <div id="like_txt">Comment</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add_comment hide">
+                    <div class="my_image">
+                        <img src="/assets/images/center1.png">
+                    </div>
+                    <div class="comment_controls">
+                        <textarea></textarea>
+                        <div class="content_icons">
+                            <i class="fa-solid fa-font-case"></i>
+                            <i class="fa-solid fa-at"></i>
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+                        <div class="buttons">
+                            <div class="true">Post</div>
+                            <div class="false">Cancel</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download">
+                    Download
                 </div>
             </div>
         </div>
@@ -507,7 +636,7 @@
                                                     1 comments
                                                 </div>
                                                 <div class="count_icons">
-                                                    <div class="icon_elm">
+                                                    <div class="icon_elm like_button liked">
                                                         <i class="fa-solid fa-thumbs-up"></i>
                                                         <div id="like_txt">Unlike</div>
                                                     </div>
@@ -577,7 +706,7 @@
                                                     2 comments
                                                 </div>
                                                 <div class="count_icons">
-                                                    <div class="icon_elm">
+                                                    <div class="icon_elm like_button  liked">
                                                         <i class="fa-solid fa-thumbs-up"></i>
                                                         <div id="like_txt">Unlike</div>
                                                     </div>
@@ -1183,11 +1312,11 @@
                                     <i class="fa-regular fa-circle-check"></i>
                                 </div>
                                 <div class="videos">
-                                    <div class="vid_container">
+                                    <div class="video_container">
                                         <video src="../assets/video/vacation.mp4">
                                             <source src="../assets/video/vacation.mp4">
                                         </video>
-                                        <i class="fa-solid fa-play play_video"></i>
+                                        <i class="fa-solid fa-play open_video"></i>
                                     </div>
                                 </div>
                             </div>
