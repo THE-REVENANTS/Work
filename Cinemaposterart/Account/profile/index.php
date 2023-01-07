@@ -4,7 +4,7 @@
 if (!isset($_SESSION["username"])) {
     echo '<script>window.location.href = "../sign-in";</script>';
 }
-$sql = "SELECT * FROM cinema_users WHERE username='{$_SESSION['username']}' ";
+$sql = "SELECT * FROM cinema_users WHERE ( username='{$_SESSION['username']}' OR email = '{$_SESSION['username']}') ";
 $result = mysqli_query($connect_to_database,$sql);
 $user = mysqli_fetch_assoc($result);
 ?>
@@ -18,7 +18,7 @@ $user = mysqli_fetch_assoc($result);
 
     <!-- About content -->
     <main class="artist_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <h2>Profile Page</h2>
         <div class="artist-info">
             <img src="/assets/images/ArtistBkgd.png" alt="" class="background">
@@ -41,8 +41,8 @@ $user = mysqli_fetch_assoc($result);
             <?php if(!mysqli_num_rows($user_posters_results) < 1 ) { ?>
                 <?php while ($user_poster = mysqli_fetch_assoc($user_posters_results)) : ?>
                         <div class="poster_box">
-                            <a href="poster.php?id=<?php echo $user_poster['poster_id']; ?>">
-                                <img  
+                            <a href="/poster.php?id=<?php echo $user_poster['poster_id']; ?>">
+                                <img
                                 src="<?php echo $user_poster['image_url']; ?>">
                             </a>
                             <div class="bottom">

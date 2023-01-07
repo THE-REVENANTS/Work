@@ -56,7 +56,14 @@ if (isset($_POST['submit_btn'])) {
             $_SESSION["username"] = $username;
             mysqli_query($connect_to_database, $my_command);
             //redirect to profile page  
-            echo '<script>window.location.href = "../profile";</script>';
+            echo '<div class="success_message">
+                    Account was successfully created! you will be redirected to your profile page
+                </div>';
+            echo '<script>
+                     setTimeout(() => {
+                         window.location.href = "../profile";
+                     }, 2000);
+                </script>';
         } else {
             echo '<div class="error_message">Something went wrong, try again or try contacting support!</div>';
         }
@@ -69,7 +76,7 @@ if (isset($_POST['submit_btn'])) {
 
     <!-- About content -->
     <main class="signup_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <h2>SIGN UP</h2>
         <form method="POST">
             <h3>PERSONAL INFO</h3>
@@ -353,7 +360,7 @@ if (isset($_POST['submit_btn'])) {
                 </div>
                 <div class="element">
                     <label>WEBSITE *</label>
-                    <input required type="text" name="website">
+                    <input type="text" name="website">
                 </div>
             </div>
             <div class="inputs">

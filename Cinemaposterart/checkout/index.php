@@ -43,10 +43,6 @@
                     </select>
                     <input required  placeholder="ZIP" id="zip">
                 </div>
-                <div class="note">
-                    <i class="fa-solid fa-rotate-left"></i>
-                    Free returns and exchanges
-                </div>
                 <input type="submit" value="$ 9.99">
             </div>
         </form>

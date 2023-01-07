@@ -2,7 +2,7 @@
 
     <!-- About content -->
     <main class="pro_account_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <form onsubmit="event.preventDefault();" id="UpgradeProForm">
             <h3>PRO ACCOUNT</h3>
             <h4>BILLING DETAILS</h4>
@@ -83,10 +83,6 @@
                         <option value="">United Kingdom</option>
                     </select>
                     <input required  placeholder="ZIP" id="zip">
-                </div>
-                <div class="note">
-                    <i class="fa-solid fa-rotate-left"></i>
-                    Free returns and exchanges
                 </div>
                 <input type="submit" value="$ 9.99">
             </div>

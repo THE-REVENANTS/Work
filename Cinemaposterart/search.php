@@ -52,7 +52,51 @@
                     </div>
                     <?php endwhile;
                 } else {
-                    echo '<h3>NO POSTERS FOUND</h3>';
+                    // Include the API key
+                    $api_key = "46ee0999e1679f82c95fae6245f4c829";
+                    
+                    // Get the search query from the form data
+                    $query = $_GET['search'];
+                    
+                    // Make a request to the API to search for movies by title
+                    $api_response = file_get_contents("https://api.themoviedb.org/3/search/movie?api_key=" . $api_key . "&language=en-US&query=" . urlencode($query));
+                    
+                    // Decode the response into an associative array
+                    $response_data = json_decode($api_response, true);
+                    
+                    // Check if the response data contains any movies
+                    if (count($response_data['results']) > 0) {
+                      // Loop through the array of movies
+                      foreach ($response_data['results'] as $movie) {
+                        ?>
+                        <div class="poster_box">
+                            <a href="poster.php?tmdb_poster=<?php echo $movie['id'] ?>">
+                            <img 
+                            src="https://image.tmdb.org/t/p/w500<?php echo $movie['poster_path']; ?>">
+                            </a>
+                            <div class="bottom">
+                                <a href="/Account/sign-in" class="hint movie"><i class="fas fa-film"></i></a> 
+                                <a href="/Account/sign-in" class="hint download"><i class="fas fa-cloud-download-alt "></i></a> 
+                                <a href="/Account/sign-in" class="hint heart"><i class="far fa-heart"></i></a>
+                            </div>
+                            <div class="top-left">
+                                <span>
+                                    <?php echo (date("Y") - date('Y', strtotime($movie['release_date']))); ?> Years 
+                                    (<?php echo date('Y', strtotime($movie['release_date'])) ?>)
+                                </span>
+                                <span>
+                                    By 
+                                    <a href="https://www.themoviedb.org">
+                                        TMDB
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    <?php }
+                    } else {
+                      // No movies were found
+                      echo '<h3>NO POSTERS FOUND</h3>';
+                    }
                 }
                 }
             }?>

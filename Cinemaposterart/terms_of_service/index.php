@@ -2,7 +2,7 @@
 
     <!-- About content -->
     <main class="tos_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <input type="search" placeholder="Start Searching" id="Search">
         <h2>TERMS OF SERVICE</h2>
         <p class="terms_of_service_text">

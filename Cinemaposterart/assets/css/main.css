@@ -106,7 +106,8 @@
       content: '';
       z-index: 1;
       opacity: 0;
-      transition: .5s; }
+      transition: .5s;
+      pointer-events: none; }
     .artist_gallery .poster_box .hint {
       position: relative; }
       .artist_gallery .poster_box .hint::before, .artist_gallery .poster_box .hint::after {
@@ -292,30 +293,26 @@
       width: fit-content;
       display: flex;
       flex-direction: column;
-      height: 600px; }
+      padding: 20px 0; }
       .membership_main .available_packs .pack img.background {
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         user-select: none;
-        height: 130%; }
+        height: 100%; }
       .membership_main .available_packs .pack h3 {
         position: relative;
         font-size: 50PX;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7); }
       .membership_main .available_packs .pack ul.features {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; }
-        .membership_main .available_packs .pack ul.features li {
-          padding-left: 10px; }
-          .membership_main .available_packs .pack ul.features li::marker {
-            content: url(/assets/images/icons/check.png);
-            vertical-align: middle; }
+        gap: 10px;
+        list-style: none; }
       .membership_main .available_packs .pack .price {
         margin-top: auto;
         position: relative;
@@ -1345,7 +1342,8 @@ footer {
     display: grid;
     justify-content: center;
     width: 100%;
-    grid-template-columns: repeat(4, 1fr); }
+    grid-template-columns: repeat(4, 1fr);
+    align-items: flex-start; }
     footer .top .column {
       width: 100%;
       display: flex;

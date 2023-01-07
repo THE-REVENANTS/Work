@@ -68,6 +68,7 @@
             z-index: 1;
             opacity: 0;
             transition: .5s;
+            pointer-events: none;
         }
         .hint {
             position: relative;

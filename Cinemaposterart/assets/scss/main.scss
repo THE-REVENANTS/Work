@@ -428,6 +428,7 @@ footer {
         justify-content: center;
         width: 100%;
         grid-template-columns: repeat(4 , 1fr);
+        align-items: flex-start;
         .column {
             width: 100%;
             display: flex;

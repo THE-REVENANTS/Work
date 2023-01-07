@@ -1,7 +1,7 @@
 <?php include '../header.php' ?>
     <!-- About content -->
     <main class="search_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <h2>Search</h2>
         <div class="search_filters">
             <div class="column">

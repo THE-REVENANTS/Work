@@ -20,7 +20,7 @@ if (isset($_GET['user_id'])) {
     ?>
     <!-- About content -->
     <main class="artist_main">
-        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS <span class="white_color">FREE</span> FOR </h1>
+        <h1>THE WORLD’S LARGEST CURATED ALTERNATIVE MOVIE POSTERS FOR <span class="white_color">FREE</span> </h1>
         <h2>ARTIST Page</h2>
         <div class="artist-info">
             <img src="/assets/images/ArtistBkgd.png" alt="" class="background">

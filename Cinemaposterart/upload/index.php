@@ -4,7 +4,7 @@
 <?php
 // Check if user logged in
 if (isset($_SESSION['username'])) {
-    $sql_user = "SELECT * FROM cinema_users WHERE username='{$_SESSION['username']}' ";
+    $sql_user = "SELECT * FROM cinema_users WHERE ( username='{$_SESSION['username']}' OR email = '{$_SESSION['username']}') ";
     $result_user = mysqli_query($connect_to_database,$sql_user);
     $user = mysqli_fetch_assoc($result_user);
 } else {
@@ -13,23 +13,79 @@ if (isset($_SESSION['username'])) {
 
 // Get user data and insert it into the database
 if (isset($_POST['submit_btn'])) {
-    // GET THE INPUT FROM THE USER
-    $the_name = $_POST['the_name'];
-    $the_image = $_POST['the_image'];
-    $the_artist = $_POST['the_artist'];
-    $the_website = $_POST['the_website'];
-    $the_language = $_POST['the_language'];
-    $the_variation = $_POST['variation'];
-    $release_date = $_POST['release_date'];
-    $variation = $_POST['variation'];
-    $the_id = $_POST['the_id'];
+    // Check if a file was uploaded
+    if(isset($_FILES['uploaded_file'])){
+        // Set the target directory for the file
+        if (!is_dir('../Uploads/' . $user['username'] . '/')) {
+            mkdir('../Uploads/' . $user['username'] . '/', 0777, true);
+        }
+        $upload_dir = '../Uploads/' . $user['username'] . '/';
 
-    // INSERT THE DATA INTO THE SERVER (SQL)
-    $sql = "INSERT INTO posters_data(poster_language,image_url,artist_name,artist_website,movie_name,release_date,owner_id,variation) VALUES ('$the_language','$the_image','$the_artist','$the_website','$the_name','$release_date','$the_id','$the_variation')";
-    mysqli_query($connect_to_database, $sql);
+        // Get the file information
+        $name = $_FILES['uploaded_file']['name'];
+        $tmp_name = $_FILES['uploaded_file']['tmp_name'];
+
+        // Get the file extension
+        $ext = pathinfo($name, PATHINFO_EXTENSION);
+
+        // Generate a unique numeric identifier for the file
+        do {
+            $id = rand();
+            $new_name = $id . '.' . $ext;
+            $target_path = $upload_dir . $new_name;
+        } while(file_exists($target_path));
+
+        // Check the dimensions of the uploaded image
+        $dimensions = getimagesize($tmp_name);
+        $width = $dimensions[0];
+        $height = $dimensions[1];
+
+        // Check if the dimensions are within the desired range
+        if($width > 1050 || $height > 700) {
+            echo '<div class="error_message">Image is too large, Max: 700x1050 Pixels</div>';
+        } else {
+            if(move_uploaded_file($tmp_name, $target_path)){
+                // If the file was successfully uploaded, generate the full URL to the file
+                $protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"], 0, 5)) == 'https' ? 'https' : 'http';
+                $url = $protocol . '://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . $target_path;
+
+                // GET THE INPUT FROM THE USER
+                $the_name = $_POST['the_name'];
+                $the_image = $url;
+                $the_artist = $_POST['the_artist'];
+                $the_website = $_POST['the_website'];
+                $the_language = $_POST['the_language'];
+                $the_variation = $_POST['variation'];
+                $release_date = $_POST['release_date'];
+                $variation = $_POST['variation'];
+                $the_id = $_POST['the_id'];
+
+
+                // INSERT THE DATA INTO THE SERVER (SQL)
+                $sql = "INSERT INTO posters_data(poster_language,image_url,artist_name,artist_website,movie_name,release_date,owner_id, variation) VALUES ('$the_language','$the_image','$the_artist','$the_website','$the_name','$release_date','$the_id', '$the_variation')";
+                mysqli_query($connect_to_database, $sql);
+
+
+                // connect to global infos to update total posters
+                $sql_global_info = "SELECT * FROM global_infos WHERE row_id = 1 ";
+                $result_global_info = mysqli_query($connect_to_database,$sql_global_info);
+                $data_global_info = mysqli_fetch_assoc($result_global_info);
+                // Update total posters
+                $added_one_poster = $data_global_info['total_posters'] + 1;
+                $update_total_posters = "UPDATE global_infos SET total_posters='$added_one_poster' WHERE row_id = 1 ";
+                mysqli_query($connect_to_database, $update_total_posters);
+
+                // Redirect the user to His/Her profile
+                echo '<script>window.location.href = "https://cinemaposterart.com/Account/profile";</script>';
+            } else {
+                // If the file was not successfully uploaded, display an error message
+                echo '<p>There was an error uploading the file. Please try again.</p>';
+            }
+        }        
+    }
 };
 
-$user_sql = "SELECT * FROM cinema_users WHERE username='{$_SESSION['username']}' and password='{$user['password']}' ";
+$user_sql = "SELECT * FROM cinema_users WHERE ( username='{$_SESSION['username']}' OR email = '{$_SESSION['username']}') and password='{$user['password']}' ";
 $user_results = mysqli_query($connect_to_database,$user_sql);
 $user = mysqli_fetch_assoc($user_results);
 ?>
@@ -42,8 +98,8 @@ $user = mysqli_fetch_assoc($user_results);
             <h3>Poster Info</h3>
             <div class="inputs">
                 <div class="element">
-                    <label>Insert Poster Image Url *</label>
-                    <input required type="text" name="the_image">
+                    <label>Upload Image (Max 700x1050) *</label>
+                    <input required type="file" name="uploaded_file">
                 </div>
                 <div class="element">
                     <label>Poster Title *</label>

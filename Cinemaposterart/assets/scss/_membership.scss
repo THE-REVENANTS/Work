@@ -11,21 +11,21 @@
             width: fit-content;
             display: flex;
             flex-direction: column; 
-            height: 600px;
+            padding: 20px 0;
             // background image
             img.background {
                 position: absolute;
-                top: 55%;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%,-50%);
                 user-select: none;
-                height: 130%;
+                height: 100%;
             }
             // pricing content
             h3 {
                 position: relative;
                 font-size: 50PX;
-                margin-bottom: 30px;
+                margin-bottom: 20px;
                 text-shadow: 1px 1px 6px rgba($color: #000000, $alpha: .7);
             }
             ul.features { 
@@ -33,14 +33,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 10px; 
-                li {
-                    padding-left: 10px;
-                    &::marker {
-                        content: url(/assets/images/icons/check.png);
-                        vertical-align: middle;
-                    }
-                }
+                gap: 10px;
+                list-style: none;
             }
             .price {
                 margin-top: auto;
